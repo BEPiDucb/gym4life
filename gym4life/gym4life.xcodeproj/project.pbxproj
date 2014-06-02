@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0F16148A193CF40600E649D3 /* G4LSerie.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F161489193CF40600E649D3 /* G4LSerie.m */; };
+		0F16148D193CF41A00E649D3 /* G4LExercicio.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F16148C193CF41A00E649D3 /* G4LExercicio.m */; };
+		0F161492193CF66800E649D3 /* G4LViewControllerSerie.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F161490193CF66800E649D3 /* G4LViewControllerSerie.m */; };
+		0F161493193CF66800E649D3 /* G4LViewControllerSerie.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0F161491193CF66800E649D3 /* G4LViewControllerSerie.xib */; };
 		360EF1ED1937CC82007FB699 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 360EF1EC1937CC82007FB699 /* Foundation.framework */; };
 		360EF1EF1937CC82007FB699 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 360EF1EE1937CC82007FB699 /* CoreGraphics.framework */; };
 		360EF1F11937CC82007FB699 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 360EF1F01937CC82007FB699 /* UIKit.framework */; };
@@ -34,6 +38,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0F161488193CF40600E649D3 /* G4LSerie.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = G4LSerie.h; sourceTree = "<group>"; };
+		0F161489193CF40600E649D3 /* G4LSerie.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = G4LSerie.m; sourceTree = "<group>"; };
+		0F16148B193CF41A00E649D3 /* G4LExercicio.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = G4LExercicio.h; sourceTree = "<group>"; };
+		0F16148C193CF41A00E649D3 /* G4LExercicio.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = G4LExercicio.m; sourceTree = "<group>"; };
+		0F16148F193CF66800E649D3 /* G4LViewControllerSerie.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = G4LViewControllerSerie.h; sourceTree = "<group>"; };
+		0F161490193CF66800E649D3 /* G4LViewControllerSerie.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = G4LViewControllerSerie.m; sourceTree = "<group>"; };
+		0F161491193CF66800E649D3 /* G4LViewControllerSerie.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = G4LViewControllerSerie.xib; sourceTree = "<group>"; };
 		360EF1E91937CC82007FB699 /* gym4life.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = gym4life.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		360EF1EC1937CC82007FB699 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		360EF1EE1937CC82007FB699 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -79,6 +90,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0F16148E193CF59E00E649D3 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
 		360EF1E01937CC82007FB699 = {
 			isa = PBXGroup;
 			children = (
@@ -117,8 +135,16 @@
 				360EF1FE1937CC82007FB699 /* Images.xcassets */,
 				360EF1F31937CC82007FB699 /* Supporting Files */,
 				360EF21B1937CCCD007FB699 /* G4LViewPrincipal.h */,
+				0F16148F193CF66800E649D3 /* G4LViewControllerSerie.h */,
+				0F161490193CF66800E649D3 /* G4LViewControllerSerie.m */,
+				0F161491193CF66800E649D3 /* G4LViewControllerSerie.xib */,
+				0F161488193CF40600E649D3 /* G4LSerie.h */,
+				0F161489193CF40600E649D3 /* G4LSerie.m */,
+				0F16148B193CF41A00E649D3 /* G4LExercicio.h */,
+				0F16148C193CF41A00E649D3 /* G4LExercicio.m */,
 				360EF21C1937CCCD007FB699 /* G4LViewPrincipal.m */,
 				360EF21D1937CCCD007FB699 /* G4LViewPrincipal.xib */,
+				0F16148E193CF59E00E649D3 /* Resources */,
 			);
 			path = gym4life;
 			sourceTree = "<group>";
@@ -229,6 +255,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				360EF1F71937CC82007FB699 /* InfoPlist.strings in Resources */,
+				0F161493193CF66800E649D3 /* G4LViewControllerSerie.xib in Resources */,
 				360EF1FF1937CC82007FB699 /* Images.xcassets in Resources */,
 				360EF21F1937CCCD007FB699 /* G4LViewPrincipal.xib in Resources */,
 			);
@@ -249,6 +276,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0F16148D193CF41A00E649D3 /* G4LExercicio.m in Sources */,
+				0F161492193CF66800E649D3 /* G4LViewControllerSerie.m in Sources */,
+				0F16148A193CF40600E649D3 /* G4LSerie.m in Sources */,
 				360EF1FD1937CC82007FB699 /* G4LAppDelegate.m in Sources */,
 				360EF1F91937CC82007FB699 /* main.m in Sources */,
 				360EF21E1937CCCD007FB699 /* G4LViewPrincipal.m in Sources */,
@@ -450,6 +480,7 @@
 				360EF2171937CC82007FB699 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		360EF2181937CC82007FB699 /* Build configuration list for PBXNativeTarget "gym4lifeTests" */ = {
 			isa = XCConfigurationList;
@@ -458,6 +489,7 @@
 				360EF21A1937CC82007FB699 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

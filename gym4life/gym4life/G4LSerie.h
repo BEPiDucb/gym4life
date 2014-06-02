@@ -14,5 +14,7 @@
 @property (nonatomic) NSMutableArray *exercicio;
 @property (nonatomic) bool favorita;
 
+-(void) carregarExercicios;
+
 
 @end

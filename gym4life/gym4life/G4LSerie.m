@@ -10,4 +10,9 @@
 
 @implementation G4LSerie
 
+
+-(void)carregarExercicios
+{
+    
+}
 @end

@@ -14,5 +14,6 @@
 @property (nonatomic) NSString *grupoMuscularExercicio;
 @property (nonatomic) NSMutableArray *enderecoImgExercicio;
 @property (nonatomic) NSMutableArray *orientacoesExercicio;
+@property (nonatomic) NSString *nomeSerie;
 
 @end

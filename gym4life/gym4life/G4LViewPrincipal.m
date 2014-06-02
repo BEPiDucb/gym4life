@@ -7,12 +7,23 @@
 //
 
 #import "G4LViewPrincipal.h"
-
+#import "G4LViewControllerSerie.h"
 @interface G4LViewPrincipal ()
 
 @end
 
+//Apagar esse metodo com o botao
 @implementation G4LViewPrincipal
+- (IBAction)chamarSerie:(id)sender
+{
+    G4LViewControllerSerie *serieJanela=[[G4LViewControllerSerie alloc]init];
+    serieJanela.modalTransitionStyle=UIModalTransitionStyleCoverVertical;
+    
+    [self presentViewController:serieJanela animated:YES completion:nil];
+    
+    
+    
+}
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {

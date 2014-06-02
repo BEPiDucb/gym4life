@@ -13,6 +13,18 @@
 @end
 
 @implementation G4LViewControllerSerie
+- (IBAction)seriesBotao:(id)sender {
+    
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
+
+- (IBAction)img_favoritar:(id)sender {
+    
+    NSLog(@"Favoritado!");
+
+
+}
+
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {

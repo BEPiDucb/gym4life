@@ -11,6 +11,8 @@
 		0F16148D193CF41A00E649D3 /* G4LExercicio.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F16148C193CF41A00E649D3 /* G4LExercicio.m */; };
 		0F161492193CF66800E649D3 /* G4LViewControllerSerie.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F161490193CF66800E649D3 /* G4LViewControllerSerie.m */; };
 		0F161493193CF66800E649D3 /* G4LViewControllerSerie.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0F161491193CF66800E649D3 /* G4LViewControllerSerie.xib */; };
+		0F161495193CFD7F00E649D3 /* coracao_botao.png in Resources */ = {isa = PBXBuildFile; fileRef = 0F161494193CFD7F00E649D3 /* coracao_botao.png */; };
+		0F161497193CFED700E649D3 /* coracao_botao_selecionado.png in Resources */ = {isa = PBXBuildFile; fileRef = 0F161496193CFED700E649D3 /* coracao_botao_selecionado.png */; };
 		360EF1ED1937CC82007FB699 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 360EF1EC1937CC82007FB699 /* Foundation.framework */; };
 		360EF1EF1937CC82007FB699 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 360EF1EE1937CC82007FB699 /* CoreGraphics.framework */; };
 		360EF1F11937CC82007FB699 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 360EF1F01937CC82007FB699 /* UIKit.framework */; };
@@ -45,6 +47,8 @@
 		0F16148F193CF66800E649D3 /* G4LViewControllerSerie.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = G4LViewControllerSerie.h; sourceTree = "<group>"; };
 		0F161490193CF66800E649D3 /* G4LViewControllerSerie.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = G4LViewControllerSerie.m; sourceTree = "<group>"; };
 		0F161491193CF66800E649D3 /* G4LViewControllerSerie.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = G4LViewControllerSerie.xib; sourceTree = "<group>"; };
+		0F161494193CFD7F00E649D3 /* coracao_botao.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = coracao_botao.png; path = ../../../../../coracao_botao.png; sourceTree = "<group>"; };
+		0F161496193CFED700E649D3 /* coracao_botao_selecionado.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = coracao_botao_selecionado.png; sourceTree = "<group>"; };
 		360EF1E91937CC82007FB699 /* gym4life.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = gym4life.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		360EF1EC1937CC82007FB699 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		360EF1EE1937CC82007FB699 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -93,6 +97,8 @@
 		0F16148E193CF59E00E649D3 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				0F161496193CFED700E649D3 /* coracao_botao_selecionado.png */,
+				0F161494193CFD7F00E649D3 /* coracao_botao.png */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -255,9 +261,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				360EF1F71937CC82007FB699 /* InfoPlist.strings in Resources */,
+				0F161495193CFD7F00E649D3 /* coracao_botao.png in Resources */,
 				0F161493193CF66800E649D3 /* G4LViewControllerSerie.xib in Resources */,
 				360EF1FF1937CC82007FB699 /* Images.xcassets in Resources */,
 				360EF21F1937CCCD007FB699 /* G4LViewPrincipal.xib in Resources */,
+				0F161497193CFED700E649D3 /* coracao_botao_selecionado.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -403,6 +411,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "gym4life/gym4life-Prefix.pch";
 				INFOPLIST_FILE = "gym4life/gym4life-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -416,6 +425,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "gym4life/gym4life-Prefix.pch";
 				INFOPLIST_FILE = "gym4life/gym4life-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -437,6 +447,7 @@
 					"$(inherited)",
 				);
 				INFOPLIST_FILE = "gym4lifeTests/gym4lifeTests-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
@@ -455,6 +466,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "gym4life/gym4life-Prefix.pch";
 				INFOPLIST_FILE = "gym4lifeTests/gym4lifeTests-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;

@@ -9,5 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface G4LViewControllerSerie : UIViewController
+@property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
 
 @end

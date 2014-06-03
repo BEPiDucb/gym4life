@@ -39,7 +39,7 @@
     [super viewDidLoad];
     
     //chamando o metodo sem lugar definido
-    [self carregarSeriesPlist];
+    [self carregarPlistsNoiPhone];
     
     
     // Do any additional setup after loading the view from its nib.
@@ -53,46 +53,40 @@
 
 
 //procurar um lugar para esse metodo
--(void) carregarSeriesPlist
+-(void) carregarPlistsNoiPhone
 {
-    //pegando endereco interno do applicativo
-    NSString *enderecoResource =[[NSBundle mainBundle] resourcePath];
-    NSFileManager *fileManager=[NSFileManager defaultManager];
-    NSMutableArray *plist=[[NSMutableArray alloc]init];
+
+    //Recuperando os plists do iphone
+      NSMutableArray *seriesPlist=
+      [[NSMutableArray alloc]
+                            initWithContentsOfFile:
+                                [[NSBundle mainBundle] pathForResource:@"series" ofType:@"plist"]];
     
-    NSArray *conteudoNoDiretorio=[fileManager contentsOfDirectoryAtPath:enderecoResource error:nil];
     
-    //selecionando somente os arquivos plist
-    [conteudoNoDiretorio enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop)
-     {
-         NSString *nomeArquivo= (NSString *) obj;
-         NSString *extencaoArquivo =[[nomeArquivo pathExtension] lowercaseString];
-         
-         if ([extencaoArquivo isEqualToString:@"plist"])
-         {
-             [plist addObject:nomeArquivo];
-         }
-    }];
     
-    //verifico se o arquivo series.plist existe
-    int exite=0;
-    for (int i=0 ; i<[plist count];i++)
-    {
-        if ([[plist objectAtIndex:i] isEqualToString:@"serie.plist" ])
-        {
-            NSLog(@"Exites");
-            exite=1;
-            break;
-            
-        }else exite=0;
-        
-    }
+    //Teste de criacao de uma serie com um exercicio
+    NSMutableArray *serie_01=[[NSMutableArray alloc] init];
+    NSMutableDictionary *exercicio_01=[[NSMutableDictionary alloc] init];
     
-    //se nao existir crio o plist
-    if (exite==0)
-    {
-        
-    }
+    [exercicio_01 setObject:@"alogamento do pescoço" forKey:@"nome"];
+    [exercicio_01 setObject:@"coracao_botao.png" forKey:@"nomeImg"];
+    
+    
+    
+    [serie_01 addObject:exercicio_01];
+    [seriesPlist addObject:serie_01];
+    
+    
+    
+    
+    //Gravando a serie no iphone
+    [seriesPlist writeToFile:
+                            [[NSBundle mainBundle] pathForResource:@"series" ofType:@"plist"]
+                                                    atomically:YES];
+    
+    
+    //apagar isso
+    NSLog(@"%@",seriesPlist);
     
 }
 

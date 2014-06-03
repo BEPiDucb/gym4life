@@ -38,6 +38,21 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    NSMutableArray *series=[[NSMutableArray alloc]
+                initWithContentsOfFile:[
+                                        [NSBundle mainBundle] pathForResource:@"series" ofType:@"plist"]
+                                        ];
+    
+    
+    // essa parte será dinamica
+    CGRect imageViewFrame= _scrollView.frame;
+    UIImageView *imageViewExercicio = [[UIImageView alloc] initWithFrame:imageViewFrame];
+    NSString *nomeFoto= [[series[1] objectAtIndex:0]objectForKey:@"nomeImg"];
+    [imageViewExercicio setImage:[UIImage imageNamed:nomeFoto]];
+    
+    [_scrollView addSubview:imageViewExercicio];
+    
     // Do any additional setup after loading the view from its nib.
 }
 

@@ -94,13 +94,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		0F16148E193CF59E00E649D3 /* Resources */ = {
+		0F16148E193CF59E00E649D3 /* Resource */ = {
 			isa = PBXGroup;
 			children = (
 				0F161496193CFED700E649D3 /* coracao_botao_selecionado.png */,
 				0F161494193CFD7F00E649D3 /* coracao_botao.png */,
 			);
-			name = Resources;
+			name = Resource;
 			sourceTree = "<group>";
 		};
 		360EF1E01937CC82007FB699 = {
@@ -150,7 +150,7 @@
 				0F16148C193CF41A00E649D3 /* G4LExercicio.m */,
 				360EF21C1937CCCD007FB699 /* G4LViewPrincipal.m */,
 				360EF21D1937CCCD007FB699 /* G4LViewPrincipal.xib */,
-				0F16148E193CF59E00E649D3 /* Resources */,
+				0F16148E193CF59E00E649D3 /* Resource */,
 			);
 			path = gym4life;
 			sourceTree = "<group>";

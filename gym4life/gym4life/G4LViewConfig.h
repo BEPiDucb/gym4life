@@ -11,21 +11,17 @@
 @interface G4LViewConfig : UIViewController{
     
 }
-@property (nonatomic)NSString * segunda;
-@property (nonatomic)NSString * terca;
-@property (nonatomic)NSString * quarta;
-@property (nonatomic)NSString * quinta;
-@property (nonatomic)NSString * sexta;
-@property (nonatomic)NSString * sabado;
-@property (nonatomic)NSString * domingo;
 
-- (IBAction)switcSegunda:(id)sender;
-- (IBAction)switcTerca:(id)sender;
-- (IBAction)switcQuarta:(id)sender;
-- (IBAction)switcQuinta:(id)sender;
-- (IBAction)switcSexta:(id)sender;
-- (IBAction)switcSabado:(id)sender;
-- (IBAction)switcDomingo:(id)sender;
+@property (weak, nonatomic) IBOutlet UISwitch *segunda;
+@property (weak, nonatomic) IBOutlet UISwitch *terca;
+@property (weak, nonatomic) IBOutlet UISwitch *quarta;
+@property (weak, nonatomic) IBOutlet UISwitch *quinta;
+@property (weak, nonatomic) IBOutlet UISwitch *sexta;
+@property (weak, nonatomic) IBOutlet UISwitch *sabado;
+@property (weak, nonatomic) IBOutlet UISwitch *domingo;
+
+
 - (IBAction)Salvar:(id)sender;
+- (IBAction)series:(id)sender;
 
 @end

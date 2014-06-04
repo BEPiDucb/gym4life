@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface G4LViewPrincipal : UIViewController
+@interface G4LViewPrincipal : UIViewController <UITableViewDataSource,UITableViewDelegate>
+
+@property (strong,nonatomic) NSMutableArray *seriesArray;
 
 @end

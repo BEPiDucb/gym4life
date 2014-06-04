@@ -21,6 +21,8 @@
 		360EF2121937CC82007FB699 /* gym4lifeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 360EF2111937CC82007FB699 /* gym4lifeTests.m */; };
 		360EF21E1937CCCD007FB699 /* G4LViewPrincipal.m in Sources */ = {isa = PBXBuildFile; fileRef = 360EF21C1937CCCD007FB699 /* G4LViewPrincipal.m */; };
 		360EF21F1937CCCD007FB699 /* G4LViewPrincipal.xib in Resources */ = {isa = PBXBuildFile; fileRef = 360EF21D1937CCCD007FB699 /* G4LViewPrincipal.xib */; };
+		360EF2221937D289007FB699 /* G4LSeries.m in Sources */ = {isa = PBXBuildFile; fileRef = 360EF2211937D289007FB699 /* G4LSeries.m */; };
+		360EF2251937D2AF007FB699 /* G4LExercicio.m in Sources */ = {isa = PBXBuildFile; fileRef = 360EF2241937D2AF007FB699 /* G4LExercicio.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +55,10 @@
 		360EF21B1937CCCD007FB699 /* G4LViewPrincipal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = G4LViewPrincipal.h; sourceTree = "<group>"; };
 		360EF21C1937CCCD007FB699 /* G4LViewPrincipal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = G4LViewPrincipal.m; sourceTree = "<group>"; };
 		360EF21D1937CCCD007FB699 /* G4LViewPrincipal.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = G4LViewPrincipal.xib; sourceTree = "<group>"; };
+		360EF2201937D289007FB699 /* G4LSeries.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = G4LSeries.h; sourceTree = "<group>"; };
+		360EF2211937D289007FB699 /* G4LSeries.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = G4LSeries.m; sourceTree = "<group>"; };
+		360EF2231937D2AF007FB699 /* G4LExercicio.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = G4LExercicio.h; sourceTree = "<group>"; };
+		360EF2241937D2AF007FB699 /* G4LExercicio.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = G4LExercicio.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +118,7 @@
 		360EF1F21937CC82007FB699 /* gym4life */ = {
 			isa = PBXGroup;
 			children = (
+				360EF2261937D48C007FB699 /* Resources */,
 				360EF1FB1937CC82007FB699 /* G4LAppDelegate.h */,
 				360EF1FC1937CC82007FB699 /* G4LAppDelegate.m */,
 				360EF1FE1937CC82007FB699 /* Images.xcassets */,
@@ -119,6 +126,10 @@
 				360EF21B1937CCCD007FB699 /* G4LViewPrincipal.h */,
 				360EF21C1937CCCD007FB699 /* G4LViewPrincipal.m */,
 				360EF21D1937CCCD007FB699 /* G4LViewPrincipal.xib */,
+				360EF2201937D289007FB699 /* G4LSeries.h */,
+				360EF2211937D289007FB699 /* G4LSeries.m */,
+				360EF2231937D2AF007FB699 /* G4LExercicio.h */,
+				360EF2241937D2AF007FB699 /* G4LExercicio.m */,
 			);
 			path = gym4life;
 			sourceTree = "<group>";
@@ -150,6 +161,13 @@
 				360EF20E1937CC82007FB699 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		360EF2261937D48C007FB699 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -249,6 +267,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				360EF2251937D2AF007FB699 /* G4LExercicio.m in Sources */,
+				360EF2221937D289007FB699 /* G4LSeries.m in Sources */,
 				360EF1FD1937CC82007FB699 /* G4LAppDelegate.m in Sources */,
 				360EF1F91937CC82007FB699 /* main.m in Sources */,
 				360EF21E1937CCCD007FB699 /* G4LViewPrincipal.m in Sources */,

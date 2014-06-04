@@ -7,11 +7,12 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "G4LExercicio.h"
 @interface G4LSeries : NSObject{
 
 }
 
 @property (nonatomic) NSString *nome;
-@property (nonatomic) BOOL favorito;
+@property (nonatomic) NSMutableArray *exercicios;
+
+-(void) carregarSerie;
 @end

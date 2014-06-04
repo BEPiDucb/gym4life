@@ -10,4 +10,12 @@
 
 @implementation G4LSeries
 
+
+
+-(void)carregarSerie
+{
+    //Recupero o seriesPlist
+    NSArray *seriesPlist = [[NSBundle mainBundle] pathForResource:@"series" ofType:@"plist"];
+    
+}
 @end

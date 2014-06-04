@@ -50,8 +50,8 @@
     CGRect labelOrientacaoFrame;
     
     
-    imageViewFrame = CGRectMake(0.f, 0.f,280.f,260.f);
-    labelOrientacaoFrame =CGRectMake(0.f, 260.f, 280.f, 56.f);
+    imageViewFrame = CGRectMake(0.f, 0.f,240.f,300.f);
+    labelOrientacaoFrame =CGRectMake(0.f, 240.f, 240.f, 70.f);
     
     UIImageView *imageViewExercicio = [[UIImageView alloc] initWithFrame:imageViewFrame];
     UILabel *labelOrientacao=[[UILabel alloc ]initWithFrame:labelOrientacaoFrame];

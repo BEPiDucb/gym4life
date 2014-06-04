@@ -10,4 +10,17 @@
 
 @implementation G4LExercicio
 
+
+-(id)carregaExercicio
+{
+    NSMutableArray *exerciciosDaSerie =[[NSMutableArray alloc]init ];
+    
+    //Recupera os dados de series.plist
+    
+    NSArray *seriesPlist=[[NSBundle mainBundle] pathForResource:@"series" ofType:@"plist"];
+    
+    
+    return exerciciosDaSerie;
+}
+
 @end

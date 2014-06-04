@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0F99B841193F995800097873 /* series.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0F99B840193F995800097873 /* series.plist */; };
 		360EF1ED1937CC82007FB699 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 360EF1EC1937CC82007FB699 /* Foundation.framework */; };
 		360EF1EF1937CC82007FB699 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 360EF1EE1937CC82007FB699 /* CoreGraphics.framework */; };
 		360EF1F11937CC82007FB699 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 360EF1F01937CC82007FB699 /* UIKit.framework */; };
@@ -36,6 +37,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0F99B840193F995800097873 /* series.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = series.plist; sourceTree = "<group>"; };
 		360EF1E91937CC82007FB699 /* gym4life.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = gym4life.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		360EF1EC1937CC82007FB699 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		360EF1EE1937CC82007FB699 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -166,6 +168,7 @@
 		360EF2261937D48C007FB699 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				0F99B840193F995800097873 /* series.plist */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -247,6 +250,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				360EF1F71937CC82007FB699 /* InfoPlist.strings in Resources */,
+				0F99B841193F995800097873 /* series.plist in Resources */,
 				360EF1FF1937CC82007FB699 /* Images.xcassets in Resources */,
 				360EF21F1937CCCD007FB699 /* G4LViewPrincipal.xib in Resources */,
 			);
@@ -470,6 +474,7 @@
 				360EF2171937CC82007FB699 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		360EF2181937CC82007FB699 /* Build configuration list for PBXNativeTarget "gym4lifeTests" */ = {
 			isa = XCConfigurationList;
@@ -478,6 +483,7 @@
 				360EF21A1937CC82007FB699 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

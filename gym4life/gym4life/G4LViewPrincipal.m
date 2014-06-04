@@ -27,6 +27,9 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+   //Carrega arquivos plists no iphone 
+    [self carregarPlistsNoiPhone];
+    
     
     //Aloca o array series
     _seriesArray = [[NSMutableArray alloc]init];
@@ -97,5 +100,46 @@
 {
     NSLog(@"Configuracao acionada");
 }
+
+
+//Carregar arquivos plists
+-(void) carregarPlistsNoiPhone
+{
     
+    //Recuperando os plists do iphone
+    NSMutableArray *seriesPlist=
+    [[NSMutableArray alloc]
+     initWithContentsOfFile:
+     [[NSBundle mainBundle] pathForResource:@"series" ofType:@"plist"]];
+    
+    
+    
+    //Teste de criacao de uma serie com um exercicio
+    NSMutableArray *serie_01=[[NSMutableArray alloc] init];
+    NSMutableDictionary *exercicio_01=[[NSMutableDictionary alloc] init];
+    
+    [exercicio_01 setObject:@"alogamento do pescoço" forKey:@"nome"];
+    [exercicio_01 setObject:@"coracao_botao.png" forKey:@"nomeImg"];
+    
+    
+    
+    [serie_01 addObject:exercicio_01];
+    [seriesPlist addObject:serie_01];
+    
+    
+    
+    
+    //Gravando a serie no iphone
+    [seriesPlist writeToFile:
+     [[NSBundle mainBundle] pathForResource:@"series" ofType:@"plist"]
+                  atomically:YES];
+    
+    
+    //apagar isso
+    NSLog(@"%@",seriesPlist);
+    
+}
+
+
+
 @end

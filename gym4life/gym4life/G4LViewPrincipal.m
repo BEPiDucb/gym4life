@@ -7,7 +7,7 @@
 //
 
 #import "G4LViewPrincipal.h"
-
+#import "G4LViewControllerSerie.h"
 @interface G4LViewPrincipal ()
 
 @end
@@ -137,6 +137,16 @@
     
     //apagar isso
     NSLog(@"%@",seriesPlist);
+    
+}
+- (IBAction)iniciarRotina:(id)sender {
+    
+    G4LViewControllerSerie *serie=[[G4LViewControllerSerie alloc] init];
+    
+    serie.modalTransitionStyle=UIModalPresentationFormSheet;
+    
+    [self presentViewController:serie animated:YES completion:nil];
+    
     
 }
 

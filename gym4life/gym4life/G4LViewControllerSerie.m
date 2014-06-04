@@ -46,10 +46,18 @@
     
     
     // essa parte será dinamica
-    CGRect imageViewFrame= _scrollView.frame;
+    CGRect imageViewFrame;
+    
+    imageViewFrame.origin.x=0.0f;
+    imageViewFrame.origin.y=0.0f;
+    imageViewFrame.size = _scrollView.frame.size;
+    
     UIImageView *imageViewExercicio = [[UIImageView alloc] initWithFrame:imageViewFrame];
-    NSString *nomeFoto= [[series[1] objectAtIndex:0]objectForKey:@"nomeImg"];
-    [imageViewExercicio setImage:[UIImage imageNamed:nomeFoto]];
+    imageViewExercicio.backgroundColor =[UIColor blackColor];
+    
+  // Nome da foto guardado no series.plist
+  //  NSString *nomeFoto= [[series[1] objectAtIndex:0]objectForKey:@"nomeImg"];
+  //  [imageViewExercicio setImage:[UIImage imageNamed:nomeFoto]];
     
     [_scrollView addSubview:imageViewExercicio];
     

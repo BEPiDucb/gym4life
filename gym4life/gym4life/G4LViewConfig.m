@@ -7,7 +7,7 @@
 //
 
 #import "G4LViewConfig.h"
-
+#import "G4LViewConfigHora.h"
 @interface G4LViewConfig ()
 
 @end
@@ -20,13 +20,6 @@
     if (self)
     {
         // Custom initialization
-//        self.segunda = @"true";
-//        self.terca = @"true";
-//        self.quarta = @"true";
-//        self.quinta = @"true";
-//        self.sexta = @"true";
-//        self.sabado = @"true";
-//        self.domingo = @"true";
         
     }
     return self;
@@ -36,7 +29,7 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
-    
+
     //Inicializar com as configuracoes do usuario
     //primeiro recuperar o configuracoes.plist
     NSArray *configuracoesPlist=[[NSArray alloc]
@@ -57,8 +50,6 @@
         [self.sexta setOn:1 animated:YES];
         [self.sabado setOn:1 animated:YES];
         [self.domingo setOn:1 animated:YES];
-        
-        NSLog(@"Entrei no if");
         
     }else
     {
@@ -96,6 +87,10 @@
         auxString=[configuracoesPlist[0] objectForKey:@"domingo"];
         auxNum= ([auxString isEqualToString:@"true"])?1:0;
         [self.domingo setOn:auxNum animated:YES];
+        
+        //horario
+        auxString=[configuracoesPlist[0] objectForKey:@"horario"];
+        self.strHorario = auxString;
     }
     
 }
@@ -108,7 +103,8 @@
 
 
 - (IBAction)Salvar:(id)sender {
-    
+    //setando valor de horas
+    self.strHorario = [[G4LViewConfigHora defaultHora]str];
     
     //Recuperando endereco do arquivo configuracoes.plist
     NSString *configuracoesPlistEndereco=[[NSBundle mainBundle] pathForResource:@"configuracoes" ofType:@"plist"];
@@ -125,55 +121,20 @@
     [configuracoesDoUsuario setObject:((self.sexta.on)==1)?@"true":@"false" forKey:@"sexta"];
     [configuracoesDoUsuario setObject:((self.sabado.on)==1)?@"true":@"false" forKey:@"sabado"];
     [configuracoesDoUsuario setObject:((self.domingo.on)==1)?@"true":@"false" forKey:@"domingo"];
+    [configuracoesDoUsuario setObject:self.strHorario forKey:@"horario"];
     
     [configuracoesPlist addObject:configuracoesDoUsuario];
     [configuracoesPlist writeToFile:configuracoesPlistEndereco atomically:YES];
-    
+
     [self dismissViewControllerAnimated:YES completion:nil];
-    
-   //Apagar esse codigo
-//    
-//    //  NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDesktopDirectory, NSUserDomainMask, YES);
-//    //   NSString *documentsDirectory = [paths objectAtIndex:0];
-//    
-//    NSString *documentsDirectory = [[NSBundle mainBundle]resourcePath];
-//    NSString *path = [documentsDirectory stringByAppendingPathComponent:@"resource/date.plist"];
-//    //NSString  *path = [NSString stringWithFormat:@"%@/resource/%@", documentsDirectory,@"date.plist"];
-//    NSFileManager *fileManager = [NSFileManager defaultManager];
-//    NSMutableDictionary *data;
-//    NSMutableArray *pList = [[NSMutableArray alloc]init];
-//    
-//    if ([fileManager fileExistsAtPath: path])
-//        data = [[NSMutableDictionary alloc] initWithContentsOfFile: path];
-//    
-//    else
-//        data = [[NSMutableDictionary alloc] init];
-//    
-//    [data setObject:self.segunda forKey:@"segunda"];
-//    [data setObject:self.terca forKey:@"terca"];
-//    [data setObject:self.quarta forKey:@"quarta"];
-//    [data setObject:self.quinta forKey:@"quinta"];
-//    [data setObject:self.sexta forKey:@"sexta"];
-//    [data setObject:self.sabado forKey:@"sabado"];
-//    [data setObject:self.domingo forKey:@"domingo"];
-//    
-//    [pList addObject:data];
-//    [pList writeToFile: path atomically:YES];
-//    
-//    NSArray *plistsNoCelular=[[NSFileManager defaultManager] contentsOfDirectoryAtPath:path error:nil];
-//    
-//    [plistsNoCelular enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
-//        
-//        NSString *nomeArquivo=(NSString *) obj;
-//        NSString *extencaoArquivo =[[nomeArquivo stringByDeletingPathExtension] lowercaseString];
-//        
-//        if ([extencaoArquivo isEqualToString:@"plist"])
-//        {
-//            NSLog(@"%@",nomeArquivo);
-//        }
-//    }];
 }
 
 
 
+- (IBAction)horarioSeries:(id)sender {
+    G4LViewConfigHora *viewConfigHora=[G4LViewConfigHora defaultHora];
+    
+    viewConfigHora.modalTransitionStyle=UIModalPresentationFullScreen;
+    [self presentViewController:viewConfigHora animated:YES completion:nil];
+}
 @end

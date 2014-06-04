@@ -24,6 +24,8 @@
 		360EF21F1937CCCD007FB699 /* G4LViewPrincipal.xib in Resources */ = {isa = PBXBuildFile; fileRef = 360EF21D1937CCCD007FB699 /* G4LViewPrincipal.xib */; };
 		364D8AF5193D1CC0004ABDC7 /* G4LViewConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 364D8AF3193D1CC0004ABDC7 /* G4LViewConfig.m */; };
 		364D8AF6193D1CC0004ABDC7 /* G4LViewConfig.xib in Resources */ = {isa = PBXBuildFile; fileRef = 364D8AF4193D1CC0004ABDC7 /* G4LViewConfig.xib */; };
+		36B256CB193F9AAA00C1EC15 /* G4LViewConfigHora.m in Sources */ = {isa = PBXBuildFile; fileRef = 36B256C9193F9AAA00C1EC15 /* G4LViewConfigHora.m */; };
+		36B256CC193F9AAA00C1EC15 /* G4LViewConfigHora.xib in Resources */ = {isa = PBXBuildFile; fileRef = 36B256CA193F9AAA00C1EC15 /* G4LViewConfigHora.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +62,9 @@
 		364D8AF2193D1CC0004ABDC7 /* G4LViewConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = G4LViewConfig.h; sourceTree = "<group>"; };
 		364D8AF3193D1CC0004ABDC7 /* G4LViewConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = G4LViewConfig.m; sourceTree = "<group>"; };
 		364D8AF4193D1CC0004ABDC7 /* G4LViewConfig.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = G4LViewConfig.xib; sourceTree = "<group>"; };
+		36B256C8193F9AAA00C1EC15 /* G4LViewConfigHora.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = G4LViewConfigHora.h; sourceTree = "<group>"; };
+		36B256C9193F9AAA00C1EC15 /* G4LViewConfigHora.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = G4LViewConfigHora.m; sourceTree = "<group>"; };
+		36B256CA193F9AAA00C1EC15 /* G4LViewConfigHora.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = G4LViewConfigHora.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -138,6 +143,9 @@
 				364D8AF2193D1CC0004ABDC7 /* G4LViewConfig.h */,
 				364D8AF3193D1CC0004ABDC7 /* G4LViewConfig.m */,
 				364D8AF4193D1CC0004ABDC7 /* G4LViewConfig.xib */,
+				36B256C8193F9AAA00C1EC15 /* G4LViewConfigHora.h */,
+				36B256C9193F9AAA00C1EC15 /* G4LViewConfigHora.m */,
+				36B256CA193F9AAA00C1EC15 /* G4LViewConfigHora.xib */,
 			);
 			path = gym4life;
 			sourceTree = "<group>";
@@ -249,6 +257,7 @@
 			files = (
 				360EF1F71937CC82007FB699 /* InfoPlist.strings in Resources */,
 				0F1614A1193E5A0200E649D3 /* configuracoes.plist in Resources */,
+				36B256CC193F9AAA00C1EC15 /* G4LViewConfigHora.xib in Resources */,
 				360EF1FF1937CC82007FB699 /* Images.xcassets in Resources */,
 				364D8AF6193D1CC0004ABDC7 /* G4LViewConfig.xib in Resources */,
 				360EF21F1937CCCD007FB699 /* G4LViewPrincipal.xib in Resources */,
@@ -271,6 +280,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				360EF1FD1937CC82007FB699 /* G4LAppDelegate.m in Sources */,
+				36B256CB193F9AAA00C1EC15 /* G4LViewConfigHora.m in Sources */,
 				360EF1F91937CC82007FB699 /* main.m in Sources */,
 				364D8AF5193D1CC0004ABDC7 /* G4LViewConfig.m in Sources */,
 				360EF21E1937CCCD007FB699 /* G4LViewPrincipal.m in Sources */,

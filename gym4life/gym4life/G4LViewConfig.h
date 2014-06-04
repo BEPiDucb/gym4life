@@ -19,9 +19,11 @@
 @property (weak, nonatomic) IBOutlet UISwitch *sexta;
 @property (weak, nonatomic) IBOutlet UISwitch *sabado;
 @property (weak, nonatomic) IBOutlet UISwitch *domingo;
+@property (nonatomic) NSString * strHorario;
 
 
 - (IBAction)Salvar:(id)sender;
-- (IBAction)series:(id)sender;
+//- (IBAction)series:(id)sender;
+- (IBAction)horarioSeries:(id)sender;
 
 @end

@@ -143,7 +143,7 @@
     
     G4LViewControllerSerie *serie=[[G4LViewControllerSerie alloc] init];
     
-    serie.modalTransitionStyle=UIModalPresentationFormSheet;
+    serie.modalTransitionStyle=UIModalTransitionStyleCrossDissolve;
     
     [self presentViewController:serie animated:YES completion:nil];
     

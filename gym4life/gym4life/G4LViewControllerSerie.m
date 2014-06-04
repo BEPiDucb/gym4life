@@ -47,19 +47,25 @@
     
     // essa parte será dinamica
     CGRect imageViewFrame;
+    CGRect labelOrientacaoFrame;
     
-    imageViewFrame.origin.x=0.0f;
-    imageViewFrame.origin.y=0.0f;
-    imageViewFrame.size = _scrollView.frame.size;
+    
+    imageViewFrame = CGRectMake(0.f, 0.f,280.f,260.f);
+    labelOrientacaoFrame =CGRectMake(0.f, 260.f, 280.f, 56.f);
     
     UIImageView *imageViewExercicio = [[UIImageView alloc] initWithFrame:imageViewFrame];
+    UILabel *labelOrientacao=[[UILabel alloc ]initWithFrame:labelOrientacaoFrame];
+    
     imageViewExercicio.backgroundColor =[UIColor blackColor];
+    labelOrientacao.backgroundColor =[UIColor yellowColor];
+    
     
   // Nome da foto guardado no series.plist
   //  NSString *nomeFoto= [[series[1] objectAtIndex:0]objectForKey:@"nomeImg"];
   //  [imageViewExercicio setImage:[UIImage imageNamed:nomeFoto]];
     
     [_scrollView addSubview:imageViewExercicio];
+    [_scrollView addSubview:labelOrientacao];
     
     // Do any additional setup after loading the view from its nib.
 }

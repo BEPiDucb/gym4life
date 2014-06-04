@@ -7,7 +7,8 @@
 //
 
 #import "G4LViewPrincipal.h"
-#import "G4LViewControllerSerie.h"
+#import "G4LViewSerie.h"
+
 @interface G4LViewPrincipal ()
 
 @end
@@ -27,9 +28,6 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
-   //Carrega arquivos plists no iphone 
-    [self carregarPlistsNoiPhone];
-    
     
     //Aloca o array series
     _seriesArray = [[NSMutableArray alloc]init];
@@ -80,11 +78,19 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     
-    //Mensagem para (encher o saco) teste
+    /*Mensagem para (encher o saco =3) teste
     UIAlertView *messageAlert = [[UIAlertView alloc]
                                  initWithTitle:@"Serie escolhida" message:[NSString stringWithFormat:@"Voce escolheu a Serie %d",(int)indexPath.item] delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
     
     [messageAlert show];
+     //Yay, sem mais alertas para encher o saco ˆˆ
+     */
+    
+    //Aloca a classe a ser mostrada
+    G4LViewSerie *view = [[G4LViewSerie alloc]initWithSerie:(int)indexPath.item andQtdExercicios:3];
+    
+    //Apresenta a xib da classe
+    [self presentViewController:view animated:YES completion:nil];
     
 }
 
@@ -100,56 +106,5 @@
 {
     NSLog(@"Configuracao acionada");
 }
-
-
-//Carregar arquivos plists
--(void) carregarPlistsNoiPhone
-{
     
-    //Recuperando os plists do iphone
-    NSMutableArray *seriesPlist=
-    [[NSMutableArray alloc]
-     initWithContentsOfFile:
-     [[NSBundle mainBundle] pathForResource:@"series" ofType:@"plist"]];
-    
-    
-    
-    //Teste de criacao de uma serie com um exercicio
-    NSMutableArray *serie_01=[[NSMutableArray alloc] init];
-    NSMutableDictionary *exercicio_01=[[NSMutableDictionary alloc] init];
-    
-    [exercicio_01 setObject:@"alogamento do pescoço" forKey:@"nome"];
-    [exercicio_01 setObject:@"coracao_botao.png" forKey:@"nomeImg"];
-    
-    
-    
-    [serie_01 addObject:exercicio_01];
-    [seriesPlist addObject:serie_01];
-    
-    
-    
-    
-    //Gravando a serie no iphone
-    [seriesPlist writeToFile:
-     [[NSBundle mainBundle] pathForResource:@"series" ofType:@"plist"]
-                  atomically:YES];
-    
-    
-    //apagar isso
-    NSLog(@"%@",seriesPlist);
-    
-}
-- (IBAction)iniciarRotina:(id)sender {
-    
-    G4LViewControllerSerie *serie=[[G4LViewControllerSerie alloc] init];
-    
-    serie.modalTransitionStyle=UIModalPresentationFormSheet;
-    
-    [self presentViewController:serie animated:YES completion:nil];
-    
-    
-}
-
-
-
 @end

@@ -111,15 +111,20 @@
     [[NSMutableArray alloc]
      initWithContentsOfFile:
      [[NSBundle mainBundle] pathForResource:@"series" ofType:@"plist"]];
+   
     
+    NSLog(@" Series carregadas %@",seriesPlist);
+
+//    NSMutableArray *seriesPlist =[[NSMutableArray alloc]init];
     
     
     //Teste de criacao de uma serie com um exercicio
     NSMutableArray *serie_01=[[NSMutableArray alloc] init];
     NSMutableDictionary *exercicio_01=[[NSMutableDictionary alloc] init];
     
-    [exercicio_01 setObject:@"alogamento do pescoço" forKey:@"nome"];
-    [exercicio_01 setObject:@"coracao_botao.png" forKey:@"nomeImg"];
+    
+    [exercicio_01 setObject:@"Espreguiçar" forKey:@"nome"];
+    [exercicio_01 setObject:@"coracao_botao_selecionado.png" forKey:@"nomeImg"];
     
     
     
@@ -135,8 +140,6 @@
                   atomically:YES];
     
     
-    //apagar isso
-    NSLog(@"%@",seriesPlist);
     
 }
 - (IBAction)iniciarRotina:(id)sender {

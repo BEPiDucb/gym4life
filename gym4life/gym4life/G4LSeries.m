@@ -7,7 +7,7 @@
 //
 
 #import "G4LSeries.h"
-
+#import "G4LExercicio.h"
 @implementation G4LSeries
 
 
@@ -16,6 +16,7 @@
 {
     //Recupero o seriesPlist
     NSArray *seriesPlist = [[NSBundle mainBundle] pathForResource:@"series" ofType:@"plist"];
+    
     
 }
 @end

@@ -1,5 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
-<dict/>
+<array>
+	<array>
+		<dict>
+			<key>orientacao</key>
+			<array>
+				<string>orientacao 1</string>
+				<string>orientacao 2</string>
+			</array>
+			<key>nome</key>
+			<string>Espreguicar</string>
+			<key>imagens</key>
+			<array>
+				<string>S1_E1_0_espreguicar</string>
+				<string>S1_E1_1_espreguicar</string>
+			</array>
+		</dict>
+		<string></string>
+	</array>
+</array>
 </plist>

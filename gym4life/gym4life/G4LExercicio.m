@@ -11,7 +11,7 @@
 @implementation G4LExercicio
 
 
--(id)carregaExercicio
++(NSMutableArray *)exerciciosSerie:(int)indexSerie
 {
     NSMutableArray *exerciciosDaSerie =[[NSMutableArray alloc]init ];
     

@@ -15,7 +15,8 @@
 @property (nonatomic,readonly) NSString *articulacao;
 @property (nonatomic,readonly) NSString *grupoMuscular;
 @property (nonatomic,readonly) NSString *imagemNome;
+@property (nonatomic) NSMutableArray *orientacao;
 
--(NSMutableArray *) carregaExercicio;
++(NSMutableArray *) exerciciosSerie : (int) indexSerie;
 
 @end

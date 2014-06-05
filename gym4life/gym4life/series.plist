@@ -10,14 +10,58 @@
 				<string>orientacao 2</string>
 			</array>
 			<key>nome</key>
-			<string>Espreguicar</string>
+			<string>Ramon </string>
 			<key>imagens</key>
 			<array>
-				<string>S1_E1_0_espreguicar</string>
-				<string>S1_E1_1_espreguicar</string>
+				<string>S1_E1_0_espreguicar.png</string>
+				<string>S1_E1_1_espreguicar.png</string>
 			</array>
 		</dict>
-		<string></string>
+		<dict>
+			<key>orientacao</key>
+			<array>
+				<string>orientacao 1</string>
+				<string>orientacao 2</string>
+			</array>
+			<key>nome</key>
+			<string>exercicio Dois</string>
+			<key>imagens</key>
+			<array>
+				<string>S1_E2_0_espreguicar</string>
+				<string>S1_E2_1_espreguicar</string>
+			</array>
+		</dict>
 	</array>
+	<array>
+		<dict>
+			<key>orientacao</key>
+			<array>
+				<string>orientacao 1</string>
+				<string>orientacao 2</string>
+			</array>
+			<key>nome</key>
+			<string>alongar</string>
+			<key>imagens</key>
+			<array>
+				<string>S2_E1_0_espreguicar</string>
+				<string>S2_E1_1_espreguicar</string>
+			</array>
+		</dict>
+		<dict>
+			<key>orientacao</key>
+			<array>
+				<string>orientacao 1</string>
+				<string>orientacao 2</string>
+			</array>
+			<key>nome</key>
+			<string>exercicio Dois</string>
+			<key>imagens</key>
+			<array>
+				<string>S2_E2_0_espreguicar</string>
+				<string>S2_E2_1_espreguicar</string>
+			</array>
+		</dict>
+	</array>
+	<integer>0</integer>
 </array>
 </plist>

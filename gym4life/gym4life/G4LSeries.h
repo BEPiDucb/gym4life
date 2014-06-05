@@ -13,6 +13,7 @@
 
 @property (nonatomic) NSString *nome;
 @property (nonatomic) NSMutableArray *exercicios;
+@property (nonatomic) int numSerie;
 
--(void) carregarSerie;
++(G4LSeries *) serieEscolhida;
 @end

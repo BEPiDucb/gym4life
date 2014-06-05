@@ -7,6 +7,8 @@
 //
 
 #import "G4LViewControllerSerie.h"
+#import "G4LSeries.h"
+#import "G4LExercicio.h"
 
 @interface G4LViewControllerSerie ()
 
@@ -39,33 +41,48 @@
 {
     [super viewDidLoad];
     
-    NSMutableArray *series=[[NSMutableArray alloc]
-                initWithContentsOfFile:[
-                                        [NSBundle mainBundle] pathForResource:@"series" ofType:@"plist"]
-                                        ];
+    G4LSeries *serieEscolhida=[G4LSeries serieEscolhida];
+    G4LExercicio *exercicio;
     
-    
-    // essa parte será dinamica
     CGRect imageViewFrame;
     CGRect labelOrientacaoFrame;
+
+    UIImageView *imageViewExercicio ;
+    UILabel *labelOrientacao;
     
     
-    imageViewFrame = CGRectMake(0.f, 0.f,240.f,300.f);
-    labelOrientacaoFrame =CGRectMake(0.f, 240.f, 240.f, 70.f);
     
-    UIImageView *imageViewExercicio = [[UIImageView alloc] initWithFrame:imageViewFrame];
-    UILabel *labelOrientacao=[[UILabel alloc ]initWithFrame:labelOrientacaoFrame];
+    for (int i=0; i<[[serieEscolhida exercicios] count]; i++)
+    {
     
-    imageViewExercicio.backgroundColor =[UIColor blackColor];
-    labelOrientacao.backgroundColor =[UIColor yellowColor];
+        exercicio= [[serieEscolhida exercicios] objectAtIndex:0];
     
+        
+        imageViewFrame = CGRectMake(0.f, 0.f,240.f,240.f);
+        labelOrientacaoFrame =CGRectMake(0.f, 240.f, 240.f, 70.f);
+        
+        imageViewFrame.origin.x=_scrollView.frame.size.width*i;
+        labelOrientacaoFrame.origin.x=_scrollView.frame.size.width*i;
     
-  // Nome da foto guardado no series.plist
-  //  NSString *nomeFoto= [[series[1] objectAtIndex:0]objectForKey:@"nomeImg"];
-  //  [imageViewExercicio setImage:[UIImage imageNamed:nomeFoto]];
+        imageViewExercicio = [[UIImageView alloc] initWithFrame:imageViewFrame];
+        labelOrientacao=[[UILabel alloc ]initWithFrame:labelOrientacaoFrame];
     
-    [_scrollView addSubview:imageViewExercicio];
-    [_scrollView addSubview:labelOrientacao];
+        
+        [imageViewExercicio setImage:[UIImage imageNamed:[[exercicio imagens] objectAtIndex:i]]];
+        
+        [imageViewExercicio setContentMode:UIViewContentModeScaleToFill];
+        
+        labelOrientacao.text=[[exercicio orientacao] objectAtIndex:i];
+        labelOrientacao.textAlignment=NSTextAlignmentCenter;
+        
+        _ExercicioNome.text=[exercicio nome];
+        [_scrollView addSubview:imageViewExercicio];
+        [_scrollView addSubview:labelOrientacao];
+    
+    }//fim for
+    
+    _scrollView.contentSize = CGSizeMake(self.scrollView.frame.size.width * [[serieEscolhida exercicios]count], self.scrollView.frame.size.height);
+
     
     // Do any additional setup after loading the view from its nib.
 }

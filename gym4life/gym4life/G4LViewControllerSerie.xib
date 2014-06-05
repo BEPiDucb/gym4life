@@ -6,6 +6,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="G4LViewControllerSerie">
             <connections>
+                <outlet property="ExercicioNome" destination="XVQ-G4-HuL" id="JfR-Kz-acb"/>
                 <outlet property="scrollView" destination="MkS-rh-VsF" id="xf8-JS-Nac"/>
                 <outlet property="view" destination="1" id="3"/>
             </connections>
@@ -25,8 +26,8 @@
                         <action selector="seriesBotao:" destination="-1" eventType="touchUpInside" id="1Ma-ZX-dzy"/>
                     </connections>
                 </button>
-                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Serie_Nome" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XVQ-G4-HuL">
-                    <rect key="frame" x="113" y="83" width="94" height="21"/>
+                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Exercicio_Nome" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XVQ-G4-HuL">
+                    <rect key="frame" x="98" y="93" width="125" height="21"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -35,7 +36,6 @@
                 <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="MkS-rh-VsF">
                     <rect key="frame" x="40" y="141" width="240" height="300"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                    <color key="backgroundColor" red="0.75294125079999996" green="0.73725491759999995" blue="0.74117648599999997" alpha="1" colorSpace="deviceRGB"/>
                 </scrollView>
                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a0D-gu-Tvg">
                     <rect key="frame" x="17" y="459" width="89" height="30"/>

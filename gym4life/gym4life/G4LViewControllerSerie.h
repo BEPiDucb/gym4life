@@ -10,5 +10,6 @@
 
 @interface G4LViewControllerSerie : UIViewController
 @property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
+@property (weak, nonatomic) IBOutlet UILabel *ExercicioNome;
 
 @end

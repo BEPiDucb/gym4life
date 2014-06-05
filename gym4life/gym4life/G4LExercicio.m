@@ -16,9 +16,29 @@
     NSMutableArray *exerciciosDaSerie =[[NSMutableArray alloc]init ];
     
     //Recupera os dados de series.plist
+    NSArray *seriesPlist=[[NSArray alloc] initWithContentsOfFile:
+    [[NSBundle mainBundle] pathForResource:@"series" ofType:@"plist"]];
     
-    NSArray *seriesPlist=[[NSBundle mainBundle] pathForResource:@"series" ofType:@"plist"];
+    NSArray *exerciciosNaSerie=[seriesPlist objectAtIndex:indexSerie];
     
+    NSDictionary *exerciciosDictionary;
+    G4LExercicio *exercicio;
+    
+
+  for (int i=0; i<[exerciciosNaSerie count]; i++)
+    {
+        
+        exerciciosDictionary =[exerciciosNaSerie objectAtIndex:i];
+        exercicio=[[G4LExercicio alloc]init];
+        
+        [exercicio setOrientacao: [exerciciosDictionary objectForKey:@"orientacao"]];
+        [exercicio setImagens:[exerciciosDictionary objectForKey:@"imagens"]];
+        [exercicio setNome:[exerciciosDictionary objectForKey:@"nome"]];
+        
+        [exerciciosDaSerie addObject:exercicio];
+    }
+    
+    NSLog(@"[Classe Exercicio]%@",exerciciosNaSerie);
     
     return exerciciosDaSerie;
 }

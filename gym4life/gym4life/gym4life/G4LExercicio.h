@@ -11,12 +11,10 @@
 @interface G4LExercicio : NSObject{
     
 }
-@property (nonatomic) NSString *nome;
-
-@property (nonatomic) NSString *articulacao;
-@property (nonatomic) NSString *grupoMuscular;
-
-@property (nonatomic) NSArray  *imagens;
+@property (nonatomic,readonly) NSString *nome;
+@property (nonatomic,readonly) NSString *articulacao;
+@property (nonatomic,readonly) NSString *grupoMuscular;
+@property (nonatomic,readonly) NSString *imagemNome;
 @property (nonatomic) NSMutableArray *orientacao;
 
 +(NSMutableArray *) exerciciosSerie : (int) indexSerie;

@@ -8,6 +8,9 @@
 
 #import "G4LViewPrincipal.h"
 #import "G4LViewControllerSerie.h"
+#import "G4LSeries.h"
+#import "G4LExercicio.h"
+
 @interface G4LViewPrincipal ()
 
 @end
@@ -28,7 +31,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
    //Carrega arquivos plists no iphone 
-    [self carregarPlistsNoiPhone];
+    [self carregarDadosNoiPhone];
     
     
     //Aloca o array series
@@ -92,6 +95,7 @@
 -(IBAction)mudaNotificacao:(id)sender
 {
     NSLog(@"Botao acionado");
+    
 }
 
 
@@ -103,42 +107,11 @@
 
 
 //Carregar arquivos plists
--(void) carregarPlistsNoiPhone
+-(void) carregarDadosNoiPhone
 {
-    
-    //Recuperando os plists do iphone
-    NSMutableArray *seriesPlist=
-    [[NSMutableArray alloc]
-     initWithContentsOfFile:
-     [[NSBundle mainBundle] pathForResource:@"series" ofType:@"plist"]];
-   
-    
-    NSLog(@" Series carregadas %@",seriesPlist);
+//Carregar Serie escolhida pelo usuario
+    G4LSeries *serieEscolhida=[G4LSeries serieEscolhida];
 
-//    NSMutableArray *seriesPlist =[[NSMutableArray alloc]init];
-    
-    
-    //Teste de criacao de uma serie com um exercicio
-    NSMutableArray *serie_01=[[NSMutableArray alloc] init];
-    NSMutableDictionary *exercicio_01=[[NSMutableDictionary alloc] init];
-    
-    
-    [exercicio_01 setObject:@"Espreguiçar" forKey:@"nome"];
-    [exercicio_01 setObject:@"coracao_botao_selecionado.png" forKey:@"nomeImg"];
-    
-    
-    
-    [serie_01 addObject:exercicio_01];
-    [seriesPlist addObject:serie_01];
-    
-    
-    
-    
-    //Gravando a serie no iphone
-    [seriesPlist writeToFile:
-     [[NSBundle mainBundle] pathForResource:@"series" ofType:@"plist"]
-                  atomically:YES];
-    
     
     
 }

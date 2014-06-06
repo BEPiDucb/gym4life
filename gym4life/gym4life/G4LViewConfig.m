@@ -101,7 +101,25 @@
     // Dispose of any resources that can be recreated.
 }
 
-
+- (void)alertaMessagem:(UISwitch *)sender{
+    UILocalNotification *localNotification = [[UILocalNotification alloc] init];
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+    [dateFormatter setDateFormat:@"HH:mm"];
+    NSDate *hora = [dateFormatter dateFromString:self.strHorario];
+    NSLog(@"%@",hora);
+    
+    if (sender.on) {
+        NSDate *data = [NSDate date];
+        localNotification.fireDate = hora;
+        [dateFormatter setDateFormat:@"dd-MM-YYYY"];
+        NSString *str = [dateFormatter stringFromDate:data];
+        localNotification.alertBody = [NSString stringWithFormat:@"Começou seu exercício! %@ %@", str
+                                       ,self.strHorario];
+        localNotification.soundName = UILocalNotificationDefaultSoundName;
+        localNotification.applicationIconBadgeNumber = 1;
+        [[UIApplication sharedApplication] scheduleLocalNotification:localNotification];
+    }
+}
 - (IBAction)Salvar:(id)sender {
     //setando valor de horas
     self.strHorario = [[G4LViewConfigHora defaultHora]str];
@@ -125,7 +143,17 @@
     
     [configuracoesPlist addObject:configuracoesDoUsuario];
     [configuracoesPlist writeToFile:configuracoesPlistEndereco atomically:YES];
-
+    
+    //alerta
+    [self alertaMessagem:self.segunda];
+    [self alertaMessagem:self.terca];
+    [self alertaMessagem:self.quarta];
+    [self alertaMessagem:self.quinta];
+    [self alertaMessagem:self.sexta];
+    [self alertaMessagem:self.sabado];
+    [self alertaMessagem:self.domingo];
+    
+    
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 

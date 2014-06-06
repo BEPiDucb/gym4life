@@ -25,5 +25,5 @@
 - (IBAction)Salvar:(id)sender;
 //- (IBAction)series:(id)sender;
 - (IBAction)horarioSeries:(id)sender;
-
+- (void)alertaMessagem:(UISwitch *)sender;
 @end

@@ -40,6 +40,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    [self iniciarExercicios];
     
      pageControlBeingUsed = NO;
     
@@ -138,6 +139,93 @@
     
     pageControlBeingUsed = YES;
 
+}
+
+-(void) iniciarExercicios
+{
+    /*Deixa a scrollview invisivel ao usuario
+      e substitui o espaco por uma image view que 
+     trocara as imagens dos exercicios
+     */
+    _scrollView.alpha=0;
+    _pageControl.alpha=0;
+    
+    CGRect labelOrientacaoFrame;
+    
+    exerciciosImageView=[[UIImageView alloc]initWithFrame:_scrollView.frame];
+
+    labelOrientacaoFrame =CGRectMake(0.f, 240.f, 240.f, 120.f);
+    labelOrientacaoFrame.origin.x=exerciciosImageView.frame.origin.x;
+    labelOrientacaoFrame.origin.y=exerciciosImageView.frame.size.width+exerciciosImageView.frame.origin.y;
+    
+    labelOrientacao = [[UILabel alloc]initWithFrame:labelOrientacaoFrame];
+    
+    
+    //carrega  o cronometro com 10 segundos para cada exercicio
+    cronometro =
+    [NSTimer
+     scheduledTimerWithTimeInterval:1          //A cada X segundos (no caso 1)
+     target:self                               //Para um alvo (o próprio cronomero)
+     selector:@selector(ContadorCronometro)    //Chama um seletor (no caso o método ContadorCronometro)
+     userInfo:nil                              //Não sei pra que serve =3
+     repeats:YES];                             //Se repete
+    
+    contador=10;
+    
+    [exerciciosImageView setImage:[UIImage imageNamed:[[[[[G4LSeries serieEscolhida] exercicios] firstObject] imagens] objectAtIndex:0]]];
+    labelOrientacao.backgroundColor=[UIColor redColor];
+    
+    [self.view addSubview:labelOrientacao];
+    [self.view addSubview:exerciciosImageView];
+    
+    
+}
+
+-(void)ContadorCronometro
+{
+    NSArray *exerciciosDaSerie=[[G4LSeries serieEscolhida]exercicios];
+    qtdExercicios=[exerciciosDaSerie count];
+    G4LExercicio *exercicioCorrente;
+    
+    //Assim que chamado, decrementa o contador geral
+    contador --;
+    
+    //Quando o contador for menor que 0
+    if(contador < 0)
+    {
+        
+        //Incrementa o número do exercício
+        exercicio++;
+        
+        //Quando acabar os exercícios
+        if(exercicio == qtdExercicios)
+        {
+            
+            //Retira a view
+            [self dismissViewControllerAnimated:YES completion:nil];
+            
+        }else
+        {
+            
+            //Imprime o valor do exercício
+            exercicioCorrente =[exerciciosDaSerie objectAtIndex:exercicio];
+            _ExercicioNome.text =[exercicioCorrente nome];
+            
+            [exerciciosImageView setImage:[UIImage imageNamed:[[exercicioCorrente imagens ] objectAtIndex:0]]];
+            NSLog(@"imagem %@",[[exercicioCorrente imagens ] objectAtIndex:0]);
+            
+            [self.view addSubview:exerciciosImageView];
+            
+            //Reseta o contador geral
+            contador = 10;
+            
+            //Imprime o valor do cronometro
+            _cronometroLabel.text = [NSString stringWithFormat:@"00:%02d",contador];
+        }
+    }else{
+        //Imprime o valor do cronometro
+        _cronometroLabel.text = [NSString stringWithFormat:@"00:%02d",contador];
+    }
 }
 
 - (void)didReceiveMemoryWarning

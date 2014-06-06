@@ -26,7 +26,8 @@
 - (id)initWithSerie:(int)serie andQtdExercicios:(int)numExercicios
 {
     self = [super init];
-    if (self) {
+    if (self)
+    {
         numSerie = serie;
         qtdExercicios = numExercicios;
         exercicio = 1;
@@ -49,7 +50,7 @@
     [NSTimer
      scheduledTimerWithTimeInterval:1          //A cada X segundos (no caso 1)
      target:self                               //Para um alvo (o próprio cronomero)
-     selector:@selector(ContadorCronometro)    //Chama um seletor (no caso o método ContadorCronometro
+     selector:@selector(ContadorCronometro)    //Chama um seletor (no caso o método ContadorCronometro)
      userInfo:nil                              //Não sei pra que serve =3
      repeats:YES];                             //Se repete
 }

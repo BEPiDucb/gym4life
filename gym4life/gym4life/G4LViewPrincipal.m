@@ -10,6 +10,7 @@
 #import "G4LViewControllerSerie.h"
 #import "G4LSeries.h"
 #import "G4LExercicio.h"
+#import "G4LMostraSerie.h"
 
 @interface G4LViewPrincipal ()
 
@@ -37,9 +38,13 @@
     //Aloca o array series
     _seriesArray = [[NSMutableArray alloc]init];
     
+    NSArray *seriesPlist=[[NSArray alloc] initWithContentsOfFile:
+                          [[NSBundle mainBundle] pathForResource:@"series" ofType:@"plist"]];
+
+    
     // Preenche o array com 30 series vazias, apenas para demonstração e teste,
     // devendo ser mudado para alocar em vez de strings, alocar arrays de exercícios
-    for(int i=0;i<30;i++){
+    for(int i=0;i<seriesPlist.count - 1;i++){
         [_seriesArray addObject:[NSString stringWithFormat:@"Serie %d",i]];
     }
     
@@ -83,11 +88,13 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     
-    //Mensagem para (encher o saco) teste
-    UIAlertView *messageAlert = [[UIAlertView alloc]
-                                 initWithTitle:@"Serie escolhida" message:[NSString stringWithFormat:@"Voce escolheu a Serie %d",(int)indexPath.item] delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+    [G4LSeries setNumSerie:(int)indexPath.item];
     
-    [messageAlert show];
+    G4LViewControllerSerie *serie=[[G4LViewControllerSerie alloc] init];
+    
+    serie.modalTransitionStyle=UIModalTransitionStyleCrossDissolve;
+    
+    [self presentViewController:serie animated:YES completion:nil];
     
 }
 
@@ -102,16 +109,19 @@
 //Método chamado quando o botão de configuração é chamado
 -(IBAction)botaoConfigurar:(id)sender
 {
-    NSLog(@"Configuracao acionada");
+    G4LMostraSerie *view = [[G4LMostraSerie alloc]init];
+    
+    [self presentViewController:view animated:YES completion:nil];
+    
 }
 
 
 //Carregar arquivos plists
 -(void) carregarDadosNoiPhone
 {
-//Carregar Serie escolhida pelo usuario
-    G4LSeries *serieEscolhida=[G4LSeries serieEscolhida];
 
+    //Carregar Serie escolhida pelo usuario
+    G4LSeries *serieEscolhida=[G4LSeries serieEscolhida];
     
     
 }

@@ -9,8 +9,8 @@
 #import "G4LSeries.h"
 #import "G4LExercicio.h"
 @implementation G4LSeries
-static G4LSeries *serieEscolhida=nil;
 
+static G4LSeries *serieEscolhida=nil;
 
 +(G4LSeries *)serieEscolhida
 {
@@ -18,18 +18,24 @@ static G4LSeries *serieEscolhida=nil;
     [[NSBundle mainBundle] pathForResource: @"series" ofType:@"plist" ]
     ];
     
-    int indexSerieEscolhida=0;
+    int indexSerieEscolhida = 0;
     
     
     if (serieEscolhida==nil)
     {
-        indexSerieEscolhida=[[seriesPlist lastObject] intValue];
-        serieEscolhida =[[G4LSeries alloc]init];
-        serieEscolhida.exercicios=[G4LExercicio exerciciosSerie:indexSerieEscolhida];
+        indexSerieEscolhida = [[seriesPlist lastObject] intValue];
+        serieEscolhida = [[G4LSeries alloc]init];
+        serieEscolhida.exercicios = [G4LExercicio exerciciosSerie:indexSerieEscolhida];
         
     }
     return serieEscolhida;
 }
+
++(void)setNumSerie:(int)nroSerie
+{
+    serieEscolhida.exercicios = [G4LExercicio exerciciosSerie:nroSerie];
+}
+
 -(void)carregarSerie
 {
     //Recupero o seriesPlist

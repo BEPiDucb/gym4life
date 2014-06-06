@@ -41,6 +41,8 @@
 {
     [super viewDidLoad];
     
+     pageControlBeingUsed = NO;
+    
     G4LSeries *serieEscolhida=[G4LSeries serieEscolhida];
     G4LExercicio *exercicio;
     
@@ -81,10 +83,61 @@
     
     }//fim for
     
+    //Habilita a paginação
+    self.scrollView.pagingEnabled = YES;
+    self.scrollView.delegate = self;
+    
+    
     _scrollView.contentSize = CGSizeMake(self.scrollView.frame.size.width * [[serieEscolhida exercicios]count], self.scrollView.frame.size.height);
 
+    //Faz o pageControl iniciar na primeira página, já que a view acabou de ser carregada.
+    self.pageControl.currentPage = 0;
     
-    // Do any additional setup after loading the view from its nib.
+    //Define o número de páginas do pageControl
+    self.pageControl.numberOfPages = [[serieEscolhida exercicios]count];
+    
+   
+}
+
+//Método chamado se a scrollview sofreu a açao de scroll
+-(void)scrollViewDidScroll:(UIScrollView *)scrollView{
+    
+    //Se não foi clicado no pageControl
+    if(!pageControlBeingUsed){
+        
+        //Define a largura da página
+        CGFloat pageWidth = self.scrollView.frame.size.width;
+        
+        //Um cálculo para definir o número da página
+        int page = floor((self.scrollView.contentOffset.x - pageWidth / 2) / pageWidth) + 1;
+        
+        //Define a posição da bolinha branca do pageControl
+        self.pageControl.currentPage = page;
+        
+    }
+    
+}
+-(void)scrollViewWillBeginDragging:(UIScrollView *)scrollView
+{
+    pageControlBeingUsed = NO;
+}
+
+-(void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView
+{
+    pageControlBeingUsed = NO;
+}
+
+- (IBAction)paginaMudada:(id)sender {
+    
+    CGRect frame;
+    
+    frame.origin.x = self.scrollView.frame.size.width * self.pageControl.currentPage;
+    frame.origin.y = 0;
+    frame.size = self.scrollView.frame.size;
+    [self.scrollView scrollRectToVisible:frame animated:YES];
+    
+    pageControlBeingUsed = YES;
+
 }
 
 - (void)didReceiveMemoryWarning

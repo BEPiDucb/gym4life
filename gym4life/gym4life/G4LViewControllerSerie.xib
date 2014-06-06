@@ -7,6 +7,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="G4LViewControllerSerie">
             <connections>
                 <outlet property="ExercicioNome" destination="XVQ-G4-HuL" id="JfR-Kz-acb"/>
+                <outlet property="pageControl" destination="ijq-t3-q7d" id="h5M-zP-Wd6"/>
                 <outlet property="scrollView" destination="MkS-rh-VsF" id="xf8-JS-Nac"/>
                 <outlet property="view" destination="1" id="3"/>
             </connections>
@@ -38,7 +39,7 @@
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                 </scrollView>
                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a0D-gu-Tvg">
-                    <rect key="frame" x="17" y="459" width="89" height="30"/>
+                    <rect key="frame" x="20" y="492" width="89" height="30"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <state key="normal" title="img_favoritar">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -47,6 +48,14 @@
                         <action selector="img_favoritar:" destination="-1" eventType="touchUpInside" id="7Ns-cb-cIM"/>
                     </connections>
                 </button>
+                <pageControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="ijq-t3-q7d">
+                    <rect key="frame" x="141" y="449" width="39" height="37"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <color key="backgroundColor" red="0.75294125079999996" green="0.73725491759999995" blue="0.74117648599999997" alpha="1" colorSpace="deviceRGB"/>
+                    <connections>
+                        <action selector="paginaMudada:" destination="-1" eventType="valueChanged" id="bCm-Qn-Cdk"/>
+                    </connections>
+                </pageControl>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>

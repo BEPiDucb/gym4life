@@ -13,13 +13,11 @@
 {
     //Flag para saber se o pageControl está sendo usado
     BOOL pageControlBeingUsed;
-    
+    NSArray *imagensDoExercicio;
     NSTimer *cronometro;
     int contador,numSerie,exercicio,qtdExercicios;
     
-    UIImageView *exerciciosImageView;
     
-    UILabel *labelOrientacao;
     }
 
 @property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
@@ -28,5 +26,8 @@
 @property (weak, nonatomic) IBOutlet UIPageControl *pageControl;
 
 @property (weak, nonatomic) IBOutlet UILabel *cronometroLabel;
+@property (weak, nonatomic) IBOutlet UILabel *labelOrientacao;
+
+@property (weak, nonatomic) IBOutlet UIImageView *exerciciosImageView;
 
 @end

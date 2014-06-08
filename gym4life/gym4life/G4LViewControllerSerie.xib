@@ -8,6 +8,8 @@
             <connections>
                 <outlet property="ExercicioNome" destination="XVQ-G4-HuL" id="JfR-Kz-acb"/>
                 <outlet property="cronometroLabel" destination="lqQ-XJ-YWF" id="NPd-6E-jEW"/>
+                <outlet property="exerciciosImageView" destination="Q9h-VO-VQQ" id="bI4-On-ALq"/>
+                <outlet property="labelOrientacao" destination="JsU-di-H4c" id="fCC-ap-GIP"/>
                 <outlet property="pageControl" destination="ijq-t3-q7d" id="h5M-zP-Wd6"/>
                 <outlet property="scrollView" destination="MkS-rh-VsF" id="xf8-JS-Nac"/>
                 <outlet property="view" destination="1" id="3"/>
@@ -35,8 +37,12 @@
                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                     <nil key="highlightedColor"/>
                 </label>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Q9h-VO-VQQ">
+                    <rect key="frame" x="40" y="134" width="240" height="300"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                </imageView>
                 <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="MkS-rh-VsF">
-                    <rect key="frame" x="40" y="141" width="240" height="300"/>
+                    <rect key="frame" x="40" y="134" width="240" height="300"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                 </scrollView>
                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a0D-gu-Tvg">
@@ -53,13 +59,20 @@
                     <rect key="frame" x="141" y="449" width="39" height="37"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <color key="pageIndicatorTintColor" red="0.98039215690000003" green="0.98039215690000003" blue="0.98039215690000003" alpha="1" colorSpace="deviceRGB"/>
-                    <color key="currentPageIndicatorTintColor" patternImage="AD04BAAF-6B38-4415-8102-44E22F8609C6" colorSpace="pattern"/>
+                    <color key="currentPageIndicatorTintColor" patternImage="4D8B7F34-571B-4B9E-BAC6-A743A38BCDF8" colorSpace="pattern"/>
                     <connections>
                         <action selector="paginaMudada:" destination="-1" eventType="valueChanged" id="bCm-Qn-Cdk"/>
                     </connections>
                 </pageControl>
                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Cronometro" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lqQ-XJ-YWF">
                     <rect key="frame" x="114" y="68" width="92" height="21"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="label_orientacao" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JsU-di-H4c">
+                    <rect key="frame" x="40" y="457" width="240" height="21"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -73,7 +86,7 @@
         </view>
     </objects>
     <resources>
-        <image name="AD04BAAF-6B38-4415-8102-44E22F8609C6" width="320" height="460">
+        <image name="4D8B7F34-571B-4B9E-BAC6-A743A38BCDF8" width="320" height="460">
             <mutableData key="keyedArchiveRepresentation">
 YnBsaXN0MDDUAQIDBAUGPj9YJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVyVCR0b3ASAAGGoK4HCBMU
 GR4fIyQsLzI4O1UkbnVsbNUJCgsMDQ4PEBESVk5TU2l6ZVYkY2xhc3NcTlNJbWFnZUZsYWdzVk5TUmVw

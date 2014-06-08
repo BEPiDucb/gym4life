@@ -150,39 +150,32 @@
     _scrollView.alpha=0;
     _pageControl.alpha=0;
     
-    CGRect labelOrientacaoFrame;
     
-    exerciciosImageView=[[UIImageView alloc]initWithFrame:_scrollView.frame];
+    imagensDoExercicio=@[[UIImage imageNamed:@"S1_E1_0_espreguicar.png"],[UIImage imageNamed:@"S1_E1_1_espreguicar.png"]];
+    
+    _exerciciosImageView.image=imagensDoExercicio[0];
+    
 
-    labelOrientacaoFrame =CGRectMake(0.f, 240.f, 240.f, 120.f);
-    labelOrientacaoFrame.origin.x=exerciciosImageView.frame.origin.x;
-    labelOrientacaoFrame.origin.y=exerciciosImageView.frame.size.width+exerciciosImageView.frame.origin.y;
-    
-    labelOrientacao = [[UILabel alloc]initWithFrame:labelOrientacaoFrame];
-    
     
     //carrega  o cronometro com 10 segundos para cada exercicio
     cronometro =
     [NSTimer
      scheduledTimerWithTimeInterval:1          //A cada X segundos (no caso 1)
      target:self                               //Para um alvo (o próprio cronomero)
-     selector:@selector(ContadorCronometro)    //Chama um seletor (no caso o método ContadorCronometro)
+  //   selector:@selector(ContadorCronometro)    //Chama um seletor (no caso o método ContadorCronometro)
+     selector:@selector(segundoTeste)
      userInfo:nil                              //Não sei pra que serve =3
      repeats:YES];                             //Se repete
     
-    contador=10;
+   
     
-    [exerciciosImageView setImage:[UIImage imageNamed:[[[[[G4LSeries serieEscolhida] exercicios] firstObject] imagens] objectAtIndex:0]]];
-    labelOrientacao.backgroundColor=[UIColor redColor];
-    
-    [self.view addSubview:labelOrientacao];
-    [self.view addSubview:exerciciosImageView];
     
     
 }
 
 -(void)ContadorCronometro
 {
+    NSLog(@"Fui Chamado !");
     NSArray *exerciciosDaSerie=[[G4LSeries serieEscolhida]exercicios];
     qtdExercicios=[exerciciosDaSerie count];
     G4LExercicio *exercicioCorrente;
@@ -208,13 +201,13 @@
         {
             
             //Imprime o valor do exercício
-            exercicioCorrente =[exerciciosDaSerie objectAtIndex:exercicio];
-            _ExercicioNome.text =[exercicioCorrente nome];
-            
-            [exerciciosImageView setImage:[UIImage imageNamed:[[exercicioCorrente imagens ] objectAtIndex:0]]];
-            NSLog(@"imagem %@",[[exercicioCorrente imagens ] objectAtIndex:0]);
-            
-            [self.view addSubview:exerciciosImageView];
+//            exercicioCorrente =[exerciciosDaSerie objectAtIndex:exercicio];
+//            _ExercicioNome.text =[exercicioCorrente nome];
+//            
+//            [exerciciosImageView setImage:[UIImage imageNamed:[[exercicioCorrente imagens ] objectAtIndex:0]]];
+//            NSLog(@"imagem %@",[[exercicioCorrente imagens ] objectAtIndex:0]);
+//            
+//            [self.view addSubview:exerciciosImageView];
             
             //Reseta o contador geral
             contador = 10;
@@ -226,6 +219,32 @@
         //Imprime o valor do cronometro
         _cronometroLabel.text = [NSString stringWithFormat:@"00:%02d",contador];
     }
+}
+
+-(void) segundoTeste
+{
+
+    NSLog(@"Rodando!");
+    //prepara transicao das imagens do exercicios
+    CATransition *transicao=[CATransition animation];
+    transicao.type=kCATransitionFade;
+    
+    //aplica a transicao no imageView dos exercicios
+    [_exerciciosImageView.layer addAnimation:transicao forKey:nil];
+    
+    NSUInteger index =[imagensDoExercicio indexOfObject:_exerciciosImageView.image];
+    
+    index= (index+1)%[imagensDoExercicio count];
+    _exerciciosImageView.image=imagensDoExercicio[index];
+    
+    if (contador>5)
+    {
+        [cronometro invalidate];
+        NSLog(@"Parei");
+    }
+    
+  contador++;
+    
 }
 
 - (void)didReceiveMemoryWarning

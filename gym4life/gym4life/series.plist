@@ -15,7 +15,6 @@
 			<array>
 				<string>S1_E1_0_espreguicar.png</string>
 				<string>S1_E1_1_espreguicar.png</string>
-				<string></string>
 			</array>
 		</dict>
 		<dict>
@@ -44,8 +43,8 @@
 			<string>alongar</string>
 			<key>imagens</key>
 			<array>
-				<string>S2_E1_0_espreguicar</string>
-				<string>S2_E1_1_espreguicar</string>
+				<string>S1_E1_0_espreguicar.png</string>
+				<string>S1_E1_1_espreguicar.png</string>
 			</array>
 		</dict>
 		<dict>
@@ -58,8 +57,8 @@
 			<string>exercicio Dois</string>
 			<key>imagens</key>
 			<array>
-				<string>S2_E2_0_espreguicar</string>
-				<string>S2_E2_1_espreguicar</string>
+				<string>S1_E2_0_espreguicar.png</string>
+				<string>S1_E2_1_espreguicar.png</string>
 			</array>
 		</dict>
 	</array>

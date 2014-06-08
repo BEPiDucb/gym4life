@@ -40,7 +40,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    [self iniciarExercicios];
+   // [self iniciarExercicios];
     
      pageControlBeingUsed = NO;
     
@@ -71,7 +71,7 @@
         labelOrientacao=[[UILabel alloc ]initWithFrame:labelOrientacaoFrame];
     
         
-        [imageViewExercicio setImage:[UIImage imageNamed:[[exercicio imagens] objectAtIndex:i]]];
+        [imageViewExercicio setImage:[[exercicio imagens] objectAtIndex:i]];
         
         [imageViewExercicio setContentMode:UIViewContentModeScaleToFill];
         

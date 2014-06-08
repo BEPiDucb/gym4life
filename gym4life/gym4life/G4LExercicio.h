@@ -16,7 +16,7 @@
 @property (nonatomic) NSString *articulacao;
 @property (nonatomic) NSString *grupoMuscular;
 
-@property (nonatomic) NSArray  *imagens;
+@property (nonatomic) NSMutableArray  *imagens;
 @property (nonatomic) NSMutableArray *orientacao;
 
 +(NSMutableArray *) exerciciosSerie : (int) indexSerie;

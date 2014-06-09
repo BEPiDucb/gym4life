@@ -13,9 +13,11 @@
 {
     //Flag para saber se o pageControl está sendo usado
     BOOL pageControlBeingUsed;
-    NSArray *imagensDoExercicio;
+    NSMutableArray *animacoesExercicios;
     NSTimer *cronometro;
-    int contador,numSerie,exercicio,qtdExercicios;
+    int contador,indexExercicioCorrenteAnimacao;
+    int tempoTroca;
+    int tempoTotal;
     
     
     }

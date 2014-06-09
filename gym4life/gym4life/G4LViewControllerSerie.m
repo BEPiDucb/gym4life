@@ -40,7 +40,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-   // [self iniciarExercicios];
+    [self iniciarExercicios];
     
      pageControlBeingUsed = NO;
     
@@ -149,9 +149,11 @@
      */
     _scrollView.alpha=0;
     _pageControl.alpha=0;
+    G4LSeries *serieEscolhida=[G4LSeries serieEscolhida];
     
     
-    imagensDoExercicio=@[[UIImage imageNamed:@"S1_E1_0_espreguicar.png"],[UIImage imageNamed:@"S1_E1_1_espreguicar.png"]];
+    
+//    imagensDoExercicio=@[[UIImage imageNamed:@"S1_E1_0_espreguicar.png"],[UIImage imageNamed:@"S1_E1_1_espreguicar.png"]];
     
     _exerciciosImageView.image=imagensDoExercicio[0];
     
@@ -167,8 +169,7 @@
      userInfo:nil                              //Não sei pra que serve =3
      repeats:YES];                             //Se repete
     
-   
-    
+    contador=0;
     
     
 }
@@ -224,7 +225,11 @@
 -(void) segundoTeste
 {
 
+    int segundoEntradaImangem=0;
     NSLog(@"Rodando!");
+    //atualizando o marcador de tempo
+    _cronometroLabel.text = [NSString stringWithFormat:@"00:%02d",contador];
+    
     //prepara transicao das imagens do exercicios
     CATransition *transicao=[CATransition animation];
     transicao.type=kCATransitionFade;
@@ -232,18 +237,23 @@
     //aplica a transicao no imageView dos exercicios
     [_exerciciosImageView.layer addAnimation:transicao forKey:nil];
     
-    NSUInteger index =[imagensDoExercicio indexOfObject:_exerciciosImageView.image];
     
-    index= (index+1)%[imagensDoExercicio count];
-    _exerciciosImageView.image=imagensDoExercicio[index];
     
-    if (contador>5)
+    NSUInteger indexSerie =[[[G4LSeries serieEscolhida] exercicios] count];
+    NSUInteger indexExercicio=[imagensDoExercicio indexOfObject:_exerciciosImageView.image];
+    
+    indexSerie= (indexSerie+1)%[imagensDoExercicio count];
+    _exerciciosImageView.image=imagensDoExercicio[indexSerie];
+    
+   
+    if (contador==([[[G4LSeries serieEscolhida] exercicios]count]*10 + ([[[G4LSeries serieEscolhida] exercicios]count])*5))
     {
         [cronometro invalidate];
-        NSLog(@"Parei");
+        NSLog(@"Fim Da Serie");
     }
     
-  contador++;
+   contador++;
+  // segundoEntradaImangem+=
     
 }
 

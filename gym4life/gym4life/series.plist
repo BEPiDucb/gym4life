@@ -10,11 +10,13 @@
 				<string>orientacao 2</string>
 			</array>
 			<key>nome</key>
-			<string>Ramon </string>
+			<string>Espreguiçar</string>
 			<key>imagens</key>
 			<array>
 				<string>S1_E1_0_espreguicar.png</string>
 				<string>S1_E1_1_espreguicar.png</string>
+				<string>S1_E1_2_espreguicar.png</string>
+				<string>S1_E1_3_espreguicar.png</string>
 			</array>
 		</dict>
 		<dict>
@@ -24,11 +26,126 @@
 				<string>orientacao 2</string>
 			</array>
 			<key>nome</key>
-			<string>exercicio Dois</string>
+			<string>Circundução da cabeça</string>
 			<key>imagens</key>
 			<array>
-				<string>S1_E2_0_espreguicar.png</string>
-				<string>S1_E2_1_espreguicar.png</string>
+				<string>S1_E2_0_circunducao_cabeca.png</string>
+				<string>S1_E2_1_circunducao_cabeca.png</string>
+				<string>S1_E2_2_circunducao_cabeca.png</string>
+				<string>S1_E2_3_circunducao_cabeca.png</string>
+			</array>
+		</dict>
+		<dict>
+			<key>orientacao</key>
+			<array>
+				<string>orientacao 1</string>
+				<string>orientacao 2</string>
+			</array>
+			<key>nome</key>
+			<string>Extensão da cabeça</string>
+			<key>imagens</key>
+			<array>
+				<string>S1_E3_0_extensao_cabeca.png</string>
+			</array>
+		</dict>
+		<dict>
+			<key>orientacao</key>
+			<array>
+				<string>orientacao 1</string>
+				<string>orientacao 2</string>
+			</array>
+			<key>nome</key>
+			<string>Rotação dos ombros</string>
+			<key>imagens</key>
+			<array>
+				<string>S1_E4_0_rotacao_ombros.png</string>
+				<string>S1_E4_1_rotacao_ombros.png</string>
+				<string>S1_E4_2_rotacao_ombros.png</string>
+				<string>S1_E4_3_rotacao_ombros.png</string>
+			</array>
+		</dict>
+		<dict>
+			<key>orientacao</key>
+			<array>
+				<string>orientacao 1</string>
+				<string>orientacao 2</string>
+			</array>
+			<key>nome</key>
+			<string>Peitoral</string>
+			<key>imagens</key>
+			<array>
+				<string>S1_E5_0_peitoral.png</string>
+				<string>S1_E5_1_peitoral.png</string>
+				<string>S1_E5_2_peitoral.png</string>
+			</array>
+		</dict>
+		<dict>
+			<key>orientacao</key>
+			<array>
+				<string>orientacao 1</string>
+				<string>orientacao 2</string>
+			</array>
+			<key>nome</key>
+			<string>Extensão punho</string>
+			<key>imagens</key>
+			<array>
+				<string>S1_E6_0_extensao_punho.png</string>
+			</array>
+		</dict>
+		<dict>
+			<key>orientacao</key>
+			<array>
+				<string>orientacao 1</string>
+				<string>orientacao 2</string>
+			</array>
+			<key>nome</key>
+			<string>Abdução ombro</string>
+			<key>imagens</key>
+			<array>
+				<string>S1_E7_0_abducao_ombro.png</string>
+				<string>S1_E7_1_abducao_ombro.png</string>
+				<string>S1_E7_2_abducao_ombro.png</string>
+			</array>
+		</dict>
+		<dict>
+			<key>orientacao</key>
+			<array>
+				<string>orientacao 1</string>
+				<string>orientacao 2</string>
+			</array>
+			<key>nome</key>
+			<string>Ombro / Tríceps</string>
+			<key>imagens</key>
+			<array>
+				<string>S1_E8_0_ombro_triceps.png</string>
+			</array>
+		</dict>
+		<dict>
+			<key>orientacao</key>
+			<array>
+				<string>orientacao 1</string>
+				<string>orientacao 2</string>
+			</array>
+			<key>nome</key>
+			<string>Rotação tronco</string>
+			<key>imagens</key>
+			<array>
+				<string>S1_E9_0_rotacao_tronco.png</string>
+				<string>S1_E9_1_rotacao_tronco.png</string>
+				<string>S1_E9_2_rotacao_tronco.png</string>
+			</array>
+		</dict>
+		<dict>
+			<key>orientacao</key>
+			<array>
+				<string>orientacao 1</string>
+				<string>orientacao 2</string>
+			</array>
+			<key>nome</key>
+			<string>Flexão tronco</string>
+			<key>imagens</key>
+			<array>
+				<string>S1_E10_0_flexao_tronco.png</string>
 			</array>
 		</dict>
 	</array>
@@ -40,11 +157,10 @@
 				<string>orientacao 2</string>
 			</array>
 			<key>nome</key>
-			<string>alongar</string>
+			<string>Espreguiçar</string>
 			<key>imagens</key>
 			<array>
-				<string>S1_E1_0_espreguicar.png</string>
-				<string>S1_E1_1_espreguicar.png</string>
+				<string>S2_E1_0_espreguicar.png</string>
 			</array>
 		</dict>
 		<dict>
@@ -54,11 +170,650 @@
 				<string>orientacao 2</string>
 			</array>
 			<key>nome</key>
-			<string>exercicio Dois</string>
+			<string>Rotação da cabeça</string>
 			<key>imagens</key>
 			<array>
-				<string>S1_E2_0_espreguicar.png</string>
-				<string>S1_E2_1_espreguicar.png</string>
+				<string>S2_E2_0_rotacao_cabeca.png</string>
+				<string>S2_E2_1_rotacao_cabeca.png</string>
+				<string>S2_E2_2_rotacao_cabeca.png</string>
+			</array>
+		</dict>
+		<dict>
+			<key>orientacao</key>
+			<array>
+				<string>orientacao 1</string>
+				<string>orientacao 2</string>
+			</array>
+			<key>nome</key>
+			<string>Rotação da cabeça</string>
+			<key>imagens</key>
+			<array>
+				<string>S2_E3_0_rotacao_cabeca.png</string>
+				<string>S2_E3_1_rotacao_cabeca.png</string>
+				<string>S2_E3_2_rotacao_cabeca.png</string>
+			</array>
+		</dict>
+		<dict>
+			<key>orientacao</key>
+			<array>
+				<string>orientacao 1</string>
+				<string>orientacao 2</string>
+			</array>
+			<key>nome</key>
+			<string>Cruzar braços</string>
+			<key>imagens</key>
+			<array>
+				<string>S2_E4_0_cruzar_bracos.png</string>
+				<string>S2_E4_1_cruzar_bracos.png</string>
+				<string>S2_E4_2_cruzar_bracos.png</string>
+				<string>S2_E4_3_cruzar_bracos.png</string>
+			</array>
+		</dict>
+		<dict>
+			<key>orientacao</key>
+			<array>
+				<string>orientacao 1</string>
+				<string>orientacao 2</string>
+			</array>
+			<key>nome</key>
+			<string>Abdução ombro</string>
+			<key>imagens</key>
+			<array>
+				<string>S2_E5_0_abducao_ombro.png</string>
+				<string>S2_E5_1_abducao_ombro.png</string>
+				<string>S2_E5_2_abducao_ombro.png</string>
+			</array>
+		</dict>
+		<dict>
+			<key>orientacao</key>
+			<array>
+				<string>orientacao 1</string>
+				<string>orientacao 2</string>
+			</array>
+			<key>nome</key>
+			<string>Flexão tronco</string>
+			<key>imagens</key>
+			<array>
+				<string>S2_E6_0_flexao_tronco.png</string>
+			</array>
+		</dict>
+		<dict>
+			<key>orientacao</key>
+			<array>
+				<string>orientacao 1</string>
+				<string>orientacao 2</string>
+			</array>
+			<key>nome</key>
+			<string>Rotação do tronco</string>
+			<key>imagens</key>
+			<array>
+				<string>S2_E7_0_rotacao_tronco.png</string>
+				<string>S2_E7_1_rotacao_tronco.png</string>
+				<string>S2_E7_2_rotacao_tronco.png</string>
+			</array>
+		</dict>
+	</array>
+	<array>
+		<dict>
+			<key>orientacao</key>
+			<array>
+				<string>orientacao 1</string>
+				<string>orientacao 2</string>
+			</array>
+			<key>nome</key>
+			<string>Espreguiçar</string>
+			<key>imagens</key>
+			<array>
+				<string>S3_E1_0_espreguicar.png</string>
+			</array>
+		</dict>
+		<dict>
+			<key>orientacao</key>
+			<array>
+				<string>orientacao 1</string>
+				<string>orientacao 2</string>
+			</array>
+			<key>nome</key>
+			<string>Espreguiçar Frontal</string>
+			<key>imagens</key>
+			<array>
+				<string>S3_E2_0_espreguicar_frontal.png</string>
+			</array>
+		</dict>
+		<dict>
+			<key>orientacao</key>
+			<array>
+				<string>orientacao 1</string>
+				<string>orientacao 2</string>
+			</array>
+			<key>nome</key>
+			<string>Rotação tronco sentado</string>
+			<key>imagens</key>
+			<array>
+				<string>S3_E3_0_rotacao_tronco_sentado.png</string>
+				<string>S3_E3_1_rotacao_tronco_sentado.png</string>
+				<string>S3_E3_2_rotacao_tronco_sentado.png</string>
+				<string>S3_E3_3_rotacao_tronco_sentado.png</string>
+				<string>S3_E3_4_rotacao_tronco_sentado.png</string>
+			</array>
+		</dict>
+		<dict>
+			<key>orientacao</key>
+			<array>
+				<string>orientacao 1</string>
+				<string>orientacao 2</string>
+			</array>
+			<key>nome</key>
+			<string>Flexão tronco</string>
+			<key>imagens</key>
+			<array>
+				<string>S3_E4_0_flexao_tronco.png</string>
+				<string>S3_E4_1_flexao_tronco.png</string>
+				<string>S3_E4_2_flexao_tronco.png</string>
+			</array>
+		</dict>
+		<dict>
+			<key>orientacao</key>
+			<array>
+				<string>orientacao 1</string>
+				<string>orientacao 2</string>
+			</array>
+			<key>nome</key>
+			<string>Flexão tronco</string>
+			<key>imagens</key>
+			<array>
+				<string>S3_E5_0_flexao_tronco.png</string>
+				<string>S3_E5_1_flexao_tronco.png</string>
+			</array>
+		</dict>
+		<dict>
+			<key>orientacao</key>
+			<array>
+				<string>orientacao 1</string>
+				<string>orientacao 2</string>
+			</array>
+			<key>nome</key>
+			<string>Ombro/Tríceps</string>
+			<key>imagens</key>
+			<array>
+				<string>S3_E6_0_ombro_triceps.png</string>
+				<string>S3_E6_1_ombro_triceps.png</string>
+			</array>
+		</dict>
+		<dict>
+			<key>orientacao</key>
+			<array>
+				<string>orientacao 1</string>
+				<string>orientacao 2</string>
+			</array>
+			<key>nome</key>
+			<string>Flexão tronco</string>
+			<key>imagens</key>
+			<array>
+				<string>S3_E7_0_flexao_tronco.png</string>
+				<string>S3_E7_1_flexao_tronco.png</string>
+			</array>
+		</dict>
+	</array>
+	<array>
+		<dict>
+			<key>orientacao</key>
+			<array>
+				<string>orientacao 1</string>
+				<string>orientacao 2</string>
+			</array>
+			<key>nome</key>
+			<string>Espreguiçar</string>
+			<key>imagens</key>
+			<array>
+				<string>S4_E1_0_espreguicar.png</string>
+				<string>S4_E1_1_espreguicar.png</string>
+				<string>S4_E1_2_espreguicar.png</string>
+			</array>
+		</dict>
+		<dict>
+			<key>orientacao</key>
+			<array>
+				<string>orientacao 1</string>
+				<string>orientacao 2</string>
+			</array>
+			<key>nome</key>
+			<string>Extensão punho</string>
+			<key>imagens</key>
+			<array>
+				<string>S4_E2_0_extensao_punho.png</string>
+			</array>
+		</dict>
+		<dict>
+			<key>orientacao</key>
+			<array>
+				<string>orientacao 1</string>
+				<string>orientacao 2</string>
+			</array>
+			<key>nome</key>
+			<string>Flexão Tronco</string>
+			<key>imagens</key>
+			<array>
+				<string>S4_E3_0_flexao_tronco.png</string>
+			</array>
+		</dict>
+		<dict>
+			<key>orientacao</key>
+			<array>
+				<string>orientacao 1</string>
+				<string>orientacao 2</string>
+			</array>
+			<key>nome</key>
+			<string>Braço alternado</string>
+			<key>imagens</key>
+			<array>
+				<string>S4_E4_0_braco_alternado.png</string>
+			</array>
+		</dict>
+		<dict>
+			<key>orientacao</key>
+			<array>
+				<string>orientacao 1</string>
+				<string>orientacao 2</string>
+			</array>
+			<key>nome</key>
+			<string>Circundução braço</string>
+			<key>imagens</key>
+			<array>
+				<string>S4_E5_0_circunduçao_braco.png</string>
+				<string>S4_E5_1_circunduçao_braco.png</string>
+				<string>S4_E5_2_circunduçao_braco.png</string>
+				<string>S4_E5_3_circunduçao_braco.png</string>
+			</array>
+		</dict>
+		<dict>
+			<key>orientacao</key>
+			<array>
+				<string>orientacao 1</string>
+				<string>orientacao 2</string>
+			</array>
+			<key>nome</key>
+			<string>Deslizamento braço</string>
+			<key>imagens</key>
+			<array>
+				<string>S4_E6_0_deslizamento_braco.png</string>
+			</array>
+		</dict>
+		<dict>
+			<key>orientacao</key>
+			<array>
+				<string>orientacao 1</string>
+				<string>orientacao 2</string>
+			</array>
+			<key>nome</key>
+			<string>Flexão braços</string>
+			<key>imagens</key>
+			<array>
+				<string>S4_E7_0_flexao_braco.png</string>
+				<string>S4_E7_1_flexao_braco.png</string>
+			</array>
+		</dict>
+		<dict>
+			<key>orientacao</key>
+			<array>
+				<string>orientacao 1</string>
+				<string>orientacao 2</string>
+			</array>
+			<key>nome</key>
+			<string>Inversão/Eversão</string>
+			<key>imagens</key>
+			<array>
+				<string>S4_E8_0_inversao_eversao.png</string>
+				<string>S4_E8_1_inversao_eversao.png</string>
+			</array>
+		</dict>
+	</array>
+	<array>
+		<dict>
+			<key>orientacao</key>
+			<array>
+				<string>orientacao 1</string>
+				<string>orientacao 2</string>
+			</array>
+			<key>nome</key>
+			<string>Espreguiçar</string>
+			<key>imagens</key>
+			<array>
+				<string>S5_E1_0_espreguicar.png</string>
+			</array>
+		</dict>
+		<dict>
+			<key>orientacao</key>
+			<array>
+				<string>orientacao 1</string>
+				<string>orientacao 2</string>
+			</array>
+			<key>nome</key>
+			<string>Rotação da cabeça</string>
+			<key>imagens</key>
+			<array>
+				<string>S5_E2_0_rotacao_cabeca.png</string>
+				<string>S5_E2_1_rotacao_cabeca.png</string>
+				<string>S5_E2_2_rotacao_cabeca.png</string>
+			</array>
+		</dict>
+		<dict>
+			<key>orientacao</key>
+			<array>
+				<string>orientacao 1</string>
+				<string>orientacao 2</string>
+			</array>
+			<key>nome</key>
+			<string>Rotação da cabeça</string>
+			<key>imagens</key>
+			<array>
+				<string>S5_E3_0_rotacao_cabeca.png</string>
+				<string>S5_E3_1_rotacao_cabeca.png</string>
+				<string>S5_E3_2_rotacao_cabeca.png</string>
+			</array>
+		</dict>
+		<dict>
+			<key>orientacao</key>
+			<array>
+				<string>orientacao 1</string>
+				<string>orientacao 2</string>
+			</array>
+			<key>nome</key>
+			<string>Cruzar braços</string>
+			<key>imagens</key>
+			<array>
+				<string>S5_E4_0_cruzar_bracos.png</string>
+				<string>S5_E4_1_cruzar_bracos.png</string>
+				<string>S5_E4_2_cruzar_bracos.png</string>
+				<string>S5_E4_3_cruzar_bracos.png</string>
+			</array>
+		</dict>
+		<dict>
+			<key>orientacao</key>
+			<array>
+				<string>orientacao 1</string>
+				<string>orientacao 2</string>
+			</array>
+			<key>nome</key>
+			<string>Abdução ombro</string>
+			<key>imagens</key>
+			<array>
+				<string>S5_E5_0_abducao_ombro.png</string>
+				<string>S5_E5_1_abducao_ombro.png</string>
+				<string>S5_E5_2_abducao_ombro.png</string>
+			</array>
+		</dict>
+		<dict>
+			<key>orientacao</key>
+			<array>
+				<string>orientacao 1</string>
+				<string>orientacao 2</string>
+			</array>
+			<key>nome</key>
+			<string>Flexão tronco</string>
+			<key>imagens</key>
+			<array>
+				<string>S5_E6_0_flexao_tronco.png</string>
+			</array>
+		</dict>
+		<dict>
+			<key>orientacao</key>
+			<array>
+				<string>orientacao 1</string>
+				<string>orientacao 2</string>
+			</array>
+			<key>nome</key>
+			<string>Rotação do tronco</string>
+			<key>imagens</key>
+			<array>
+				<string>S5_E7_0_rotacao_tronco.png</string>
+				<string>S5_E7_1_rotacao_tronco.png</string>
+				<string>S5_E7_2_rotacao_tronco.png</string>
+			</array>
+		</dict>
+		<dict>
+			<key>orientacao</key>
+			<array>
+				<string>orientacao 1</string>
+				<string>orientacao 2</string>
+			</array>
+			<key>nome</key>
+			<string>Ombro / Tríceps</string>
+			<key>imagens</key>
+			<array>
+				<string>S5_E8_0_ombro_triceps.png</string>
+			</array>
+		</dict>
+		<dict>
+			<key>orientacao</key>
+			<array>
+				<string>orientacao 1</string>
+				<string>orientacao 2</string>
+			</array>
+			<key>nome</key>
+			<string>Rotação tronco</string>
+			<key>imagens</key>
+			<array>
+				<string>S5_E9_0_rotacao_tronco.png</string>
+				<string>S5_E9_1_rotacao_tronco.png</string>
+				<string>S5_E9_2_rotacao_tronco.png</string>
+			</array>
+		</dict>
+		<dict>
+			<key>orientacao</key>
+			<array>
+				<string>orientacao 1</string>
+				<string>orientacao 2</string>
+			</array>
+			<key>nome</key>
+			<string>Flexão tronco</string>
+			<key>imagens</key>
+			<array>
+				<string>S5_E10_0_flexao_tronco.png</string>
+			</array>
+		</dict>
+	</array>
+	<array>
+		<dict>
+			<key>orientacao</key>
+			<array>
+				<string>orientacao 1</string>
+				<string>orientacao 2</string>
+			</array>
+			<key>nome</key>
+			<string>Flexão braço</string>
+			<key>imagens</key>
+			<array>
+				<string>S6_E1_0_flexao_braco.png</string>
+				<string>S6_E1_1_flexao_braco.png</string>
+				<string>S6_E1_2_flexao_braco.png</string>
+			</array>
+		</dict>
+		<dict>
+			<key>orientacao</key>
+			<array>
+				<string>orientacao 1</string>
+				<string>orientacao 2</string>
+			</array>
+			<key>nome</key>
+			<string>Flexão tronco</string>
+			<key>imagens</key>
+			<array>
+				<string>S6_E2_0_flexao_tronco.png</string>
+				<string>S6_E2_1_flexao_tronco.png</string>
+				<string>S6_E2_2_flexao_tronco.png</string>
+			</array>
+		</dict>
+		<dict>
+			<key>orientacao</key>
+			<array>
+				<string>orientacao 1</string>
+				<string>orientacao 2</string>
+			</array>
+			<key>nome</key>
+			<string>Extensão braço</string>
+			<key>imagens</key>
+			<array>
+				<string>S6_E3_0_extensao_braco.png</string>
+				<string>S6_E3_1_extensao_braco.png</string>
+				<string>S6_E3_2_extensao_braco.png</string>
+			</array>
+		</dict>
+		<dict>
+			<key>orientacao</key>
+			<array>
+				<string>orientacao 1</string>
+				<string>orientacao 2</string>
+			</array>
+			<key>nome</key>
+			<string>Extensão braço traseira</string>
+			<key>imagens</key>
+			<array>
+				<string>S6_E4_0_extensao_braco_trasiera.png</string>
+				<string>S6_E4_1_extensao_braco_trasiera.png</string>
+				<string>S6_E4_2_extensao_braco_trasiera.png</string>
+			</array>
+		</dict>
+		<dict>
+			<key>orientacao</key>
+			<array>
+				<string>orientacao 1</string>
+				<string>orientacao 2</string>
+			</array>
+			<key>nome</key>
+			<string>Extensão braço</string>
+			<key>imagens</key>
+			<array>
+				<string>S6_E5_0_extensao_braco.png</string>
+				<string>S6_E5_1_extensao_braco.png</string>
+				<string>S6_E5_2_extensao_braco.png</string>
+			</array>
+		</dict>
+		<dict>
+			<key>orientacao</key>
+			<array>
+				<string>orientacao 1</string>
+				<string>orientacao 2</string>
+			</array>
+			<key>nome</key>
+			<string>Flexão braço</string>
+			<key>imagens</key>
+			<array>
+				<string>S6_E6_0_flexao_braco.png</string>
+				<string>S6_E6_1_flexao_braco.png</string>
+				<string>S6_E6_2_flexao_braco.png</string>
+			</array>
+		</dict>
+		<dict>
+			<key>orientacao</key>
+			<array>
+				<string>orientacao 1</string>
+				<string>orientacao 2</string>
+			</array>
+			<key>nome</key>
+			<string>Braço lateral</string>
+			<key>imagens</key>
+			<array>
+				<string>S6_E7_0_braco_lateral.png</string>
+				<string>S6_E7_1_braco_lateral.png</string>
+				<string>S6_E7_2_braco_lateral.png</string>
+			</array>
+		</dict>
+	</array>
+	<array>
+		<dict>
+			<key>orientacao</key>
+			<array>
+				<string>orientacao 1</string>
+				<string>orientacao 2</string>
+			</array>
+			<key>nome</key>
+			<string>Rotação pescoço com mãos</string>
+			<key>imagens</key>
+			<array>
+				<string>S7_E1_0_rotacao.png</string>
+				<string>S7_E1_1_rotacao.png</string>
+				<string>S7_E1_2_rotacao.png</string>
+			</array>
+		</dict>
+		<dict>
+			<key>orientacao</key>
+			<array>
+				<string>orientacao 1</string>
+				<string>orientacao 2</string>
+			</array>
+			<key>nome</key>
+			<string>Dedo a dedo</string>
+			<key>imagens</key>
+			<array>
+				<string>S7_E2_0_dedo_a_dedo.png</string>
+				<string>S7_E2_1_dedo_a_dedo.png</string>
+				<string>S7_E2_2_dedo_a_dedo.png</string>
+				<string>S7_E2_3_dedo_a_dedo.png</string>
+				<string>S7_E2_4_dedo_a_dedo.png</string>
+				<string>S7_E2_5_dedo_a_dedo.png</string>
+				<string>S7_E2_6_dedo_a_dedo.png</string>
+				<string>S7_E2_7_dedo_a_dedo.png</string>
+				<string>S7_E2_8_dedo_a_dedo.png</string>
+			</array>
+		</dict>
+		<dict>
+			<key>orientacao</key>
+			<array>
+				<string>orientacao 1</string>
+				<string>orientacao 2</string>
+			</array>
+			<key>nome</key>
+			<string>Extensão tronco</string>
+			<key>imagens</key>
+			<array>
+				<string>S7_E3_0_extensao_tronco.png</string>
+			</array>
+		</dict>
+		<dict>
+			<key>orientacao</key>
+			<array>
+				<string>orientacao 1</string>
+				<string>orientacao 2</string>
+			</array>
+			<key>nome</key>
+			<string>Extensão Cotovelo</string>
+			<key>imagens</key>
+			<array>
+				<string>S7_E4_0_extensao_cotovelo.png</string>
+				<string>S7_E4_1_extensao_cotovelo.png</string>
+				<string>S7_E4_2_extensao_cotovelo.png</string>
+			</array>
+		</dict>
+		<dict>
+			<key>orientacao</key>
+			<array>
+				<string>orientacao 1</string>
+				<string>orientacao 2</string>
+			</array>
+			<key>nome</key>
+			<string>Flexão Cotovelo</string>
+			<key>imagens</key>
+			<array>
+				<string>S7_E5_0_flexao_cotovelo.png</string>
+				<string>S7_E5_1_flexao_cotovelo.png</string>
+				<string>S7_E5_2_flexao_cotovelo.png</string>
+			</array>
+		</dict>
+		<dict>
+			<key>orientacao</key>
+			<array>
+				<string>orientacao 1</string>
+				<string>orientacao 2</string>
+			</array>
+			<key>nome</key>
+			<string>Flexão plantar</string>
+			<key>imagens</key>
+			<array>
+				<string>S7_E6_0_flexao_plantar.png</string>
+				<string>S7_E6_1_flexao_plantar.png</string>
+				<string>S7_E6_2_flexao_plantar.png</string>
+				<string>S7_E6_3_flexao_plantar.png</string>
 			</array>
 		</dict>
 	</array>

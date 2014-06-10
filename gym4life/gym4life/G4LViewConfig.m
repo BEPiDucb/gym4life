@@ -32,10 +32,9 @@
 
     //Inicializar com as configuracoes do usuario
     //primeiro recuperar o configuracoes.plist
-    NSArray *configuracoesPlist=[[NSArray alloc]
-                                 initWithContentsOfFile:[
-                                                         [NSBundle mainBundle] pathForResource:@"configuracoes" ofType:@"plist"]
-                                 ];
+    NSArray *configuracoesPlist=[[NSArray alloc]initWithContentsOfFile:
+                                 [[NSBundle mainBundle]pathForResource:@"configuracoes" ofType:@"plist"]];
+    
     NSString *auxString;
     int auxNum=0;
     
@@ -101,24 +100,78 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (void)alertaMessagem:(UISwitch *)sender{
+- (void)alertaMessagem:(UISwitch *)sender andDay:(int)day{
     UILocalNotification *localNotification = [[UILocalNotification alloc] init];
     NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
     [dateFormatter setDateFormat:@"HH:mm"];
     NSDate *hora = [dateFormatter dateFromString:self.strHorario];
     NSLog(@"%@",hora);
     
-    if (sender.on) {
-        NSDate *data = [NSDate date];
-        localNotification.fireDate = hora;
-        [dateFormatter setDateFormat:@"dd-MM-YYYY"];
-        NSString *str = [dateFormatter stringFromDate:data];
-        localNotification.alertBody = [NSString stringWithFormat:@"Começou seu exercício! %@ %@", str
-                                       ,self.strHorario];
+    //NSDateFormatter *dateFormatter = [[[NSDateFormatter alloc] init] autorelease];
+    [dateFormatter setDateFormat:@"EEEE"];
+    
+    int diaSemana;
+    
+    if([[dateFormatter stringFromDate:[NSDate date]] isEqualToString:@"Sunday"]){
+        diaSemana = 1;
+    }else{
+        if([[dateFormatter stringFromDate:[NSDate date]] isEqualToString:@"Monday"]){
+            diaSemana = 2;
+        }else{
+            if([[dateFormatter stringFromDate:[NSDate date]] isEqualToString:@"Tuesday"]){
+                diaSemana = 3;
+            }else{
+                if([[dateFormatter stringFromDate:[NSDate date]] isEqualToString:@"Wednesday"]){
+                    diaSemana = 4;
+                }else{
+                    if([[dateFormatter stringFromDate:[NSDate date]] isEqualToString:@"Thursday"]){
+                        diaSemana = 5;
+                    }else{
+                        if([[dateFormatter stringFromDate:[NSDate date]] isEqualToString:@"Friday"]){
+                            diaSemana = 6;
+                        }else{
+                            diaSemana = 7;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
+    //gather current calendar
+    NSCalendar *calendar = [NSCalendar currentCalendar];
+    
+    //gather date components from date
+    NSDateComponents *dateComponents = [calendar components:(NSHourCalendarUnit | NSMinuteCalendarUnit | NSSecondCalendarUnit) fromDate:[NSDate date]];
+    
+    
+    //set date components
+    [dateComponents setDay: day];
+    [dateComponents setMonth:6];
+    [dateComponents setYear:2014];
+    
+    //save date relative from date
+    NSDate *date = [calendar dateFromComponents:dateComponents];
+    
+    NSCalendar *gregorian = [[NSCalendar alloc] initWithCalendarIdentifier:NSGregorianCalendar] ;
+    NSDateComponents *comps = [gregorian components:NSWeekdayCalendarUnit fromDate:date];
+    int weekday = [comps weekday];
+    NSLog(@"weekday=%d",weekday);
+    
+    if (diaSemana == weekday) {
+        localNotification.fireDate = date;
+        localNotification.alertBody = [NSString stringWithFormat:@"Começou seu exercício!"];
         localNotification.soundName = UILocalNotificationDefaultSoundName;
         localNotification.applicationIconBadgeNumber = 1;
+        
+        localNotification.repeatInterval = NSWeekdayCalendarUnit;
+        
+        NSLog(@"\n\n\nMarcou\n\n\n");
+        
         [[UIApplication sharedApplication] scheduleLocalNotification:localNotification];
+        
     }
+    
 }
 - (IBAction)Salvar:(id)sender {
     //setando valor de horas
@@ -145,13 +198,13 @@
     [configuracoesPlist writeToFile:configuracoesPlistEndereco atomically:YES];
     
     //alerta
-    [self alertaMessagem:self.segunda];
-    [self alertaMessagem:self.terca];
-    [self alertaMessagem:self.quarta];
-    [self alertaMessagem:self.quinta];
-    [self alertaMessagem:self.sexta];
-    [self alertaMessagem:self.sabado];
-    [self alertaMessagem:self.domingo];
+    [self alertaMessagem:self.segunda andDay:2];
+    [self alertaMessagem:self.terca andDay:3];
+    [self alertaMessagem:self.quarta andDay:4];
+    [self alertaMessagem:self.quinta andDay:5];
+    [self alertaMessagem:self.sexta andDay:6];
+    [self alertaMessagem:self.sabado andDay:7];
+    [self alertaMessagem:self.domingo andDay:1];
     
     
     [self dismissViewControllerAnimated:YES completion:nil];

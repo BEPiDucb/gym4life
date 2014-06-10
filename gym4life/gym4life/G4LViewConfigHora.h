@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface G4LViewConfigHora : UIViewController
+
 @property (weak, nonatomic) IBOutlet UIDatePicker *horario;
 @property (nonatomic) NSString * str;
 

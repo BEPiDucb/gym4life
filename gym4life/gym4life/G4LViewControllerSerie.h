@@ -15,7 +15,10 @@
     BOOL pageControlBeingUsed;
     NSMutableArray *animacoesExercicios;
     NSTimer *cronometro;
-    int contador,indexExercicioCorrenteAnimacao;
+    int segundos;
+    int minutos;
+    int contador;
+    int indexExercicioCorrenteAnimacao;
     int tempoTroca;
     int tempoTotal;
     
@@ -31,5 +34,10 @@
 @property (weak, nonatomic) IBOutlet UILabel *labelOrientacao;
 
 @property (weak, nonatomic) IBOutlet UIImageView *exerciciosImageView;
+@property (weak, nonatomic) IBOutlet UIButton *favoritar_img;
+
+@property (weak, nonatomic) IBOutlet UIButton *seriesVoltar;
+@property (weak, nonatomic) IBOutlet UIButton *terminarBotao;
+
 
 @end

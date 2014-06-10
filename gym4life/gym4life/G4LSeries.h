@@ -8,13 +8,17 @@
 
 #import <Foundation/Foundation.h>
 @interface G4LSeries : NSObject{
+    
+
 
 }
 
 @property (nonatomic) NSString *nome;
 @property (nonatomic) NSMutableArray *exercicios;
 
+
 +(G4LSeries *) serieEscolhida;
 +(void) setNumSerie:(int)nroSerie;
-
++(void) setSerieClicada:(int)indexSerie;
++(int) serieClicada;
 @end

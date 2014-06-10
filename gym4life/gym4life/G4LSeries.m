@@ -11,6 +11,7 @@
 @implementation G4LSeries
 
 static G4LSeries *serieEscolhida=nil;
+static int indexSerieClicada=0;
 
 +(G4LSeries *)serieEscolhida
 {
@@ -30,17 +31,26 @@ static G4LSeries *serieEscolhida=nil;
     }
     return serieEscolhida;
 }
-
-+(void)setNumSerie:(int)nroSerie
-{
-    serieEscolhida.exercicios = [G4LExercicio exerciciosSerie:nroSerie];
-}
-
 -(void)carregarSerie
 {
     //Recupero o seriesPlist
     NSArray *seriesPlist = [[NSBundle mainBundle] pathForResource:@"series" ofType:@"plist"];
     
     
+}
+
++(void)setNumSerie:(int)nroSerie
+{
+    serieEscolhida.exercicios = [G4LExercicio exerciciosSerie:nroSerie];
+}
+
+
++(void)setSerieClicada:(int)indexSerie
+{
+    indexSerieClicada=indexSerie;
+}
++(int)serieClicada
+{
+    return indexSerieClicada;
 }
 @end

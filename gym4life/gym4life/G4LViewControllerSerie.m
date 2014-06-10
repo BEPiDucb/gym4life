@@ -22,9 +22,19 @@
 
 - (IBAction)img_favoritar:(id)sender {
     
-    NSLog(@"Favoritado!");
+       
+    //Para mudar no objeto corrente
+  //  [G4LSeries setNumSerie:[G4LSeries serieClicada]];
+    //mudando opcao de serie no plist
+    NSMutableArray *seriesPlist=[[NSMutableArray alloc]initWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"series" ofType:@"plist" ]];
+    
+    NSNumber *serieEscolhida =[[NSNumber alloc]initWithInt:[G4LSeries serieClicada]];
+    [seriesPlist replaceObjectAtIndex:([seriesPlist count]-1) withObject:serieEscolhida];
+    [seriesPlist writeToFile:[[NSBundle mainBundle] pathForResource:@"series" ofType:@"plist"] atomically:YES];
+    
 
-
+    
+    
 }
 
 
@@ -40,68 +50,10 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    [self iniciarExercicios];
-    
-     pageControlBeingUsed = NO;
-    
-    G4LSeries *serieEscolhida=[G4LSeries serieEscolhida];
-    G4LExercicio *exercicio;
-    
-    CGRect imageViewFrame;
-    CGRect labelOrientacaoFrame;
-
-    UIImageView *imageViewExercicio ;
-    UILabel *labelOrientacao;
-    
-    
-    
-    for (int i=0; i<[[serieEscolhida exercicios] count]; i++)
-    {
-    
-        exercicio= [[serieEscolhida exercicios] objectAtIndex:0];
-    
-        
-        imageViewFrame = CGRectMake(0.f, 0.f,240.f,240.f);
-        labelOrientacaoFrame =CGRectMake(0.f, 240.f, 240.f, 70.f);
-        
-        imageViewFrame.origin.x=_scrollView.frame.size.width*i;
-        labelOrientacaoFrame.origin.x=_scrollView.frame.size.width*i;
-    
-        imageViewExercicio = [[UIImageView alloc] initWithFrame:imageViewFrame];
-        labelOrientacao=[[UILabel alloc ]initWithFrame:labelOrientacaoFrame];
-    
-        //Atencao nesta linha
-       
-        if (i<[[exercicio imagens] count])
-        {
-            [imageViewExercicio setImage:[[exercicio imagens] objectAtIndex:i]];
-            [imageViewExercicio setContentMode:UIViewContentModeScaleToFill];
-
-        }
-        
-       // labelOrientacao.text=[[exercicio orientacao] objectAtIndex:i];
-        labelOrientacao.text=@"Orientacao";
-        labelOrientacao.textAlignment=NSTextAlignmentCenter;
-        
-        _ExercicioNome.text=[exercicio nome];
-        [_scrollView addSubview:imageViewExercicio];
-        [_scrollView addSubview:labelOrientacao];
-    
-    }//fim for
-    
-    //Habilita a paginação
-    self.scrollView.pagingEnabled = YES;
-    self.scrollView.delegate = self;
-    
-    
-    _scrollView.contentSize = CGSizeMake(self.scrollView.frame.size.width * [[serieEscolhida exercicios]count], self.scrollView.frame.size.height);
-
-    //Faz o pageControl iniciar na primeira página, já que a view acabou de ser carregada.
-    self.pageControl.currentPage = 0;
-    
-    //Define o número de páginas do pageControl
-    self.pageControl.numberOfPages = [[serieEscolhida exercicios]count];
-    
+    if ([G4LSeries serieClicada]==-1)
+        [self iniciarExercicios];
+    else
+        [self verExerciciosDaSerie:[G4LSeries serieClicada]];
    
 }
 
@@ -154,6 +106,10 @@
      */
     _scrollView.alpha=0;
     _pageControl.alpha=0;
+    _favoritar_img.alpha=0;
+    _seriesVoltar.alpha=0;
+    
+    
     G4LSeries *serieEscolhida=[G4LSeries serieEscolhida];
     animacoesExercicios=[[NSMutableArray alloc]init];
     indexExercicioCorrenteAnimacao=0;
@@ -165,10 +121,7 @@
         [animacoesExercicios addObject:[[serieEscolhida exercicios] objectAtIndex:i]];
     }
     
-    _exerciciosImageView.animationImages=[[animacoesExercicios objectAtIndex:indexExercicioCorrenteAnimacao]imagens];
-    _exerciciosImageView.animationDuration=1;
-    [_exerciciosImageView startAnimating];
-   
+    
     
     //carrega  o cronometro com 10 segundos para cada exercicio
     cronometro =
@@ -180,59 +133,122 @@
      repeats:YES];                             //Se repete
     
     contador=0;
+    minutos=0;
+    segundos=0;
+    
     
     
 }
 
+- (IBAction)terminarBotao:(id)sender {
+    
+    [_exerciciosImageView stopAnimating];
+    [cronometro invalidate];
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
 
 
 -(void) ContadorCronometro
 {
-
-    
-    
     //atualizando o marcador de tempo
-    _cronometroLabel.text = [NSString stringWithFormat:@"00:%02d",contador];
     
-    tempoTotal=[[[G4LSeries serieEscolhida] exercicios]count]*10 + ([[[G4LSeries serieEscolhida] exercicios]count])*5;
-    tempoTroca=tempoTotal/[[[G4LSeries serieEscolhida] exercicios]count];
+    if (segundos==60)
+    {
+        minutos++;
+        segundos=0;
+    }
+    _cronometroLabel.text = [NSString stringWithFormat:@"%d:%02d",minutos,segundos];
+    
+    tempoTotal=[[[G4LSeries serieEscolhida] exercicios]count]*10 + (([[[G4LSeries serieEscolhida] exercicios]count])-1)*5;
     
     if ((contador/tempoTotal)==tempoTroca)
     {
+        _ExercicioNome.text=[[animacoesExercicios objectAtIndex:indexExercicioCorrenteAnimacao]nome];
         _exerciciosImageView.animationImages=[[animacoesExercicios objectAtIndex:indexExercicioCorrenteAnimacao]imagens];
         _exerciciosImageView.animationDuration=10;
         [_exerciciosImageView startAnimating];
 
         indexExercicioCorrenteAnimacao++;
     }
-    
-  /*
-    //prepara transicao das imagens do exercicios
-    CATransition *transicao=[CATransition animation];
-    transicao.type=kCATransitionFade;
-    
-    //aplica a transicao no imageView dos exercicios
-    [_exerciciosImageView.layer addAnimation:transicao forKey:nil];
-    
-    
-    
-    NSUInteger indexSerie =[[[G4LSeries serieEscolhida] exercicios] count];
-    NSUInteger indexExercicio=[imagensDoExercicio indexOfObject:_exerciciosImageView.image];
-    
-    indexSerie= (indexSerie+1)%[imagensDoExercicio count];
-    _exerciciosImageView.image=imagensDoExercicio[indexSerie];
-    */
-    
-    
+        tempoTroca=tempoTotal/[[[G4LSeries serieEscolhida] exercicios]count];
     if (contador==tempoTotal)
     {
         [cronometro invalidate];
         NSLog(@"Fim Da Serie");
     }
     
+   segundos++;
    contador++;
     
 }
+
+-(void) verExerciciosDaSerie:(int) indexSerie
+{
+    
+    pageControlBeingUsed = NO;
+    _terminarBotao.alpha=0;
+    _cronometroLabel.alpha=0;
+    _labelOrientacao.alpha=0;
+    
+    G4LSeries *serieEscolhida=[G4LSeries serieEscolhida];
+    G4LExercicio *exercicio;
+    
+    CGRect imageViewFrame;
+    CGRect labelOrientacaoFrame;
+    
+    UIImageView *imageViewExercicio ;
+    UILabel *labelOrientacao;
+    
+    
+    
+    for (int i=0; i<[[serieEscolhida exercicios] count]; i++)
+    {
+        
+        exercicio= [[serieEscolhida exercicios] objectAtIndex:indexSerie];
+        
+        
+        imageViewFrame = CGRectMake(0.f, 0.f,240.f,240.f);
+        labelOrientacaoFrame =CGRectMake(0.f, 240.f, 240.f, 70.f);
+        
+        imageViewFrame.origin.x=_scrollView.frame.size.width*i;
+        labelOrientacaoFrame.origin.x=_scrollView.frame.size.width*i;
+        
+        imageViewExercicio = [[UIImageView alloc] initWithFrame:imageViewFrame];
+        labelOrientacao=[[UILabel alloc ]initWithFrame:labelOrientacaoFrame];
+        
+        //Atencao nesta linha
+        
+        if (i<[[exercicio imagens] count])
+        {
+            [imageViewExercicio setImage:[[exercicio imagens] objectAtIndex:i]];
+            [imageViewExercicio setContentMode:UIViewContentModeScaleToFill];
+            
+        }
+        
+        // labelOrientacao.text=[[exercicio orientacao] objectAtIndex:i];
+        labelOrientacao.text=@"Orientacao";
+        labelOrientacao.textAlignment=NSTextAlignmentCenter;
+        
+        _ExercicioNome.text=[exercicio nome];
+        [_scrollView addSubview:imageViewExercicio];
+        [_scrollView addSubview:labelOrientacao];
+        
+    }//fim for
+    
+    //Habilita a paginação
+    self.scrollView.pagingEnabled = YES;
+    self.scrollView.delegate = self;
+    
+    
+    _scrollView.contentSize = CGSizeMake(self.scrollView.frame.size.width * [[serieEscolhida exercicios]count], self.scrollView.frame.size.height);
+    
+    //Faz o pageControl iniciar na primeira página, já que a view acabou de ser carregada.
+    self.pageControl.currentPage = 0;
+    
+    //Define o número de páginas do pageControl
+    self.pageControl.numberOfPages = [[serieEscolhida exercicios]count];
+}
+
 
 - (void)didReceiveMemoryWarning
 {

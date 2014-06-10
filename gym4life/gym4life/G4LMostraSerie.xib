@@ -8,6 +8,7 @@
             <connections>
                 <outlet property="pageControl" destination="Wad-r3-9a2" id="UwH-ES-Iwf"/>
                 <outlet property="scrollView" destination="jst-9l-ah6" id="YU3-4K-kvb"/>
+                <outlet property="seriesVoltar" destination="ZbK-sJ-eXg" id="HNN-7s-Upm"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>

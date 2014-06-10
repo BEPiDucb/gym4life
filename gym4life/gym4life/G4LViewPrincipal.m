@@ -88,10 +88,8 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     
-    [G4LSeries setNumSerie:(int)indexPath.item];
-    
+    [G4LSeries setSerieClicada:(int)indexPath.item];
     G4LViewControllerSerie *serie=[[G4LViewControllerSerie alloc] init];
-    
     serie.modalTransitionStyle=UIModalTransitionStyleCrossDissolve;
     
     [self presentViewController:serie animated:YES completion:nil];
@@ -128,6 +126,7 @@
 - (IBAction)iniciarRotina:(id)sender {
     
     G4LViewControllerSerie *serie=[[G4LViewControllerSerie alloc] init];
+    [G4LSeries setSerieClicada:-1];
     
     serie.modalTransitionStyle=UIModalTransitionStyleCrossDissolve;
     

@@ -15,5 +15,6 @@
 }
 @property (nonatomic,retain) IBOutlet UIScrollView *scrollView;
 @property (nonatomic,retain) IBOutlet UIPageControl *pageControl;
+@property (weak, nonatomic) IBOutlet UIButton *seriesVoltar;
 
 @end

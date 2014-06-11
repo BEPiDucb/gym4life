@@ -159,21 +159,27 @@
     }
     _cronometroLabel.text = [NSString stringWithFormat:@"%d:%02d",minutos,segundos];
     
-    tempoTotal=[[[G4LSeries serieEscolhida] exercicios]count]*10 + (([[[G4LSeries serieEscolhida] exercicios]count])-1)*5;
+    tempoTotal=[[[G4LSeries serieEscolhida] exercicios]count]*10 + (([[[G4LSeries serieEscolhida] exercicios]count])-1)*0;
     
-    if ((contador/tempoTotal)==tempoTroca)
+    if ((contador %10)==0)
     {
         _ExercicioNome.text=[[animacoesExercicios objectAtIndex:indexExercicioCorrenteAnimacao]nome];
         _exerciciosImageView.animationImages=[[animacoesExercicios objectAtIndex:indexExercicioCorrenteAnimacao]imagens];
         _exerciciosImageView.animationDuration=10;
         [_exerciciosImageView startAnimating];
 
-        indexExercicioCorrenteAnimacao++;
+        if (indexExercicioCorrenteAnimacao<([[[G4LSeries serieEscolhida] exercicios]count]-1))
+        {
+            indexExercicioCorrenteAnimacao++;
+        }
+        
     }
         tempoTroca=tempoTotal/[[[G4LSeries serieEscolhida] exercicios]count];
     if (contador==tempoTotal)
     {
         [cronometro invalidate];
+        [_exerciciosImageView stopAnimating];
+        [self dismissViewControllerAnimated:YES completion:nil];
         NSLog(@"Fim Da Serie");
     }
     

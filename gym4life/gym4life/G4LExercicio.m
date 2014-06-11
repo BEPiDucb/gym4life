@@ -23,7 +23,7 @@
     
     NSDictionary *exerciciosDictionary;
     G4LExercicio *exercicio;
-    NSMutableArray *imagensDoExercicio=[[NSMutableArray alloc]init];
+    NSMutableArray *imagensDoExercicio;
     UIImage *imagem;
 
   for (int i=0; i<[exerciciosNaSerie count]; i++)
@@ -31,7 +31,7 @@
         
         exerciciosDictionary =[exerciciosNaSerie objectAtIndex:i];
         exercicio=[[G4LExercicio alloc]init];
-        
+        imagensDoExercicio =[[NSMutableArray alloc]init];
        for (NSString *conteudo in [exerciciosDictionary objectForKey:@"imagens"])
        {
            [imagensDoExercicio addObject:[UIImage imageNamed:conteudo]];
@@ -46,7 +46,6 @@
         [exerciciosDaSerie addObject:exercicio];
        
 
-        imagensDoExercicio=nil;
     }
     
    // NSLog(@"[Classe Exercicio]%@",exerciciosNaSerie);

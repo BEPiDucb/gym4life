@@ -21,6 +21,7 @@
     self.window.rootViewController = view;
     
     [self.window makeKeyAndVisible];
+
     return YES;
 }
 

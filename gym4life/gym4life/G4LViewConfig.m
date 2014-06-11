@@ -7,7 +7,7 @@
 //
 
 #import "G4LViewConfig.h"
-
+#import "G4LViewConfigHora.h"
 @interface G4LViewConfig ()
 
 @end
@@ -20,13 +20,6 @@
     if (self)
     {
         // Custom initialization
-//        self.segunda = @"true";
-//        self.terca = @"true";
-//        self.quarta = @"true";
-//        self.quinta = @"true";
-//        self.sexta = @"true";
-//        self.sabado = @"true";
-//        self.domingo = @"true";
         
     }
     return self;
@@ -36,13 +29,12 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
-    
+
     //Inicializar com as configuracoes do usuario
     //primeiro recuperar o configuracoes.plist
-    NSArray *configuracoesPlist=[[NSArray alloc]
-                                 initWithContentsOfFile:[
-                                                         [NSBundle mainBundle] pathForResource:@"configuracoes" ofType:@"plist"]
-                                 ];
+    NSArray *configuracoesPlist=[[NSArray alloc]initWithContentsOfFile:
+                                 [[NSBundle mainBundle]pathForResource:@"configuracoes" ofType:@"plist"]];
+    
     NSString *auxString;
     int auxNum=0;
     
@@ -57,8 +49,6 @@
         [self.sexta setOn:1 animated:YES];
         [self.sabado setOn:1 animated:YES];
         [self.domingo setOn:1 animated:YES];
-        
-        NSLog(@"Entrei no if");
         
     }else
     {
@@ -96,6 +86,10 @@
         auxString=[configuracoesPlist[0] objectForKey:@"domingo"];
         auxNum= ([auxString isEqualToString:@"true"])?1:0;
         [self.domingo setOn:auxNum animated:YES];
+        
+        //horario
+        auxString=[configuracoesPlist[0] objectForKey:@"horario"];
+        self.strHorario = auxString;
     }
     
 }
@@ -106,9 +100,107 @@
     // Dispose of any resources that can be recreated.
 }
 
-
-- (IBAction)Salvar:(id)sender {
+- (void)alertaMessagem:(UISwitch *)sender andDay:(int)day{
+    UILocalNotification *localNotification = [[UILocalNotification alloc] init];
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+    [dateFormatter setDateFormat:@"HH:mm"];
+    NSDate *hora = [dateFormatter dateFromString:self.strHorario];
+    NSLog(@"%@",hora);
     
+    //NSDateFormatter *dateFormatter = [[[NSDateFormatter alloc] init] autorelease];
+    [dateFormatter setDateFormat:@"EEEE"];
+    
+    int diaSemana;
+    
+    if([[dateFormatter stringFromDate:[NSDate date]] isEqualToString:@"Sunday"]){
+        diaSemana = 1;
+    }else{
+        if([[dateFormatter stringFromDate:[NSDate date]] isEqualToString:@"Monday"]){
+            diaSemana = 2;
+        }else{
+            if([[dateFormatter stringFromDate:[NSDate date]] isEqualToString:@"Tuesday"]){
+                diaSemana = 3;
+            }else{
+                if([[dateFormatter stringFromDate:[NSDate date]] isEqualToString:@"Wednesday"]){
+                    diaSemana = 4;
+                }else{
+                    if([[dateFormatter stringFromDate:[NSDate date]] isEqualToString:@"Thursday"]){
+                        diaSemana = 5;
+                    }else{
+                        if([[dateFormatter stringFromDate:[NSDate date]] isEqualToString:@"Friday"]){
+                            diaSemana = 6;
+                        }else{
+                            diaSemana = 7;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
+    //gather current calendar
+    NSCalendar *calendar = [NSCalendar currentCalendar];
+    
+    //gather date components from date
+    NSDateComponents *dateComponents = [calendar components:(NSHourCalendarUnit | NSMinuteCalendarUnit | NSSecondCalendarUnit) fromDate:[NSDate date]];
+    
+    
+    //set date components
+    [dateComponents setDay: day];
+    [dateComponents setMonth:6];
+    [dateComponents setYear:2014];
+    [dateComponents setHour:horaI];
+    [dateComponents setMinute:minutoI];
+    [dateComponents setSecond:0];
+    
+    
+    //save date relative from date
+    NSDate *date = [calendar dateFromComponents:dateComponents];
+    
+    NSCalendar *gregorian = [[NSCalendar alloc] initWithCalendarIdentifier:NSGregorianCalendar] ;
+    NSDateComponents *comps = [gregorian components:NSWeekdayCalendarUnit fromDate:date];
+    int weekday = [comps weekday];
+    NSLog(@"weekday=%d",weekday);
+    
+    if (diaSemana == weekday && sender.on) {
+        localNotification.fireDate = date;
+        localNotification.alertBody = [NSString stringWithFormat:@"Começou seu exercício!"];
+        localNotification.soundName = UILocalNotificationDefaultSoundName;
+        localNotification.applicationIconBadgeNumber = 0;
+        localNotification.repeatInterval = NSWeekdayCalendarUnit;
+        
+        NSLog(@"\n\n\nMarcou\n\n\n");
+        
+        [[UIApplication sharedApplication] scheduleLocalNotification:localNotification];
+        
+    }
+    
+}
+- (IBAction)Salvar:(id)sender {
+    //setando valor de horas
+    
+    if([[G4LViewConfigHora defaultHora]str] != nil){
+        self.strHorario = [[G4LViewConfigHora defaultHora]str];
+    }else{
+        NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+        [dateFormatter setDateFormat:@"HH:mm"];
+        
+        self.strHorario = [dateFormatter stringFromDate:[NSDate date]];
+    }
+    
+    NSCalendar *calendar = [NSCalendar currentCalendar]; // gets default calendar
+    NSDateComponents *components;
+    
+    if([[G4LViewConfigHora defaultHora]horario].date != nil){
+        components = [calendar components:(NSYearCalendarUnit | NSMonthCalendarUnit |  NSDayCalendarUnit | NSHourCalendarUnit | NSMinuteCalendarUnit) fromDate:[[G4LViewConfigHora defaultHora]horario].date];
+    }else{
+        components = [calendar components:(NSYearCalendarUnit | NSMonthCalendarUnit |  NSDayCalendarUnit | NSHourCalendarUnit | NSMinuteCalendarUnit) fromDate:[NSDate date]];
+    }
+    
+    horaI = components.hour;
+    minutoI = components.minute;
+    
+    NSLog(@"Hora = %d, minuto = %d",horaI,minutoI);
     
     //Recuperando endereco do arquivo configuracoes.plist
     NSString *configuracoesPlistEndereco=[[NSBundle mainBundle] pathForResource:@"configuracoes" ofType:@"plist"];
@@ -125,55 +217,31 @@
     [configuracoesDoUsuario setObject:((self.sexta.on)==1)?@"true":@"false" forKey:@"sexta"];
     [configuracoesDoUsuario setObject:((self.sabado.on)==1)?@"true":@"false" forKey:@"sabado"];
     [configuracoesDoUsuario setObject:((self.domingo.on)==1)?@"true":@"false" forKey:@"domingo"];
+    [configuracoesDoUsuario setObject:self.strHorario forKey:@"horario"];
     
     [configuracoesPlist addObject:configuracoesDoUsuario];
     [configuracoesPlist writeToFile:configuracoesPlistEndereco atomically:YES];
     
-    [self dismissViewControllerAnimated:YES completion:nil];
+    //alerta
+    [self alertaMessagem:self.segunda andDay:2];
+    [self alertaMessagem:self.terca andDay:3];
+    [self alertaMessagem:self.quarta andDay:4];
+    [self alertaMessagem:self.quinta andDay:5];
+    [self alertaMessagem:self.sexta andDay:6];
+    [self alertaMessagem:self.sabado andDay:7];
+    [self alertaMessagem:self.domingo andDay:1];
     
-   //Apagar esse codigo
-//    
-//    //  NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDesktopDirectory, NSUserDomainMask, YES);
-//    //   NSString *documentsDirectory = [paths objectAtIndex:0];
-//    
-//    NSString *documentsDirectory = [[NSBundle mainBundle]resourcePath];
-//    NSString *path = [documentsDirectory stringByAppendingPathComponent:@"resource/date.plist"];
-//    //NSString  *path = [NSString stringWithFormat:@"%@/resource/%@", documentsDirectory,@"date.plist"];
-//    NSFileManager *fileManager = [NSFileManager defaultManager];
-//    NSMutableDictionary *data;
-//    NSMutableArray *pList = [[NSMutableArray alloc]init];
-//    
-//    if ([fileManager fileExistsAtPath: path])
-//        data = [[NSMutableDictionary alloc] initWithContentsOfFile: path];
-//    
-//    else
-//        data = [[NSMutableDictionary alloc] init];
-//    
-//    [data setObject:self.segunda forKey:@"segunda"];
-//    [data setObject:self.terca forKey:@"terca"];
-//    [data setObject:self.quarta forKey:@"quarta"];
-//    [data setObject:self.quinta forKey:@"quinta"];
-//    [data setObject:self.sexta forKey:@"sexta"];
-//    [data setObject:self.sabado forKey:@"sabado"];
-//    [data setObject:self.domingo forKey:@"domingo"];
-//    
-//    [pList addObject:data];
-//    [pList writeToFile: path atomically:YES];
-//    
-//    NSArray *plistsNoCelular=[[NSFileManager defaultManager] contentsOfDirectoryAtPath:path error:nil];
-//    
-//    [plistsNoCelular enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
-//        
-//        NSString *nomeArquivo=(NSString *) obj;
-//        NSString *extencaoArquivo =[[nomeArquivo stringByDeletingPathExtension] lowercaseString];
-//        
-//        if ([extencaoArquivo isEqualToString:@"plist"])
-//        {
-//            NSLog(@"%@",nomeArquivo);
-//        }
-//    }];
+    
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 
 
+- (IBAction)horarioSeries:(id)sender {
+    G4LViewConfigHora *viewConfigHora=[G4LViewConfigHora defaultHora];
+    
+    viewConfigHora.modalTransitionStyle=UIModalPresentationFullScreen;
+    [self presentViewController:viewConfigHora animated:YES completion:nil];
+    
+}
 @end

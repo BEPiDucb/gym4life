@@ -149,6 +149,10 @@
     [dateComponents setDay: day];
     [dateComponents setMonth:6];
     [dateComponents setYear:2014];
+    [dateComponents setHour:horaI];
+    [dateComponents setMinute:minutoI];
+    [dateComponents setSecond:0];
+    
     
     //save date relative from date
     NSDate *date = [calendar dateFromComponents:dateComponents];
@@ -158,12 +162,11 @@
     int weekday = [comps weekday];
     NSLog(@"weekday=%d",weekday);
     
-    if (diaSemana == weekday) {
+    if (diaSemana == weekday && sender.on) {
         localNotification.fireDate = date;
         localNotification.alertBody = [NSString stringWithFormat:@"Começou seu exercício!"];
         localNotification.soundName = UILocalNotificationDefaultSoundName;
-        localNotification.applicationIconBadgeNumber = 1;
-        
+        localNotification.applicationIconBadgeNumber = 0;
         localNotification.repeatInterval = NSWeekdayCalendarUnit;
         
         NSLog(@"\n\n\nMarcou\n\n\n");
@@ -175,7 +178,29 @@
 }
 - (IBAction)Salvar:(id)sender {
     //setando valor de horas
-    self.strHorario = [[G4LViewConfigHora defaultHora]str];
+    
+    if([[G4LViewConfigHora defaultHora]str] != nil){
+        self.strHorario = [[G4LViewConfigHora defaultHora]str];
+    }else{
+        NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+        [dateFormatter setDateFormat:@"HH:mm"];
+        
+        self.strHorario = [dateFormatter stringFromDate:[NSDate date]];
+    }
+    
+    NSCalendar *calendar = [NSCalendar currentCalendar]; // gets default calendar
+    NSDateComponents *components;
+    
+    if([[G4LViewConfigHora defaultHora]horario].date != nil){
+        components = [calendar components:(NSYearCalendarUnit | NSMonthCalendarUnit |  NSDayCalendarUnit | NSHourCalendarUnit | NSMinuteCalendarUnit) fromDate:[[G4LViewConfigHora defaultHora]horario].date];
+    }else{
+        components = [calendar components:(NSYearCalendarUnit | NSMonthCalendarUnit |  NSDayCalendarUnit | NSHourCalendarUnit | NSMinuteCalendarUnit) fromDate:[NSDate date]];
+    }
+    
+    horaI = components.hour;
+    minutoI = components.minute;
+    
+    NSLog(@"Hora = %d, minuto = %d",horaI,minutoI);
     
     //Recuperando endereco do arquivo configuracoes.plist
     NSString *configuracoesPlistEndereco=[[NSBundle mainBundle] pathForResource:@"configuracoes" ofType:@"plist"];
@@ -217,5 +242,6 @@
     
     viewConfigHora.modalTransitionStyle=UIModalPresentationFullScreen;
     [self presentViewController:viewConfigHora animated:YES completion:nil];
+    
 }
 @end

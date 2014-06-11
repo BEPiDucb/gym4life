@@ -10,6 +10,8 @@
 
 @interface G4LViewConfig : UIViewController{
     
+    int horaI,minutoI;
+    
 }
 
 @property (weak, nonatomic) IBOutlet UISwitch *segunda;
@@ -25,5 +27,5 @@
 - (IBAction)Salvar:(id)sender;
 //- (IBAction)series:(id)sender;
 - (IBAction)horarioSeries:(id)sender;
-- (void)alertaMessagem:(UISwitch *)sender;
+- (void)alertaMessagem:(UISwitch *)sender andDay:(int)day;
 @end

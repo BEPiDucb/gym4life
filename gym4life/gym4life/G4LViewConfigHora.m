@@ -15,7 +15,7 @@
 @implementation G4LViewConfigHora
 
 static G4LViewConfigHora *defaultHora=nil;
-    
+
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -41,11 +41,12 @@ static G4LViewConfigHora *defaultHora=nil;
 - (IBAction)voltarViewConfig:(id)sender {
     NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
     [dateFormatter setDateFormat:@"HH:mm"];
+    
     self.str = [dateFormatter stringFromDate:self.horario.date];
     
+    [[G4LViewConfigHora defaultHora] setHorario:_horario];
     [self dismissViewControllerAnimated:YES completion:nil];
 }
-
 
 +(G4LViewConfigHora *)defaultHora
 {

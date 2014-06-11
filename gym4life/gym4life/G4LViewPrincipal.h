@@ -11,5 +11,6 @@
 @interface G4LViewPrincipal : UIViewController <UITableViewDataSource,UITableViewDelegate>
 
 @property (strong,nonatomic) NSMutableArray *seriesArray;
+@property (weak, nonatomic) IBOutlet UISwitch *notificacaoBotao;
 
 @end

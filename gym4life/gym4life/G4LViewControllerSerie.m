@@ -26,14 +26,15 @@
     //Para mudar no objeto corrente
   //  [G4LSeries setNumSerie:[G4LSeries serieClicada]];
     //mudando opcao de serie no plist
-    NSMutableArray *seriesPlist=[[NSMutableArray alloc]initWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"series" ofType:@"plist" ]];
+    NSMutableArray *seriesPlist=
+    [[NSMutableArray alloc]initWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"series" ofType:@"plist" ]];
     
     NSNumber *serieEscolhida =[[NSNumber alloc]initWithInt:[G4LSeries serieClicada]];
     [seriesPlist replaceObjectAtIndex:([seriesPlist count]-1) withObject:serieEscolhida];
     [seriesPlist writeToFile:[[NSBundle mainBundle] pathForResource:@"series" ofType:@"plist"] atomically:YES];
     
 
-    
+    NSLog(@"%@",serieEscolhida);
     
 }
 

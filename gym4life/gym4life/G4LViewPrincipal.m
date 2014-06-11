@@ -11,6 +11,7 @@
 #import "G4LSeries.h"
 #import "G4LExercicio.h"
 #import "G4LMostraSerie.h"
+#import "G4LViewConfig.h"
 
 @interface G4LViewPrincipal ()
 
@@ -33,6 +34,15 @@
     // Do any additional setup after loading the view from its nib.
    //Carrega arquivos plists no iphone 
     [self carregarDadosNoiPhone];
+    
+    NSArray *configuracoesPlist=[[NSArray alloc]initWithContentsOfFile:
+                                 [[NSBundle mainBundle]pathForResource:@"configuracoes" ofType:@"plist"]];
+
+    if (configuracoesPlist==NULL)
+    {
+        _notificacaoBotao.on=1;
+        
+    }else _notificacaoBotao.on=0;
     
     
     //Aloca o array series
@@ -99,7 +109,22 @@
 //Método chamado quando o valor da Notificação é alterado
 -(IBAction)mudaNotificacao:(id)sender
 {
-    NSLog(@"Botao acionado");
+    if (_notificacaoBotao.on ==1)
+    {
+        G4LViewConfig *configuracao=[[G4LViewConfig alloc]init];
+        
+        configuracao.modalTransitionStyle =UIModalTransitionStyleCoverVertical;
+        [self presentViewController:configuracao animated:YES completion:nil];
+        
+        NSLog(@"Botao acionado");
+
+    }else
+    {
+        UIApplication *aplicacao =[UIApplication sharedApplication ];
+        [aplicacao cancelAllLocalNotifications];
+        
+        
+    }
     
 }
 

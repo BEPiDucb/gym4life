@@ -92,6 +92,20 @@
         self.strHorario = auxString;
     }
     
+    NSCalendar *calendar = [NSCalendar currentCalendar]; // gets default calendar
+    NSDateComponents *components;
+    
+    if([[G4LViewConfigHora defaultHora]horario].date != nil){
+        components = [calendar components:(NSYearCalendarUnit | NSMonthCalendarUnit |  NSDayCalendarUnit | NSHourCalendarUnit | NSMinuteCalendarUnit) fromDate:[[G4LViewConfigHora defaultHora]horario].date];
+    }else{
+        components = [calendar components:(NSYearCalendarUnit | NSMonthCalendarUnit |  NSDayCalendarUnit | NSHourCalendarUnit | NSMinuteCalendarUnit) fromDate:[NSDate date]];
+    }
+
+    horaI = components.hour;
+    minutoI = components.minute;
+    
+    _horaMarcada.text = [NSString stringWithFormat:@"%02d:%02d",horaI,minutoI];
+    
 }
 
 - (void)didReceiveMemoryWarning
@@ -244,4 +258,5 @@
     [self presentViewController:viewConfigHora animated:YES completion:nil];
     
 }
+
 @end

@@ -13,10 +13,7 @@
 			<string>Espreguiçar</string>
 			<key>imagens</key>
 			<array>
-				<string>azul.png</string>
-				<string>verde.png</string>
-				<string>azul.png</string>
-				<string>verde.png</string>
+				<string>S1_E1_0_espreguicar.jpg</string>
 			</array>
 		</dict>
 		<dict>
@@ -29,10 +26,7 @@
 			<string>Circundução da cabeça</string>
 			<key>imagens</key>
 			<array>
-				<string>verde.png</string>
-				<string>azul.png</string>
-				<string>verde.png</string>
-				<string>azul.png</string>
+				<string>S1_E2_0_circunducaoCabeca.jpg</string>
 			</array>
 		</dict>
 		<dict>
@@ -45,7 +39,7 @@
 			<string>Extensão da cabeça</string>
 			<key>imagens</key>
 			<array>
-				<string>azul.png</string>
+				<string>S1_E3_0_extencaoCabeca.jpg</string>
 			</array>
 		</dict>
 		<dict>
@@ -58,10 +52,7 @@
 			<string>Rotação dos ombros</string>
 			<key>imagens</key>
 			<array>
-				<string>verde.png</string>
-				<string>azul.png</string>
-				<string>verde.png</string>
-				<string>azul.png</string>
+				<string>S1_E4_0_rotacaoOmbro.jpg</string>
 			</array>
 		</dict>
 		<dict>
@@ -74,9 +65,7 @@
 			<string>Peitoral</string>
 			<key>imagens</key>
 			<array>
-				<string>verde.png</string>
-				<string>azul.png</string>
-				<string>verde.png</string>
+				<string>S1_E5_0_peitoral.jpg</string>
 			</array>
 		</dict>
 		<dict>
@@ -89,7 +78,7 @@
 			<string>Extensão punho</string>
 			<key>imagens</key>
 			<array>
-				<string>azul.png</string>
+				<string>S1_E6_0_punho.jpg</string>
 			</array>
 		</dict>
 		<dict>
@@ -102,9 +91,7 @@
 			<string>Abdução ombro</string>
 			<key>imagens</key>
 			<array>
-				<string>verde.png</string>
-				<string>azul.png</string>
-				<string>verde.png</string>
+				<string>S1_E7_0_abducaoOmbros.jpg</string>
 			</array>
 		</dict>
 		<dict>
@@ -117,7 +104,7 @@
 			<string>Ombro / Tríceps</string>
 			<key>imagens</key>
 			<array>
-				<string>verde.png</string>
+				<string>S1_E8_0_ombros.jpg</string>
 			</array>
 		</dict>
 		<dict>
@@ -130,9 +117,7 @@
 			<string>Rotação tronco</string>
 			<key>imagens</key>
 			<array>
-				<string>azul.png</string>
-				<string>verde.png</string>
-				<string>azul.png</string>
+				<string>S1_E9_0_rotacaoTronco.jpg</string>
 			</array>
 		</dict>
 		<dict>
@@ -145,7 +130,7 @@
 			<string>Flexão tronco</string>
 			<key>imagens</key>
 			<array>
-				<string>verde.png</string>
+				<string>S1_E10_0_flexaoTronco.jpg</string>
 			</array>
 		</dict>
 	</array>
@@ -253,6 +238,6 @@
 			</array>
 		</dict>
 	</array>
-	<integer>1</integer>
+	<integer>0</integer>
 </array>
 </plist>

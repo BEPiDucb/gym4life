@@ -151,6 +151,10 @@
 
 -(void) ContadorCronometro
 {
+    //Configura transicao das imagens
+    CATransition *transition = [CATransition animation];
+    transition.type = kCATransitionFade;
+   
     //atualizando o marcador de tempo
     
     if (segundos==60)
@@ -168,11 +172,14 @@
         _exerciciosImageView.animationImages=[[animacoesExercicios objectAtIndex:indexExercicioCorrenteAnimacao]imagens];
         _exerciciosImageView.animationDuration=10;
         [_exerciciosImageView startAnimating];
+        [_exerciciosImageView.layer addAnimation:transition forKey:nil]; //insere transicao de imagem mais suave
+
 
         if (indexExercicioCorrenteAnimacao<([[[G4LSeries serieEscolhida] exercicios]count]-1))
         {
             indexExercicioCorrenteAnimacao++;
         }
+        
         
     }
         tempoTroca=tempoTotal/[[[G4LSeries serieEscolhida] exercicios]count];
@@ -196,56 +203,54 @@
     _terminarBotao.alpha=0;
     _cronometroLabel.alpha=0;
     _labelOrientacao.alpha=0;
+    _ExercicioNome.alpha=0;
     
+    
+    [G4LSeries setNumSerie:indexSerie];
     G4LSeries *serieEscolhida=[G4LSeries serieEscolhida];
     G4LExercicio *exercicio;
+   // NSArray *exerciciosDaSerie=[serieEscolhida]
     
     CGRect imageViewFrame;
-    CGRect labelOrientacaoFrame;
+    CGRect labelNomeExercicioFrame;
     
     UIImageView *imageViewExercicio ;
-    UILabel *labelOrientacao;
+    UILabel *labelNomeExercicio;
     
     
     
     for (int i=0; i<[[serieEscolhida exercicios] count]; i++)
     {
         
-        exercicio= [[serieEscolhida exercicios] objectAtIndex:indexSerie];
+        exercicio= [[serieEscolhida exercicios] objectAtIndex:i];
         
         
-        imageViewFrame = CGRectMake(0.f, 0.f,240.f,240.f);
-        labelOrientacaoFrame =CGRectMake(0.f, 240.f, 240.f, 70.f);
+        imageViewFrame = CGRectMake(0.f, 24.f,240.f,240.f);
         
         imageViewFrame.origin.x=_scrollView.frame.size.width*i;
-        labelOrientacaoFrame.origin.x=_scrollView.frame.size.width*i;
+        
+        labelNomeExercicioFrame = CGRectMake(0.f, 0.f,240.f,24.f);
+        labelNomeExercicioFrame.origin.x=_scrollView.frame.size.width*i;
+        
+        labelNomeExercicio = [[UILabel alloc]initWithFrame:labelNomeExercicioFrame];
+        labelNomeExercicio.text=[exercicio nome];
+        labelNomeExercicio.textAlignment=NSTextAlignmentCenter;
         
         imageViewExercicio = [[UIImageView alloc] initWithFrame:imageViewFrame];
-        labelOrientacao=[[UILabel alloc ]initWithFrame:labelOrientacaoFrame];
+       
+        [imageViewExercicio setImage:[[exercicio imagens] objectAtIndex:0]];
+        [imageViewExercicio setContentMode:UIViewContentModeScaleToFill];
         
-        //Atencao nesta linha
         
-        if (i<[[exercicio imagens] count])
-        {
-            [imageViewExercicio setImage:[[exercicio imagens] objectAtIndex:i]];
-            [imageViewExercicio setContentMode:UIViewContentModeScaleToFill];
-            
-        }
-        
-        // labelOrientacao.text=[[exercicio orientacao] objectAtIndex:i];
-        labelOrientacao.text=@"Orientacao";
-        labelOrientacao.textAlignment=NSTextAlignmentCenter;
-        
-        _ExercicioNome.text=[exercicio nome];
+        [_scrollView addSubview:labelNomeExercicio];
         [_scrollView addSubview:imageViewExercicio];
-        [_scrollView addSubview:labelOrientacao];
+     
         
     }//fim for
     
     //Habilita a paginação
     self.scrollView.pagingEnabled = YES;
     self.scrollView.delegate = self;
-    
     
     _scrollView.contentSize = CGSizeMake(self.scrollView.frame.size.width * [[serieEscolhida exercicios]count], self.scrollView.frame.size.height);
     

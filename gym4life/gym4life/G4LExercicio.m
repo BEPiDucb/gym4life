@@ -36,7 +36,7 @@
        {
            [imagensDoExercicio addObject:[UIImage imageNamed:conteudo]];
            imagem=[[UIImage alloc]init];
-           
+        
        }
        
         [exercicio setOrientacao: [exerciciosDictionary objectForKey:@"orientacao"]];

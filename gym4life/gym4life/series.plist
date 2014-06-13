@@ -145,7 +145,7 @@
 			<string>Espreguiçar</string>
 			<key>imagens</key>
 			<array>
-				<string>verde.png</string>
+				<string>S2_E1_0_espreguicar.jpg</string>
 			</array>
 		</dict>
 		<dict>
@@ -158,9 +158,7 @@
 			<string>Rotação da cabeça</string>
 			<key>imagens</key>
 			<array>
-				<string>azul.png</string>
-				<string>verde.png</string>
-				<string>azul.png</string>
+				<string>S2_E2_0_rotacaoCabeca.jpg</string>
 			</array>
 		</dict>
 		<dict>
@@ -173,9 +171,7 @@
 			<string>Rotação da cabeça</string>
 			<key>imagens</key>
 			<array>
-				<string>verde.png</string>
-				<string>azul.png</string>
-				<string>verde.png</string>
+				<string>S2_E3_0_rotacaoCabeca.jpg</string>
 			</array>
 		</dict>
 		<dict>
@@ -188,10 +184,7 @@
 			<string>Cruzar braços</string>
 			<key>imagens</key>
 			<array>
-				<string>azul.png</string>
-				<string>verde.png</string>
-				<string>azul.png</string>
-				<string>verde.png</string>
+				<string>S2_E4_0_cruzarBracos.jpg</string>
 			</array>
 		</dict>
 		<dict>
@@ -204,9 +197,7 @@
 			<string>Abdução ombro</string>
 			<key>imagens</key>
 			<array>
-				<string>azul.png</string>
-				<string>verde.png</string>
-				<string>azul.png</string>
+				<string>S2_E5_0_abducaoOmbros.jpg</string>
 			</array>
 		</dict>
 		<dict>
@@ -219,7 +210,7 @@
 			<string>Flexão tronco</string>
 			<key>imagens</key>
 			<array>
-				<string>verde.png</string>
+				<string>S2_E6_0_flexaoOmbro.jpg</string>
 			</array>
 		</dict>
 		<dict>
@@ -232,9 +223,7 @@
 			<string>Rotação do tronco</string>
 			<key>imagens</key>
 			<array>
-				<string>azul.png</string>
-				<string>verde.png</string>
-				<string>azul.png</string>
+				<string>S2_E7_0_rotacaoTronco.jpg</string>
 			</array>
 		</dict>
 	</array>

@@ -5,36 +5,36 @@
 	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
 	<false/>
 	<key>IDESourceControlProjectIdentifier</key>
-	<string>4C3EEBD8-8BB0-4FDC-B27B-94719BF6CC8C</string>
+	<string>80F1F2DB-BD9D-4A5A-81A9-275B8C935AD0</string>
 	<key>IDESourceControlProjectName</key>
 	<string>gym4life</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
-		<key>F278CF8A-5A1A-4A46-BB41-9E262CF22581</key>
-		<string>https://github.com/juliothefox/gym4life.git</string>
+		<key>2350374B-3040-4977-8C83-F82429EF912A</key>
+		<string>https://github.com/BEPiDucb/gym4life.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
 	<string>gym4life/gym4life.xcodeproj/project.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
-		<key>F278CF8A-5A1A-4A46-BB41-9E262CF22581</key>
+		<key>2350374B-3040-4977-8C83-F82429EF912A</key>
 		<string>../../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
-	<string>https://github.com/juliothefox/gym4life.git</string>
+	<string>https://github.com/BEPiDucb/gym4life.git</string>
 	<key>IDESourceControlProjectVersion</key>
 	<integer>110</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>F278CF8A-5A1A-4A46-BB41-9E262CF22581</string>
+	<string>2350374B-3040-4977-8C83-F82429EF912A</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>F278CF8A-5A1A-4A46-BB41-9E262CF22581</string>
+			<string>2350374B-3040-4977-8C83-F82429EF912A</string>
 			<key>IDESourceControlWCCName</key>
-			<string>gym4life</string>
+			<string>gym4lifeMasterRep</string>
 		</dict>
 	</array>
 </dict>

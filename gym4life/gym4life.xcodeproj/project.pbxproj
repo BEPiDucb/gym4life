@@ -24,6 +24,14 @@
 		360EF21F1937CCCD007FB699 /* G4LViewPrincipal.xib in Resources */ = {isa = PBXBuildFile; fileRef = 360EF21D1937CCCD007FB699 /* G4LViewPrincipal.xib */; };
 		360EF2221937D289007FB699 /* G4LSeries.m in Sources */ = {isa = PBXBuildFile; fileRef = 360EF2211937D289007FB699 /* G4LSeries.m */; };
 		360EF2251937D2AF007FB699 /* G4LExercicio.m in Sources */ = {isa = PBXBuildFile; fileRef = 360EF2241937D2AF007FB699 /* G4LExercicio.m */; };
+		43F75F37194F7EF200B4704A /* G4LMostraSerie.m in Sources */ = {isa = PBXBuildFile; fileRef = 43F75F34194F7EF200B4704A /* G4LMostraSerie.m */; };
+		43F75F38194F7EF200B4704A /* G4LMostraSerie.xib in Resources */ = {isa = PBXBuildFile; fileRef = 43F75F35194F7EF200B4704A /* G4LMostraSerie.xib */; };
+		43F75F42194F7EFC00B4704A /* G4LViewConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 43F75F3A194F7EFC00B4704A /* G4LViewConfig.m */; };
+		43F75F43194F7EFC00B4704A /* G4LViewConfig.xib in Resources */ = {isa = PBXBuildFile; fileRef = 43F75F3B194F7EFC00B4704A /* G4LViewConfig.xib */; };
+		43F75F44194F7EFC00B4704A /* G4LViewConfigHora.m in Sources */ = {isa = PBXBuildFile; fileRef = 43F75F3D194F7EFC00B4704A /* G4LViewConfigHora.m */; };
+		43F75F45194F7EFC00B4704A /* G4LViewConfigHora.xib in Resources */ = {isa = PBXBuildFile; fileRef = 43F75F3E194F7EFC00B4704A /* G4LViewConfigHora.xib */; };
+		43F75F46194F7EFC00B4704A /* G4LViewControllerSerie.m in Sources */ = {isa = PBXBuildFile; fileRef = 43F75F40194F7EFC00B4704A /* G4LViewControllerSerie.m */; };
+		43F75F47194F7EFC00B4704A /* G4LViewControllerSerie.xib in Resources */ = {isa = PBXBuildFile; fileRef = 43F75F41194F7EFC00B4704A /* G4LViewControllerSerie.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +69,19 @@
 		360EF2211937D289007FB699 /* G4LSeries.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = G4LSeries.m; sourceTree = "<group>"; };
 		360EF2231937D2AF007FB699 /* G4LExercicio.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = G4LExercicio.h; sourceTree = "<group>"; };
 		360EF2241937D2AF007FB699 /* G4LExercicio.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = G4LExercicio.m; sourceTree = "<group>"; };
+		43F75F33194F7EF200B4704A /* G4LMostraSerie.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = G4LMostraSerie.h; sourceTree = "<group>"; };
+		43F75F34194F7EF200B4704A /* G4LMostraSerie.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = G4LMostraSerie.m; sourceTree = "<group>"; };
+		43F75F35194F7EF200B4704A /* G4LMostraSerie.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = G4LMostraSerie.xib; sourceTree = "<group>"; };
+		43F75F36194F7EF200B4704A /* G4LSerie.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = G4LSerie.h; sourceTree = "<group>"; };
+		43F75F39194F7EFC00B4704A /* G4LViewConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = G4LViewConfig.h; sourceTree = "<group>"; };
+		43F75F3A194F7EFC00B4704A /* G4LViewConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = G4LViewConfig.m; sourceTree = "<group>"; };
+		43F75F3B194F7EFC00B4704A /* G4LViewConfig.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = G4LViewConfig.xib; sourceTree = "<group>"; };
+		43F75F3C194F7EFC00B4704A /* G4LViewConfigHora.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = G4LViewConfigHora.h; sourceTree = "<group>"; };
+		43F75F3D194F7EFC00B4704A /* G4LViewConfigHora.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = G4LViewConfigHora.m; sourceTree = "<group>"; };
+		43F75F3E194F7EFC00B4704A /* G4LViewConfigHora.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = G4LViewConfigHora.xib; sourceTree = "<group>"; };
+		43F75F3F194F7EFC00B4704A /* G4LViewControllerSerie.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = G4LViewControllerSerie.h; sourceTree = "<group>"; };
+		43F75F40194F7EFC00B4704A /* G4LViewControllerSerie.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = G4LViewControllerSerie.m; sourceTree = "<group>"; };
+		43F75F41194F7EFC00B4704A /* G4LViewControllerSerie.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = G4LViewControllerSerie.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,6 +141,19 @@
 		360EF1F21937CC82007FB699 /* gym4life */ = {
 			isa = PBXGroup;
 			children = (
+				43F75F39194F7EFC00B4704A /* G4LViewConfig.h */,
+				43F75F3A194F7EFC00B4704A /* G4LViewConfig.m */,
+				43F75F3B194F7EFC00B4704A /* G4LViewConfig.xib */,
+				43F75F3C194F7EFC00B4704A /* G4LViewConfigHora.h */,
+				43F75F3D194F7EFC00B4704A /* G4LViewConfigHora.m */,
+				43F75F3E194F7EFC00B4704A /* G4LViewConfigHora.xib */,
+				43F75F3F194F7EFC00B4704A /* G4LViewControllerSerie.h */,
+				43F75F40194F7EFC00B4704A /* G4LViewControllerSerie.m */,
+				43F75F41194F7EFC00B4704A /* G4LViewControllerSerie.xib */,
+				43F75F33194F7EF200B4704A /* G4LMostraSerie.h */,
+				43F75F34194F7EF200B4704A /* G4LMostraSerie.m */,
+				43F75F35194F7EF200B4704A /* G4LMostraSerie.xib */,
+				43F75F36194F7EF200B4704A /* G4LSerie.h */,
 				360EF2261937D48C007FB699 /* Resources */,
 				360EF1FB1937CC82007FB699 /* G4LAppDelegate.h */,
 				360EF1FC1937CC82007FB699 /* G4LAppDelegate.m */,
@@ -249,7 +283,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				43F75F45194F7EFC00B4704A /* G4LViewConfigHora.xib in Resources */,
+				43F75F47194F7EFC00B4704A /* G4LViewControllerSerie.xib in Resources */,
 				360EF1F71937CC82007FB699 /* InfoPlist.strings in Resources */,
+				43F75F38194F7EF200B4704A /* G4LMostraSerie.xib in Resources */,
+				43F75F43194F7EFC00B4704A /* G4LViewConfig.xib in Resources */,
 				0F99B841193F995800097873 /* series.plist in Resources */,
 				360EF1FF1937CC82007FB699 /* Images.xcassets in Resources */,
 				360EF21F1937CCCD007FB699 /* G4LViewPrincipal.xib in Resources */,
@@ -271,9 +309,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				43F75F44194F7EFC00B4704A /* G4LViewConfigHora.m in Sources */,
 				360EF2251937D2AF007FB699 /* G4LExercicio.m in Sources */,
 				360EF2221937D289007FB699 /* G4LSeries.m in Sources */,
+				43F75F37194F7EF200B4704A /* G4LMostraSerie.m in Sources */,
+				43F75F46194F7EFC00B4704A /* G4LViewControllerSerie.m in Sources */,
 				360EF1FD1937CC82007FB699 /* G4LAppDelegate.m in Sources */,
+				43F75F42194F7EFC00B4704A /* G4LViewConfig.m in Sources */,
 				360EF1F91937CC82007FB699 /* main.m in Sources */,
 				360EF21E1937CCCD007FB699 /* G4LViewPrincipal.m in Sources */,
 			);

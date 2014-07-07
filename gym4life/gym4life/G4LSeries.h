@@ -16,6 +16,10 @@
 
 +(G4LSeries *) serieEscolhida;
 +(void) setNumSerie:(int)nroSerie;
++(int) numSerie;
 +(void) setSerieClicada:(int)indexSerie;
 +(int) serieClicada;
++(void) setIndexSerieEscolhida:(int)indexSerie;
++(int) indexSerieEscolhida;
+
 @end

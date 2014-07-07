@@ -26,12 +26,14 @@
     //Para mudar no objeto corrente
   //  [G4LSeries setNumSerie:[G4LSeries serieClicada]];
     //mudando opcao de serie no plist
-    NSMutableArray *seriesPlist=
-    [[NSMutableArray alloc]initWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"series" ofType:@"plist" ]];
+    NSMutableArray *numSeriesPlist=
+    [[NSMutableArray alloc]initWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"numeroSerieEscolhida" ofType:@"plist" ]];
     
     NSNumber *serieEscolhida =[[NSNumber alloc]initWithInt:[G4LSeries serieClicada]];
-    [seriesPlist replaceObjectAtIndex:([seriesPlist count]-1) withObject:serieEscolhida];
-    [seriesPlist writeToFile:[[NSBundle mainBundle] pathForResource:@"series" ofType:@"plist"] atomically:YES];
+    [numSeriesPlist replaceObjectAtIndex:([numSeriesPlist count]-1) withObject:serieEscolhida];
+    
+    
+    [numSeriesPlist writeToFile:[[NSBundle mainBundle] pathForResource:@"numeroSerieEscolhida" ofType:@"plist"] atomically:YES];
     
 
     NSLog(@"%@",serieEscolhida);
@@ -111,11 +113,20 @@
     _seriesVoltar.alpha=0;
     
     
+    //pega a serie escolhida pelo usuario
+    NSMutableArray *numSerieEscolhida=[[NSMutableArray alloc] initWithContentsOfFile:
+                                       [[NSBundle mainBundle] pathForResource:@"numeroSerieEscolhida" ofType:@"plist"]];
+
+    
     G4LSeries *serieEscolhida=[G4LSeries serieEscolhida];
     animacoesExercicios=[[NSMutableArray alloc]init];
     indexExercicioCorrenteAnimacao=0;
     tempoTroca=0;
     tempoTotal=0;
+    
+    [G4LSeries setNumSerie:[[numSerieEscolhida objectAtIndex:0] intValue]];
+    
+ //   NSLog(@"Serie escolhida index %d",[[numSerieEscolhida objectAtIndex:0] intValue]);
     
     for (int i=0;i<[[serieEscolhida exercicios] count];i++)
     {

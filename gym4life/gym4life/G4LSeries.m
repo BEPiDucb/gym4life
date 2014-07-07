@@ -12,6 +12,7 @@
 
 static G4LSeries *serieEscolhida=nil;
 static int indexSerieClicada=0;
+static int indexSerieEscolhida=0;
 
 +(G4LSeries *)serieEscolhida
 {
@@ -38,7 +39,9 @@ static int indexSerieClicada=0;
     
     
 }
-
+/*
+    Carrega exercicios com a passagem do index da serie
+ */
 +(void)setNumSerie:(int)nroSerie
 {
     serieEscolhida.exercicios = [G4LExercicio exerciciosSerie:nroSerie];
@@ -52,5 +55,14 @@ static int indexSerieClicada=0;
 +(int)serieClicada
 {
     return indexSerieClicada;
+}
+
++(int)indexSerieEscolhida
+{
+    return indexSerieEscolhida;
+}
++(void)setIndexSerieEscolhida:(int)indexSerie
+{
+    indexSerieEscolhida=indexSerie;
 }
 @end

@@ -42,6 +42,7 @@
     {
         _notificacaoBotao.on=1;
         
+        
     }else _notificacaoBotao.on=0;
     
     
@@ -54,9 +55,29 @@
     
     // Preenche o array com 30 series vazias, apenas para demonstração e teste,
     // devendo ser mudado para alocar em vez de strings, alocar arrays de exercícios
-    for(int i=0;i<seriesPlist.count - 1;i++){
-        [_seriesArray addObject:[NSString stringWithFormat:@"Serie %d",i]];
+    for(int i=0;i<seriesPlist.count - 1;i++)
+    {
+        [_seriesArray addObject:[NSString stringWithFormat:@"Serie %d",i+1]];
     }
+    //pega a serie escolhida pelo usuario
+    NSMutableArray *numSerieEscolhida=[[NSMutableArray alloc] initWithContentsOfFile:
+                                       [[NSBundle mainBundle] pathForResource:@"numeroSerieEscolhida" ofType:@"plist"]];
+    
+    //Se nao existir nenhum escolhido a serie 1 é definida como padrao
+    if ([numSerieEscolhida count]==0)
+    {
+        [numSerieEscolhida addObject:@01];
+        
+        [numSerieEscolhida writeToFile:[[NSBundle mainBundle] pathForResource:@"numeroSerieEscolhida" ofType:@"plist"] atomically:YES];
+        
+        NSLog(@" Entrei no if");
+    }else
+    {
+        
+        [G4LSeries setIndexSerieEscolhida:(int)[numSerieEscolhida objectAtIndex:0]];
+        
+    }
+
     
 }
 
@@ -123,7 +144,6 @@
         UIApplication *aplicacao =[UIApplication sharedApplication ];
         [aplicacao cancelAllLocalNotifications];
         
-        
     }
     
 }
@@ -151,6 +171,8 @@
 - (IBAction)iniciarRotina:(id)sender {
     
     G4LViewControllerSerie *serie=[[G4LViewControllerSerie alloc] init];
+   
+    //informa que a deve iniciar os exercicios
     [G4LSeries setSerieClicada:-1];
     
     serie.modalTransitionStyle=UIModalTransitionStyleCrossDissolve;
@@ -158,6 +180,17 @@
     [self presentViewController:serie animated:YES completion:nil];
     
     
+    
+}
+
+
+- (IBAction)apagarTEste:(id)sender
+{
+    NSArray *teste=[[NSMutableArray alloc] initWithContentsOfFile:
+                    [[NSBundle mainBundle] pathForResource:@"numeroSerieEscolhida" ofType:@"plist"]];
+    
+    NSLog(@"Serie %@",teste);
+
 }
 
 

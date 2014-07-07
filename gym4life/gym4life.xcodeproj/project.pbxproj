@@ -32,6 +32,7 @@
 		43F75F45194F7EFC00B4704A /* G4LViewConfigHora.xib in Resources */ = {isa = PBXBuildFile; fileRef = 43F75F3E194F7EFC00B4704A /* G4LViewConfigHora.xib */; };
 		43F75F46194F7EFC00B4704A /* G4LViewControllerSerie.m in Sources */ = {isa = PBXBuildFile; fileRef = 43F75F40194F7EFC00B4704A /* G4LViewControllerSerie.m */; };
 		43F75F47194F7EFC00B4704A /* G4LViewControllerSerie.xib in Resources */ = {isa = PBXBuildFile; fileRef = 43F75F41194F7EFC00B4704A /* G4LViewControllerSerie.xib */; };
+		F2913A841965E18300D7BD71 /* numeroSerieEscolhida.plist in Resources */ = {isa = PBXBuildFile; fileRef = F2913A831965E18300D7BD71 /* numeroSerieEscolhida.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -82,6 +83,7 @@
 		43F75F3F194F7EFC00B4704A /* G4LViewControllerSerie.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = G4LViewControllerSerie.h; sourceTree = "<group>"; };
 		43F75F40194F7EFC00B4704A /* G4LViewControllerSerie.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = G4LViewControllerSerie.m; sourceTree = "<group>"; };
 		43F75F41194F7EFC00B4704A /* G4LViewControllerSerie.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = G4LViewControllerSerie.xib; sourceTree = "<group>"; };
+		F2913A831965E18300D7BD71 /* numeroSerieEscolhida.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = numeroSerieEscolhida.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -203,6 +205,7 @@
 			isa = PBXGroup;
 			children = (
 				0F99B840193F995800097873 /* series.plist */,
+				F2913A831965E18300D7BD71 /* numeroSerieEscolhida.plist */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -287,6 +290,7 @@
 				43F75F47194F7EFC00B4704A /* G4LViewControllerSerie.xib in Resources */,
 				360EF1F71937CC82007FB699 /* InfoPlist.strings in Resources */,
 				43F75F38194F7EF200B4704A /* G4LMostraSerie.xib in Resources */,
+				F2913A841965E18300D7BD71 /* numeroSerieEscolhida.plist in Resources */,
 				43F75F43194F7EFC00B4704A /* G4LViewConfig.xib in Resources */,
 				0F99B841193F995800097873 /* series.plist in Resources */,
 				360EF1FF1937CC82007FB699 /* Images.xcassets in Resources */,

@@ -6,8 +6,9 @@
 		<dict>
 			<key>orientacao</key>
 			<array>
-				<string>orientacao 1</string>
-				<string>orientacao 2</string>
+				<string>Faca isso e aquilo </string>
+				<string>Faca de novo </string>
+				<string>pode continuar fazendo </string>
 			</array>
 			<key>nome</key>
 			<string>Espreguiçar</string>
@@ -23,7 +24,7 @@
 				<string>orientacao 2</string>
 			</array>
 			<key>nome</key>
-			<string>Circundução da cabeça</string>
+			<string>Rotação da cabeça</string>
 			<key>imagens</key>
 			<array>
 				<string>S1_E2_0_circunducaoCabeca.jpg</string>
@@ -36,7 +37,7 @@
 				<string>orientacao 2</string>
 			</array>
 			<key>nome</key>
-			<string>Extensão da cabeça</string>
+			<string>Flexão lateral da cabeça</string>
 			<key>imagens</key>
 			<array>
 				<string>S1_E3_0_extencaoCabeca.jpg</string>
@@ -49,7 +50,7 @@
 				<string>orientacao 2</string>
 			</array>
 			<key>nome</key>
-			<string>Rotação dos ombros</string>
+			<string>Cruzar braços</string>
 			<key>imagens</key>
 			<array>
 				<string>S1_E4_0_rotacaoOmbro.jpg</string>
@@ -62,7 +63,7 @@
 				<string>orientacao 2</string>
 			</array>
 			<key>nome</key>
-			<string>Peitoral</string>
+			<string>Abdução ombros</string>
 			<key>imagens</key>
 			<array>
 				<string>S1_E5_0_peitoral.jpg</string>
@@ -75,7 +76,7 @@
 				<string>orientacao 2</string>
 			</array>
 			<key>nome</key>
-			<string>Extensão punho</string>
+			<string>Flexão tronco</string>
 			<key>imagens</key>
 			<array>
 				<string>S1_E6_0_punho.jpg</string>
@@ -88,49 +89,10 @@
 				<string>orientacao 2</string>
 			</array>
 			<key>nome</key>
-			<string>Abdução ombro</string>
+			<string>Rotação Tronco</string>
 			<key>imagens</key>
 			<array>
 				<string>S1_E7_0_abducaoOmbros.jpg</string>
-			</array>
-		</dict>
-		<dict>
-			<key>orientacao</key>
-			<array>
-				<string>orientacao 1</string>
-				<string>orientacao 2</string>
-			</array>
-			<key>nome</key>
-			<string>Ombro / Tríceps</string>
-			<key>imagens</key>
-			<array>
-				<string>S1_E8_0_ombros.jpg</string>
-			</array>
-		</dict>
-		<dict>
-			<key>orientacao</key>
-			<array>
-				<string>orientacao 1</string>
-				<string>orientacao 2</string>
-			</array>
-			<key>nome</key>
-			<string>Rotação tronco</string>
-			<key>imagens</key>
-			<array>
-				<string>S1_E9_0_rotacaoTronco.jpg</string>
-			</array>
-		</dict>
-		<dict>
-			<key>orientacao</key>
-			<array>
-				<string>orientacao 1</string>
-				<string>orientacao 2</string>
-			</array>
-			<key>nome</key>
-			<string>Flexão tronco</string>
-			<key>imagens</key>
-			<array>
-				<string>S1_E10_0_flexaoTronco.jpg</string>
 			</array>
 		</dict>
 	</array>
@@ -155,7 +117,7 @@
 				<string>orientacao 2</string>
 			</array>
 			<key>nome</key>
-			<string>Rotação da cabeça</string>
+			<string>Variação extensão punho</string>
 			<key>imagens</key>
 			<array>
 				<string>S2_E2_0_rotacaoCabeca.jpg</string>
@@ -168,7 +130,7 @@
 				<string>orientacao 2</string>
 			</array>
 			<key>nome</key>
-			<string>Rotação da cabeça</string>
+			<string>Flexão lateral</string>
 			<key>imagens</key>
 			<array>
 				<string>S2_E3_0_rotacaoCabeca.jpg</string>
@@ -181,7 +143,7 @@
 				<string>orientacao 2</string>
 			</array>
 			<key>nome</key>
-			<string>Cruzar braços</string>
+			<string>Braços alternados</string>
 			<key>imagens</key>
 			<array>
 				<string>S2_E4_0_cruzarBracos.jpg</string>
@@ -194,7 +156,7 @@
 				<string>orientacao 2</string>
 			</array>
 			<key>nome</key>
-			<string>Abdução ombro</string>
+			<string>Deslocamento lateral dos braços</string>
 			<key>imagens</key>
 			<array>
 				<string>S2_E5_0_abducaoOmbros.jpg</string>
@@ -207,23 +169,10 @@
 				<string>orientacao 2</string>
 			</array>
 			<key>nome</key>
-			<string>Flexão tronco</string>
+			<string>Flexão dos braços</string>
 			<key>imagens</key>
 			<array>
 				<string>S2_E6_0_flexaoOmbro.jpg</string>
-			</array>
-		</dict>
-		<dict>
-			<key>orientacao</key>
-			<array>
-				<string>orientacao 1</string>
-				<string>orientacao 2</string>
-			</array>
-			<key>nome</key>
-			<string>Rotação do tronco</string>
-			<key>imagens</key>
-			<array>
-				<string>S2_E7_0_rotacaoTronco.jpg</string>
 			</array>
 		</dict>
 	</array>

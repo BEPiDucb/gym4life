@@ -175,17 +175,21 @@
     }
     _cronometroLabel.text = [NSString stringWithFormat:@"%d:%02d",minutos,segundos];
     
-    tempoTotal=[[[G4LSeries serieEscolhida] exercicios]count]*10 + (([[[G4LSeries serieEscolhida] exercicios]count])-1)*0;
+    tempoTotal=[[[G4LSeries serieEscolhida] exercicios]count]*30 + (([[[G4LSeries serieEscolhida] exercicios]count])-1)*0;
     
-    if ((contador %10)==0)
+    if ((contador %30)==0)
     {
         _ExercicioNome.text=[[animacoesExercicios objectAtIndex:indexExercicioCorrenteAnimacao]nome];
+        _labelOrientacao.text = [NSString stringWithFormat:@"Orientacao haha [%d]",contador];
+        
         _exerciciosImageView.animationImages=[[animacoesExercicios objectAtIndex:indexExercicioCorrenteAnimacao]imagens];
         _exerciciosImageView.animationDuration=10;
         [_exerciciosImageView startAnimating];
         [_exerciciosImageView.layer addAnimation:transition forKey:nil]; //insere transicao de imagem mais suave
 
-
+        
+        
+        //Pega o index do proximo exercicio
         if (indexExercicioCorrenteAnimacao<([[[G4LSeries serieEscolhida] exercicios]count]-1))
         {
             indexExercicioCorrenteAnimacao++;
@@ -193,6 +197,15 @@
         
         
     }
+    //troca a label da orientação
+    if ((contador %10)==0)
+    {
+        //_labelOrientacao.text=[[[animacoesExercicios objectAtIndex:indexExercicioCorrenteAnimacao] orientacao] objectAtIndex:0];
+        
+        NSLog(@"index ",contador);
+    }
+    
+    
         tempoTroca=tempoTotal/[[[G4LSeries serieEscolhida] exercicios]count];
     if (contador==tempoTotal)
     {

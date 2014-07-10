@@ -21,6 +21,7 @@
     int indexExercicioCorrenteAnimacao;
     int tempoTroca;
     int tempoTotal;
+    int indexOrientacao;
     
     
     }
@@ -31,13 +32,15 @@
 @property (weak, nonatomic) IBOutlet UIPageControl *pageControl;
 
 @property (weak, nonatomic) IBOutlet UILabel *cronometroLabel;
-@property (weak, nonatomic) IBOutlet UILabel *labelOrientacao;
 
 @property (weak, nonatomic) IBOutlet UIImageView *exerciciosImageView;
 @property (weak, nonatomic) IBOutlet UIButton *favoritar_img;
 
 @property (weak, nonatomic) IBOutlet UIButton *seriesVoltar;
 @property (weak, nonatomic) IBOutlet UIButton *terminarBotao;
+@property (weak, nonatomic) IBOutlet UITextView *textViewOrientacoes;
+
+
 
 
 @end

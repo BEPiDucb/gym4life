@@ -24,7 +24,6 @@
     
        
     //Para mudar no objeto corrente
-  //  [G4LSeries setNumSerie:[G4LSeries serieClicada]];
     //mudando opcao de serie no plist
     NSMutableArray *numSeriesPlist=
     [[NSMutableArray alloc]initWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"numeroSerieEscolhida" ofType:@"plist" ]];
@@ -147,6 +146,7 @@
     contador=0;
     minutos=0;
     segundos=0;
+    indexOrientacao=0;
     
     
     
@@ -165,6 +165,7 @@
     //Configura transicao das imagens
     CATransition *transition = [CATransition animation];
     transition.type = kCATransitionFade;
+    
    
     //atualizando o marcador de tempo
     
@@ -180,29 +181,45 @@
     if ((contador %30)==0)
     {
         _ExercicioNome.text=[[animacoesExercicios objectAtIndex:indexExercicioCorrenteAnimacao]nome];
-        _labelOrientacao.text = [NSString stringWithFormat:@"Orientacao haha [%d]",contador];
+        indexOrientacao=0;
+        
+        NSLog(@"%@",[[animacoesExercicios objectAtIndex:indexExercicioCorrenteAnimacao]orientacao]);
+
         
         _exerciciosImageView.animationImages=[[animacoesExercicios objectAtIndex:indexExercicioCorrenteAnimacao]imagens];
         _exerciciosImageView.animationDuration=10;
         [_exerciciosImageView startAnimating];
         [_exerciciosImageView.layer addAnimation:transition forKey:nil]; //insere transicao de imagem mais suave
-
+        
         
         
         //Pega o index do proximo exercicio
         if (indexExercicioCorrenteAnimacao<([[[G4LSeries serieEscolhida] exercicios]count]-1))
         {
             indexExercicioCorrenteAnimacao++;
+            
         }
         
         
     }
-    //troca a label da orientação
+    
+    //troca o texto da orientação
     if ((contador %10)==0)
     {
-        //_labelOrientacao.text=[[[animacoesExercicios objectAtIndex:indexExercicioCorrenteAnimacao] orientacao] objectAtIndex:0];
+        int indexAnimacao=indexExercicioCorrenteAnimacao-1;
+     
+        //Pega a orientacao que esta salva no plist e mostra na tela para o usuario
+        if (indexOrientacao<[[[animacoesExercicios objectAtIndex:indexAnimacao] orientacao] count] )
+        {
+            NSLog(@"%@",[[animacoesExercicios objectAtIndex:indexAnimacao] orientacao]);
+            
+            _textViewOrientacoes.text=[[[animacoesExercicios objectAtIndex:indexAnimacao] orientacao] objectAtIndex:indexOrientacao];
+            
+            indexOrientacao++;
+        }
         
-        NSLog(@"index ",contador);
+        
+        NSLog(@"index %d",contador);
     }
     
     
@@ -226,7 +243,7 @@
     pageControlBeingUsed = NO;
     _terminarBotao.alpha=0;
     _cronometroLabel.alpha=0;
-    _labelOrientacao.alpha=0;
+   _textViewOrientacoes.alpha=0;
     _ExercicioNome.alpha=0;
     
     

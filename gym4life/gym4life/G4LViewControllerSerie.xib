@@ -10,11 +10,11 @@
                 <outlet property="cronometroLabel" destination="lqQ-XJ-YWF" id="NPd-6E-jEW"/>
                 <outlet property="exerciciosImageView" destination="Q9h-VO-VQQ" id="bI4-On-ALq"/>
                 <outlet property="favoritar_img" destination="a0D-gu-Tvg" id="NJU-YQ-xuy"/>
-                <outlet property="labelOrientacao" destination="JsU-di-H4c" id="fCC-ap-GIP"/>
                 <outlet property="pageControl" destination="ijq-t3-q7d" id="h5M-zP-Wd6"/>
                 <outlet property="scrollView" destination="MkS-rh-VsF" id="xf8-JS-Nac"/>
                 <outlet property="seriesVoltar" destination="G1z-ee-9D3" id="ggq-2G-s4t"/>
                 <outlet property="terminarBotao" destination="RcF-yT-MMW" id="dHg-5t-i0o"/>
+                <outlet property="textViewOrientacoes" destination="IXx-k5-AM7" id="fMV-vy-dBT"/>
                 <outlet property="view" destination="1" id="3"/>
             </connections>
         </placeholder>
@@ -42,11 +42,11 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Q9h-VO-VQQ">
-                    <rect key="frame" x="40" y="134" width="240" height="300"/>
+                    <rect key="frame" x="53" y="134" width="214" height="201"/>
                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                 </imageView>
                 <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="MkS-rh-VsF">
-                    <rect key="frame" x="40" y="110" width="240" height="324"/>
+                    <rect key="frame" x="53" y="110" width="214" height="225"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                 </scrollView>
                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a0D-gu-Tvg">
@@ -75,13 +75,6 @@
                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="label_orientacao" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JsU-di-H4c">
-                    <rect key="frame" x="0.0" y="457" width="320" height="21"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="19"/>
-                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                    <nil key="highlightedColor"/>
-                </label>
                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RcF-yT-MMW">
                     <rect key="frame" x="40" y="492" width="240" height="30"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -93,6 +86,13 @@
                         <action selector="terminarBotao:" destination="-1" eventType="touchUpInside" id="D9q-9n-ylB"/>
                     </connections>
                 </button>
+                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Orientações dos Exercicios" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="IXx-k5-AM7">
+                    <rect key="frame" x="20" y="343" width="280" height="153"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <color key="backgroundColor" red="0.98039215686274506" green="0.98039215686274506" blue="0.98039215686274506" alpha="1" colorSpace="calibratedRGB"/>
+                    <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="17"/>
+                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                </textView>
             </subviews>
             <color key="backgroundColor" red="0.98039215686274506" green="0.98039215686274506" blue="0.98039215686274506" alpha="1" colorSpace="deviceRGB"/>
             <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>

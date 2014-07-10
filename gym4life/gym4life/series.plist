@@ -6,9 +6,7 @@
 		<dict>
 			<key>orientacao</key>
 			<array>
-				<string>Faca isso e aquilo </string>
-				<string>Faca de novo </string>
-				<string>pode continuar fazendo </string>
+				<string>Sentada na cadeira, estabilizou bem a coluna ao assento, os braços fica relaxados por fora da cadeira. Enche o pulmão de ar e vai soltando lentamente, braços vai la em cima entrelaçando os dedos,estique bem o corpo. </string>
 			</array>
 			<key>nome</key>
 			<string>Espreguiçar</string>
@@ -20,8 +18,8 @@
 		<dict>
 			<key>orientacao</key>
 			<array>
-				<string>orientacao 1</string>
-				<string>orientacao 2</string>
+				<string>Mãos posionadas na coxa  ombros relaxados, cabeça vai de um lado ao outro realizando uma rotação da cervical, queixo por cima do ombro. Aquecendo a musculadora com movimento dinâmico</string>
+				<string>Movimento estático, mantem a cabeça em um dos lados parada e depois troque de lado.</string>
 			</array>
 			<key>nome</key>
 			<string>Rotação da cabeça</string>
@@ -33,8 +31,9 @@
 		<dict>
 			<key>orientacao</key>
 			<array>
-				<string>orientacao 1</string>
-				<string>orientacao 2</string>
+				<string>Com as mão posicionadas na coxa, ombros relaxados e a coluna reta, force lentamente a cabeça para esquerda, tentando encostrar a orelha no ombro esquerdo.</string>
+				<string>Faça o mesmo para o lado direito.
+</string>
 			</array>
 			<key>nome</key>
 			<string>Flexão lateral da cabeça</string>
@@ -46,8 +45,8 @@
 		<dict>
 			<key>orientacao</key>
 			<array>
-				<string>orientacao 1</string>
-				<string>orientacao 2</string>
+				<string>Sentado na cadeira e com a coluna ereta, estique os braços para tras inspirando lentamente</string>
+				<string>estique os braços para frente cruzando-os e exprire</string>
 			</array>
 			<key>nome</key>
 			<string>Cruzar braços</string>
@@ -59,8 +58,9 @@
 		<dict>
 			<key>orientacao</key>
 			<array>
-				<string>orientacao 1</string>
-				<string>orientacao 2</string>
+				<string>Sentado na cadeira e com a coluna ereta, estique os braços lentamente e os cruze logo acima da cabeça e inspire.</string>
+				<string>Desca os braços lentamente até a altura dos obros e expire.
+</string>
 			</array>
 			<key>nome</key>
 			<string>Abdução ombros</string>
@@ -72,8 +72,9 @@
 		<dict>
 			<key>orientacao</key>
 			<array>
-				<string>orientacao 1</string>
-				<string>orientacao 2</string>
+				<string>Sentado na cadeira e com a coluna ereta, erga o braço esquerdo e o force lentamente para direita e inspire.</string>
+				<string>Volte o braço ao centro acima da cabeça , erga o outr braço e expire</string>
+				<string>Repita o movimento com o braço direito.</string>
 			</array>
 			<key>nome</key>
 			<string>Flexão tronco</string>
@@ -85,8 +86,9 @@
 		<dict>
 			<key>orientacao</key>
 			<array>
-				<string>orientacao 1</string>
-				<string>orientacao 2</string>
+				<string>Sentado na cadeira e com a coluna ereta, erga os braços na altura dos ombros</string>
+				<string>Gire o tronco lentamente para esquerda.</string>
+				<string>Gire o tronco lentamente para direita</string>
 			</array>
 			<key>nome</key>
 			<string>Rotação Tronco</string>

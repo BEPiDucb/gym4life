@@ -18,7 +18,10 @@
     self.window.backgroundColor = [UIColor whiteColor];
     
     G4LViewPrincipal *view = [[G4LViewPrincipal alloc]init];
-    self.window.rootViewController = view;
+    UINavigationController *nav=[[UINavigationController alloc]initWithRootViewController:view];
+    
+    
+    self.window.rootViewController = nav;
     
     [self.window makeKeyAndVisible];
 

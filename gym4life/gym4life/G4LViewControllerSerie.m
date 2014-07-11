@@ -34,7 +34,7 @@
     
     [numSeriesPlist writeToFile:[[NSBundle mainBundle] pathForResource:@"numeroSerieEscolhida" ofType:@"plist"] atomically:YES];
     
-
+    [self.navigationController popViewControllerAnimated:YES];
     NSLog(@"%@",serieEscolhida);
     
 }

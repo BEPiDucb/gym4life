@@ -183,14 +183,24 @@
     // devendo ser mudado para alocar em vez de strings, alocar arrays de exercícios
     for(int i=0;i<seriesPlist.count - 1;i++)
     {
-        [_seriesArray addObject:[NSString stringWithFormat:@"Serie %d",i+1]];
+        [_seriesArray addObject:[NSString stringWithFormat:@"Exercícios Laborais %d",i+1]];
     }
+    
     //pega a serie escolhida pelo usuario
+    
+    NSArray *paths=NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    
+    NSString *plistPath=[NSString stringWithFormat:@"%@/numeroSeriesEscolhida.plist",[paths objectAtIndex:0]];
+    
+    
+    
+    NSLog(@" caminho %@",plistPath);
+    
     NSMutableArray *numSerieEscolhida=[[NSMutableArray alloc] initWithContentsOfFile:
-                                       [[NSBundle mainBundle] pathForResource:@"numeroSerieEscolhida" ofType:@"plist"]];
+                                       plistPath];
     
     //Se nao existir nenhum escolhido a serie 1 é definida como padrao
-    if ([numSerieEscolhida count]==0)
+    if (numSerieEscolhida ==NULL)
     {
         [numSerieEscolhida addObject:@01];
         

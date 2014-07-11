@@ -43,6 +43,13 @@
 		F2B21FFA196F81C400E021D5 /* S1_rotacaotronco_7.png in Resources */ = {isa = PBXBuildFile; fileRef = F2B21FF3196F81C400E021D5 /* S1_rotacaotronco_7.png */; };
 		F2B21FFE196F9DF100E021D5 /* G4LSerieCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F2B21FFC196F9DF100E021D5 /* G4LSerieCell.m */; };
 		F2B21FFF196F9DF100E021D5 /* G4LSerieCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F2B21FFD196F9DF100E021D5 /* G4LSerieCell.xib */; };
+		F2B22015196FB5D400E021D5 /* S2_bracoalternado_4.png in Resources */ = {isa = PBXBuildFile; fileRef = F2B2200E196FB5D400E021D5 /* S2_bracoalternado_4.png */; };
+		F2B22016196FB5D400E021D5 /* S2_deslocamentolateral_5.png in Resources */ = {isa = PBXBuildFile; fileRef = F2B2200F196FB5D400E021D5 /* S2_deslocamentolateral_5.png */; };
+		F2B22017196FB5D400E021D5 /* S2_espreguicar_1.png in Resources */ = {isa = PBXBuildFile; fileRef = F2B22010196FB5D400E021D5 /* S2_espreguicar_1.png */; };
+		F2B22018196FB5D400E021D5 /* S2_flexaobraco_6.png in Resources */ = {isa = PBXBuildFile; fileRef = F2B22011196FB5D400E021D5 /* S2_flexaobraco_6.png */; };
+		F2B22019196FB5D400E021D5 /* S2_flexaolateral_3.png in Resources */ = {isa = PBXBuildFile; fileRef = F2B22012196FB5D400E021D5 /* S2_flexaolateral_3.png */; };
+		F2B2201A196FB5D400E021D5 /* S2_variacaoextensaopulso_2_V2.png in Resources */ = {isa = PBXBuildFile; fileRef = F2B22013196FB5D400E021D5 /* S2_variacaoextensaopulso_2_V2.png */; };
+		F2B2201B196FB5D400E021D5 /* S2_variacaoextensaopulso_2.png in Resources */ = {isa = PBXBuildFile; fileRef = F2B22014196FB5D400E021D5 /* S2_variacaoextensaopulso_2.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -105,6 +112,13 @@
 		F2B21FFB196F9DF100E021D5 /* G4LSerieCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = G4LSerieCell.h; sourceTree = "<group>"; };
 		F2B21FFC196F9DF100E021D5 /* G4LSerieCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = G4LSerieCell.m; sourceTree = "<group>"; };
 		F2B21FFD196F9DF100E021D5 /* G4LSerieCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = G4LSerieCell.xib; sourceTree = "<group>"; };
+		F2B2200E196FB5D400E021D5 /* S2_bracoalternado_4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = S2_bracoalternado_4.png; sourceTree = "<group>"; };
+		F2B2200F196FB5D400E021D5 /* S2_deslocamentolateral_5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = S2_deslocamentolateral_5.png; sourceTree = "<group>"; };
+		F2B22010196FB5D400E021D5 /* S2_espreguicar_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = S2_espreguicar_1.png; sourceTree = "<group>"; };
+		F2B22011196FB5D400E021D5 /* S2_flexaobraco_6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = S2_flexaobraco_6.png; sourceTree = "<group>"; };
+		F2B22012196FB5D400E021D5 /* S2_flexaolateral_3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = S2_flexaolateral_3.png; sourceTree = "<group>"; };
+		F2B22013196FB5D400E021D5 /* S2_variacaoextensaopulso_2_V2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = S2_variacaoextensaopulso_2_V2.png; sourceTree = "<group>"; };
+		F2B22014196FB5D400E021D5 /* S2_variacaoextensaopulso_2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = S2_variacaoextensaopulso_2.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -294,6 +308,13 @@
 		F2B21FEC196F786F00E021D5 /* Serie 2 */ = {
 			isa = PBXGroup;
 			children = (
+				F2B2200E196FB5D400E021D5 /* S2_bracoalternado_4.png */,
+				F2B2200F196FB5D400E021D5 /* S2_deslocamentolateral_5.png */,
+				F2B22010196FB5D400E021D5 /* S2_espreguicar_1.png */,
+				F2B22011196FB5D400E021D5 /* S2_flexaobraco_6.png */,
+				F2B22012196FB5D400E021D5 /* S2_flexaolateral_3.png */,
+				F2B22013196FB5D400E021D5 /* S2_variacaoextensaopulso_2_V2.png */,
+				F2B22014196FB5D400E021D5 /* S2_variacaoextensaopulso_2.png */,
 			);
 			name = "Serie 2";
 			sourceTree = "<group>";
@@ -379,18 +400,25 @@
 				F2B21FF8196F81C400E021D5 /* S1_inclinacaocabeca_3.png in Resources */,
 				F2B21FF7196F81C400E021D5 /* S1_flexaotronco_6_v2.png in Resources */,
 				43F75F47194F7EFC00B4704A /* G4LViewControllerSerie.xib in Resources */,
+				F2B22017196FB5D400E021D5 /* S2_espreguicar_1.png in Resources */,
 				F2B21FF9196F81C400E021D5 /* S1_rotacaocabeca_2.png in Resources */,
+				F2B22016196FB5D400E021D5 /* S2_deslocamentolateral_5.png in Resources */,
 				F2B21FFA196F81C400E021D5 /* S1_rotacaotronco_7.png in Resources */,
+				F2B22015196FB5D400E021D5 /* S2_bracoalternado_4.png in Resources */,
 				360EF1F71937CC82007FB699 /* InfoPlist.strings in Resources */,
 				F207D111196F5913009DEE99 /* exercicio_teste.jpg in Resources */,
 				43F75F38194F7EF200B4704A /* G4LMostraSerie.xib in Resources */,
 				F2913A841965E18300D7BD71 /* numeroSerieEscolhida.plist in Resources */,
 				43F75F43194F7EFC00B4704A /* G4LViewConfig.xib in Resources */,
 				0F99B841193F995800097873 /* series.plist in Resources */,
+				F2B2201A196FB5D400E021D5 /* S2_variacaoextensaopulso_2_V2.png in Resources */,
 				360EF1FF1937CC82007FB699 /* Images.xcassets in Resources */,
 				F2B21FFF196F9DF100E021D5 /* G4LSerieCell.xib in Resources */,
+				F2B22019196FB5D400E021D5 /* S2_flexaolateral_3.png in Resources */,
+				F2B22018196FB5D400E021D5 /* S2_flexaobraco_6.png in Resources */,
 				360EF21F1937CCCD007FB699 /* G4LViewPrincipal.xib in Resources */,
 				F2B21FF4196F81C400E021D5 /* S1_abducaoombro_5.png in Resources */,
+				F2B2201B196FB5D400E021D5 /* S2_variacaoextensaopulso_2.png in Resources */,
 				F2B21FF5196F81C400E021D5 /* S1_cruzarbracos_4.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

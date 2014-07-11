@@ -109,7 +109,7 @@
 			<string>Espreguiçar</string>
 			<key>imagens</key>
 			<array>
-				<string>S2_E1_0_espreguicar.jpg</string>
+				<string>S2_espreguicar_1.png</string>
 			</array>
 		</dict>
 		<dict>
@@ -122,7 +122,7 @@
 			<string>Variação extensão punho</string>
 			<key>imagens</key>
 			<array>
-				<string>S2_E2_0_rotacaoCabeca.jpg</string>
+				<string>S2_variacaoextensaopulso_2_V2.png</string>
 			</array>
 		</dict>
 		<dict>
@@ -136,7 +136,7 @@
 			<string>Flexão lateral</string>
 			<key>imagens</key>
 			<array>
-				<string>S2_E3_0_rotacaoCabeca.jpg</string>
+				<string>S2_flexaolateral_3.png</string>
 			</array>
 		</dict>
 		<dict>
@@ -148,7 +148,7 @@
 			<string>Braços alternados</string>
 			<key>imagens</key>
 			<array>
-				<string>S2_E4_0_cruzarBracos.jpg</string>
+				<string>S2_bracoalternado_4.png</string>
 			</array>
 		</dict>
 		<dict>
@@ -160,7 +160,7 @@
 			<string>Deslocamento lateral dos braços</string>
 			<key>imagens</key>
 			<array>
-				<string>S2_E5_0_abducaoOmbros.jpg</string>
+				<string>S2_deslocamentolateral_5.png</string>
 			</array>
 		</dict>
 		<dict>
@@ -172,7 +172,7 @@
 			<string>Flexão dos braços</string>
 			<key>imagens</key>
 			<array>
-				<string>S2_E6_0_flexaoOmbro.jpg</string>
+				<string>S2_flexaobraco_6.png</string>
 			</array>
 		</dict>
 	</array>

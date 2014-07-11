@@ -21,6 +21,8 @@
 
 {
     NSMutableArray *imagensCelula;
+    CATransition *transition ;
+    
 }
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -42,7 +44,8 @@
    //Carrega arquivos plists no iphone
   
     
-    
+    transition = [CATransition animation];
+    transition.type = kCATransitionFade;
     
     _notificacaoBotao.alpha=0;
     _labelNotificacao.alpha=0;
@@ -141,9 +144,6 @@
 //    //teste
     
     custonCell.imageviewSerie.animationImages=[imagensCelula objectAtIndex:indexPath.item];
-   
-    CATransition *transition = [CATransition animation];
-    transition.type = kCATransitionFade;
 
     
     custonCell.imageviewSerie.animationDuration=10;
@@ -156,7 +156,7 @@
     
   //  [custonCell.imageviewSerie setImage:[UIImage imageNamed:@"S1_abducaoombro_5.png"]];
     
-    custonCell.serieLabel.text=@"Ramon";
+    custonCell.serieLabel.text=[_seriesArray objectAtIndex:indexPath.row];
     
 
     /*

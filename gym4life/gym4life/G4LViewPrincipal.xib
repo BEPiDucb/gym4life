@@ -6,7 +6,9 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="G4LViewPrincipal">
             <connections>
+                <outlet property="labelNotificacao" destination="2vH-Bb-lcU" id="cM9-D9-bSB"/>
                 <outlet property="notificacaoBotao" destination="nlv-CD-BNt" id="xnp-S0-c0Q"/>
+                <outlet property="tableView" destination="4Nv-bt-4Qd" id="VWu-9w-Nkb"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -28,15 +30,18 @@
                     <constraints>
                         <constraint firstAttribute="width" constant="49" id="Q4Q-Tn-F0J"/>
                     </constraints>
+                    <color key="onTintColor" red="0.91764705879999997" green="0.1176470588" blue="0.23921568630000001" alpha="1" colorSpace="calibratedRGB"/>
                     <connections>
                         <action selector="mudaNotificacao:" destination="-1" eventType="valueChanged" id="MEb-8W-e6y"/>
                     </connections>
                 </switch>
                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d0d-jG-UsI">
-                    <rect key="frame" x="20" y="466" width="280" height="30"/>
+                    <rect key="frame" x="0.0" y="492" width="320" height="41"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="20"/>
+                    <color key="backgroundColor" red="0.91764705882352937" green="0.11764705882352941" blue="0.23921568627450979" alpha="1" colorSpace="calibratedRGB"/>
+                    <fontDescription key="fontDescription" name="AmericanTypewriter-Bold" family="American Typewriter" pointSize="20"/>
                     <state key="normal" title="Iniciar Rotina">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
                     <connections>
@@ -46,7 +51,7 @@
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="4Nv-bt-4Qd">
                     <rect key="frame" x="20" y="174" width="280" height="205"/>
                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <color key="separatorColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <connections>
                         <outlet property="dataSource" destination="-1" id="VsA-kd-ajC"/>
                         <outlet property="delegate" destination="-1" id="gwx-O1-mu9"/>
@@ -62,7 +67,7 @@
                     <rect key="frame" x="104" y="76" width="113" height="50"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <fontDescription key="fontDescription" name="AmericanTypewriter-Bold" family="American Typewriter" pointSize="58"/>
-                    <color key="textColor" red="0.0" green="0.81680542883211682" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <color key="textColor" red="0.94901960780000005" green="0.44705882349999998" blue="0.13725490200000001" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Life" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sDI-H9-7yW">
@@ -71,16 +76,6 @@
                     <fontDescription key="fontDescription" name="AmericanTypewriter-Bold" family="American Typewriter" pointSize="33"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="as9-Iq-Vw1">
-                    <rect key="frame" x="31" y="115" width="46" height="30"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <state key="normal" title="Button">
-                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                    </state>
-                    <connections>
-                        <action selector="apagarTEste:" destination="-1" eventType="touchUpInside" id="bFm-x1-9J6"/>
-                    </connections>
-                </button>
             </subviews>
             <color key="backgroundColor" red="0.98039215686274506" green="0.98039215686274506" blue="0.98039215686274506" alpha="1" colorSpace="calibratedRGB"/>
             <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>

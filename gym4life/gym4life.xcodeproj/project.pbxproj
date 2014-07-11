@@ -32,7 +32,15 @@
 		43F75F45194F7EFC00B4704A /* G4LViewConfigHora.xib in Resources */ = {isa = PBXBuildFile; fileRef = 43F75F3E194F7EFC00B4704A /* G4LViewConfigHora.xib */; };
 		43F75F46194F7EFC00B4704A /* G4LViewControllerSerie.m in Sources */ = {isa = PBXBuildFile; fileRef = 43F75F40194F7EFC00B4704A /* G4LViewControllerSerie.m */; };
 		43F75F47194F7EFC00B4704A /* G4LViewControllerSerie.xib in Resources */ = {isa = PBXBuildFile; fileRef = 43F75F41194F7EFC00B4704A /* G4LViewControllerSerie.xib */; };
+		F207D111196F5913009DEE99 /* exercicio_teste.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F207D110196F5913009DEE99 /* exercicio_teste.jpg */; };
 		F2913A841965E18300D7BD71 /* numeroSerieEscolhida.plist in Resources */ = {isa = PBXBuildFile; fileRef = F2913A831965E18300D7BD71 /* numeroSerieEscolhida.plist */; };
+		F2B21FF4196F81C400E021D5 /* S1_abducaoombro_5.png in Resources */ = {isa = PBXBuildFile; fileRef = F2B21FED196F81C400E021D5 /* S1_abducaoombro_5.png */; };
+		F2B21FF5196F81C400E021D5 /* S1_cruzarbracos_4.png in Resources */ = {isa = PBXBuildFile; fileRef = F2B21FEE196F81C400E021D5 /* S1_cruzarbracos_4.png */; };
+		F2B21FF6196F81C400E021D5 /* S1_espreguicar_1.png in Resources */ = {isa = PBXBuildFile; fileRef = F2B21FEF196F81C400E021D5 /* S1_espreguicar_1.png */; };
+		F2B21FF7196F81C400E021D5 /* S1_flexaotronco_6_v2.png in Resources */ = {isa = PBXBuildFile; fileRef = F2B21FF0196F81C400E021D5 /* S1_flexaotronco_6_v2.png */; };
+		F2B21FF8196F81C400E021D5 /* S1_inclinacaocabeca_3.png in Resources */ = {isa = PBXBuildFile; fileRef = F2B21FF1196F81C400E021D5 /* S1_inclinacaocabeca_3.png */; };
+		F2B21FF9196F81C400E021D5 /* S1_rotacaocabeca_2.png in Resources */ = {isa = PBXBuildFile; fileRef = F2B21FF2196F81C400E021D5 /* S1_rotacaocabeca_2.png */; };
+		F2B21FFA196F81C400E021D5 /* S1_rotacaotronco_7.png in Resources */ = {isa = PBXBuildFile; fileRef = F2B21FF3196F81C400E021D5 /* S1_rotacaotronco_7.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -83,7 +91,15 @@
 		43F75F3F194F7EFC00B4704A /* G4LViewControllerSerie.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = G4LViewControllerSerie.h; sourceTree = "<group>"; };
 		43F75F40194F7EFC00B4704A /* G4LViewControllerSerie.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = G4LViewControllerSerie.m; sourceTree = "<group>"; };
 		43F75F41194F7EFC00B4704A /* G4LViewControllerSerie.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = G4LViewControllerSerie.xib; sourceTree = "<group>"; };
+		F207D110196F5913009DEE99 /* exercicio_teste.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = exercicio_teste.jpg; sourceTree = "<group>"; };
 		F2913A831965E18300D7BD71 /* numeroSerieEscolhida.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = numeroSerieEscolhida.plist; sourceTree = "<group>"; };
+		F2B21FED196F81C400E021D5 /* S1_abducaoombro_5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = S1_abducaoombro_5.png; sourceTree = "<group>"; };
+		F2B21FEE196F81C400E021D5 /* S1_cruzarbracos_4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = S1_cruzarbracos_4.png; sourceTree = "<group>"; };
+		F2B21FEF196F81C400E021D5 /* S1_espreguicar_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = S1_espreguicar_1.png; sourceTree = "<group>"; };
+		F2B21FF0196F81C400E021D5 /* S1_flexaotronco_6_v2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = S1_flexaotronco_6_v2.png; sourceTree = "<group>"; };
+		F2B21FF1196F81C400E021D5 /* S1_inclinacaocabeca_3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = S1_inclinacaocabeca_3.png; sourceTree = "<group>"; };
+		F2B21FF2196F81C400E021D5 /* S1_rotacaocabeca_2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = S1_rotacaocabeca_2.png; sourceTree = "<group>"; };
+		F2B21FF3196F81C400E021D5 /* S1_rotacaotronco_7.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = S1_rotacaotronco_7.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -143,31 +159,14 @@
 		360EF1F21937CC82007FB699 /* gym4life */ = {
 			isa = PBXGroup;
 			children = (
-				43F75F39194F7EFC00B4704A /* G4LViewConfig.h */,
-				43F75F3A194F7EFC00B4704A /* G4LViewConfig.m */,
-				43F75F3B194F7EFC00B4704A /* G4LViewConfig.xib */,
-				43F75F3C194F7EFC00B4704A /* G4LViewConfigHora.h */,
-				43F75F3D194F7EFC00B4704A /* G4LViewConfigHora.m */,
-				43F75F3E194F7EFC00B4704A /* G4LViewConfigHora.xib */,
-				43F75F3F194F7EFC00B4704A /* G4LViewControllerSerie.h */,
-				43F75F40194F7EFC00B4704A /* G4LViewControllerSerie.m */,
-				43F75F41194F7EFC00B4704A /* G4LViewControllerSerie.xib */,
-				43F75F33194F7EF200B4704A /* G4LMostraSerie.h */,
-				43F75F34194F7EF200B4704A /* G4LMostraSerie.m */,
-				43F75F35194F7EF200B4704A /* G4LMostraSerie.xib */,
-				43F75F36194F7EF200B4704A /* G4LSerie.h */,
+				F2B21FAD196F648300E021D5 /* View */,
+				F2B21FAC196F645C00E021D5 /* Model */,
+				F2B21FAB196F644A00E021D5 /* Main */,
 				360EF2261937D48C007FB699 /* Resources */,
 				360EF1FB1937CC82007FB699 /* G4LAppDelegate.h */,
 				360EF1FC1937CC82007FB699 /* G4LAppDelegate.m */,
 				360EF1FE1937CC82007FB699 /* Images.xcassets */,
 				360EF1F31937CC82007FB699 /* Supporting Files */,
-				360EF21B1937CCCD007FB699 /* G4LViewPrincipal.h */,
-				360EF21C1937CCCD007FB699 /* G4LViewPrincipal.m */,
-				360EF21D1937CCCD007FB699 /* G4LViewPrincipal.xib */,
-				360EF2201937D289007FB699 /* G4LSeries.h */,
-				360EF2211937D289007FB699 /* G4LSeries.m */,
-				360EF2231937D2AF007FB699 /* G4LExercicio.h */,
-				360EF2241937D2AF007FB699 /* G4LExercicio.m */,
 			);
 			path = gym4life;
 			sourceTree = "<group>";
@@ -204,10 +203,91 @@
 		360EF2261937D48C007FB699 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				F2B21FEA196F785900E021D5 /* Imagens */,
+				F207D110196F5913009DEE99 /* exercicio_teste.jpg */,
 				0F99B840193F995800097873 /* series.plist */,
 				F2913A831965E18300D7BD71 /* numeroSerieEscolhida.plist */,
 			);
 			name = Resources;
+			sourceTree = "<group>";
+		};
+		F2B21FAB196F644A00E021D5 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				360EF21B1937CCCD007FB699 /* G4LViewPrincipal.h */,
+				360EF21C1937CCCD007FB699 /* G4LViewPrincipal.m */,
+				360EF21D1937CCCD007FB699 /* G4LViewPrincipal.xib */,
+			);
+			name = Main;
+			sourceTree = "<group>";
+		};
+		F2B21FAC196F645C00E021D5 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				43F75F36194F7EF200B4704A /* G4LSerie.h */,
+				360EF2201937D289007FB699 /* G4LSeries.h */,
+				360EF2211937D289007FB699 /* G4LSeries.m */,
+				360EF2231937D2AF007FB699 /* G4LExercicio.h */,
+				360EF2241937D2AF007FB699 /* G4LExercicio.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		F2B21FAD196F648300E021D5 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				F2B21FAE196F64EC00E021D5 /* xib */,
+				43F75F39194F7EFC00B4704A /* G4LViewConfig.h */,
+				43F75F3A194F7EFC00B4704A /* G4LViewConfig.m */,
+				43F75F3C194F7EFC00B4704A /* G4LViewConfigHora.h */,
+				43F75F3D194F7EFC00B4704A /* G4LViewConfigHora.m */,
+				43F75F3F194F7EFC00B4704A /* G4LViewControllerSerie.h */,
+				43F75F40194F7EFC00B4704A /* G4LViewControllerSerie.m */,
+				43F75F33194F7EF200B4704A /* G4LMostraSerie.h */,
+				43F75F34194F7EF200B4704A /* G4LMostraSerie.m */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		F2B21FAE196F64EC00E021D5 /* xib */ = {
+			isa = PBXGroup;
+			children = (
+				43F75F3B194F7EFC00B4704A /* G4LViewConfig.xib */,
+				43F75F41194F7EFC00B4704A /* G4LViewControllerSerie.xib */,
+				43F75F35194F7EF200B4704A /* G4LMostraSerie.xib */,
+				43F75F3E194F7EFC00B4704A /* G4LViewConfigHora.xib */,
+			);
+			name = xib;
+			sourceTree = "<group>";
+		};
+		F2B21FEA196F785900E021D5 /* Imagens */ = {
+			isa = PBXGroup;
+			children = (
+				F2B21FEC196F786F00E021D5 /* Serie 2 */,
+				F2B21FEB196F786500E021D5 /* Serie1 */,
+			);
+			name = Imagens;
+			sourceTree = "<group>";
+		};
+		F2B21FEB196F786500E021D5 /* Serie1 */ = {
+			isa = PBXGroup;
+			children = (
+				F2B21FED196F81C400E021D5 /* S1_abducaoombro_5.png */,
+				F2B21FEE196F81C400E021D5 /* S1_cruzarbracos_4.png */,
+				F2B21FEF196F81C400E021D5 /* S1_espreguicar_1.png */,
+				F2B21FF0196F81C400E021D5 /* S1_flexaotronco_6_v2.png */,
+				F2B21FF1196F81C400E021D5 /* S1_inclinacaocabeca_3.png */,
+				F2B21FF2196F81C400E021D5 /* S1_rotacaocabeca_2.png */,
+				F2B21FF3196F81C400E021D5 /* S1_rotacaotronco_7.png */,
+			);
+			name = Serie1;
+			sourceTree = "<group>";
+		};
+		F2B21FEC196F786F00E021D5 /* Serie 2 */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "Serie 2";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -287,14 +367,22 @@
 			buildActionMask = 2147483647;
 			files = (
 				43F75F45194F7EFC00B4704A /* G4LViewConfigHora.xib in Resources */,
+				F2B21FF6196F81C400E021D5 /* S1_espreguicar_1.png in Resources */,
+				F2B21FF8196F81C400E021D5 /* S1_inclinacaocabeca_3.png in Resources */,
+				F2B21FF7196F81C400E021D5 /* S1_flexaotronco_6_v2.png in Resources */,
 				43F75F47194F7EFC00B4704A /* G4LViewControllerSerie.xib in Resources */,
+				F2B21FF9196F81C400E021D5 /* S1_rotacaocabeca_2.png in Resources */,
+				F2B21FFA196F81C400E021D5 /* S1_rotacaotronco_7.png in Resources */,
 				360EF1F71937CC82007FB699 /* InfoPlist.strings in Resources */,
+				F207D111196F5913009DEE99 /* exercicio_teste.jpg in Resources */,
 				43F75F38194F7EF200B4704A /* G4LMostraSerie.xib in Resources */,
 				F2913A841965E18300D7BD71 /* numeroSerieEscolhida.plist in Resources */,
 				43F75F43194F7EFC00B4704A /* G4LViewConfig.xib in Resources */,
 				0F99B841193F995800097873 /* series.plist in Resources */,
 				360EF1FF1937CC82007FB699 /* Images.xcassets in Resources */,
 				360EF21F1937CCCD007FB699 /* G4LViewPrincipal.xib in Resources */,
+				F2B21FF4196F81C400E021D5 /* S1_abducaoombro_5.png in Resources */,
+				F2B21FF5196F81C400E021D5 /* S1_cruzarbracos_4.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

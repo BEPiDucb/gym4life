@@ -16,15 +16,38 @@
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
     self.window.backgroundColor = [UIColor whiteColor];
+    [self.window makeKeyAndVisible];
+
     
     G4LViewPrincipal *view = [[G4LViewPrincipal alloc]init];
     UINavigationController *nav=[[UINavigationController alloc]initWithRootViewController:view];
+
     
+    [nav.navigationBar setBackgroundColor:[UIColor colorWithRed:251.f/255.f green:220.f/255.f blue:95.f/255.f alpha:1.f]];
+    
+    //amarelo: R 251 G 220 B 95
     
     self.window.rootViewController = nav;
     
-    [self.window makeKeyAndVisible];
+    
+    
+    
+    
+    //pega a serie escolhida pelo usuario
+    NSMutableArray *numSerieEscolhida=[[NSMutableArray alloc] initWithContentsOfFile:
+                                       [[NSBundle mainBundle] pathForResource:@"numeroSerieEscolhida" ofType:@"plist"]];
+    
+    //Se nao existir nenhum escolhido a serie 1 é definida como padrao
+    if ([numSerieEscolhida count]==0)
+    {
+        [numSerieEscolhida addObject:@01];
+        
+        [numSerieEscolhida writeToFile:[[NSBundle mainBundle] pathForResource:@"numeroSerieEscolhida" ofType:@"plist"] atomically:YES];
+        
+        NSLog(@" Entrei no if");
+    }
 
+    [self.window addSubview:nav.view];
     return YES;
 }
 

@@ -12,5 +12,7 @@
 
 @property (strong,nonatomic) NSMutableArray *seriesArray;
 @property (weak, nonatomic) IBOutlet UISwitch *notificacaoBotao;
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
+@property (weak, nonatomic) IBOutlet UILabel *labelNotificacao;
 
 @end

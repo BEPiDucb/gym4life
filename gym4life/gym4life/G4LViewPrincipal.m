@@ -27,58 +27,44 @@
     }
     return self;
 }
-
+-(void)viewWillAppear:(BOOL)animated
+{
+    self.title=@" ";
+}
 - (void)viewDidLoad
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
-   //Carrega arquivos plists no iphone 
+   //Carrega arquivos plists no iphone
+    
+    
+    _notificacaoBotao.alpha=0;
+    _labelNotificacao.alpha=0;
+    
+    self.view.backgroundColor=[UIColor colorWithRed:142.f/255.f green:209.f/255.f blue:199.f/255.f alpha:1.f];
+    _tableView.backgroundColor=[UIColor colorWithRed:142.f/255.f green:209.f/255.f blue:199.f/255.f alpha:1.f];
+    
+    
+    
     [self carregarDadosNoiPhone];
     
-    NSArray *configuracoesPlist=[[NSArray alloc]initWithContentsOfFile:
-                                 [[NSBundle mainBundle]pathForResource:@"configuracoes" ofType:@"plist"]];
-
-    if (configuracoesPlist==NULL)
-    {
-        _notificacaoBotao.on=1;
-        
-        
-    }else _notificacaoBotao.on=0;
+    NSMutableString *titulo=@"";
     
     
-    //Aloca o array series
-    _seriesArray = [[NSMutableArray alloc]init];
+    self.title=titulo;
     
-    NSArray *seriesPlist=[[NSArray alloc] initWithContentsOfFile:
-                          [[NSBundle mainBundle] pathForResource:@"series" ofType:@"plist"]];
+    
+    //create UIBArButton to push the second view Controller
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Agendar" style:UIBarButtonItemStylePlain target:self action:@selector(pushSecondController)];
 
     
-    // Preenche o array com 30 series vazias, apenas para demonstração e teste,
-    // devendo ser mudado para alocar em vez de strings, alocar arrays de exercícios
-    for(int i=0;i<seriesPlist.count - 1;i++)
-    {
-        [_seriesArray addObject:[NSString stringWithFormat:@"Serie %d",i+1]];
-    }
-    //pega a serie escolhida pelo usuario
-    NSMutableArray *numSerieEscolhida=[[NSMutableArray alloc] initWithContentsOfFile:
-                                       [[NSBundle mainBundle] pathForResource:@"numeroSerieEscolhida" ofType:@"plist"]];
-    
-    //Se nao existir nenhum escolhido a serie 1 é definida como padrao
-    if ([numSerieEscolhida count]==0)
-    {
-        [numSerieEscolhida addObject:@01];
-        
-        [numSerieEscolhida writeToFile:[[NSBundle mainBundle] pathForResource:@"numeroSerieEscolhida" ofType:@"plist"] atomically:YES];
-        
-        NSLog(@" Entrei no if");
-    }else
-    {
-        
-        [G4LSeries setIndexSerieEscolhida:(int)[numSerieEscolhida objectAtIndex:0]];
-        
-    }
+}
 
-    
+
+- (void)pushSecondController
+{
+    G4LViewConfig *viewConfig = [[G4LViewConfig alloc] initWithNibName:nil bundle:NULL];
+    [self.navigationController pushViewController:viewConfig animated:YES];
 }
 
 - (void)didReceiveMemoryWarning
@@ -107,6 +93,9 @@
     }
     
     cell.textLabel.text = [_seriesArray objectAtIndex:indexPath.row];
+    cell.textLabel.backgroundColor=[UIColor whiteColor];
+    cell.backgroundColor=[UIColor colorWithRed:142.f/255.f green:209.f/255.f blue:199.f/255.f alpha:1.f];
+    
     
     //Coloca a seta no canto direito da célula
     cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
@@ -121,9 +110,13 @@
     
     [G4LSeries setSerieClicada:(int)indexPath.item];
     G4LViewControllerSerie *serie=[[G4LViewControllerSerie alloc] init];
-    serie.modalTransitionStyle=UIModalTransitionStyleCrossDissolve;
     
-    [self presentViewController:serie animated:YES completion:nil];
+    
+    serie.modalTransitionStyle=UIModalTransitionStyleCrossDissolve;
+    self.title=@"Gym4Life";
+    [self.navigationController pushViewController:serie animated:YES];
+    
+   // [self presentViewController:serie animated:YES completion:nil];
     
 }
 
@@ -167,6 +160,54 @@
     G4LSeries *serieEscolhida=[G4LSeries serieEscolhida];
     
     
+    
+    NSArray *configuracoesPlist=[[NSArray alloc]initWithContentsOfFile:
+                                 [[NSBundle mainBundle]pathForResource:@"configuracoes" ofType:@"plist"]];
+    
+    if (configuracoesPlist==NULL)
+    {
+        _notificacaoBotao.on=1;
+        
+        
+    }else _notificacaoBotao.on=0;
+    
+    
+    //Aloca o array series
+    _seriesArray = [[NSMutableArray alloc]init];
+    
+    NSArray *seriesPlist=[[NSArray alloc] initWithContentsOfFile:
+                          [[NSBundle mainBundle] pathForResource:@"series" ofType:@"plist"]];
+    
+    
+    // Preenche o array com 30 series vazias, apenas para demonstração e teste,
+    // devendo ser mudado para alocar em vez de strings, alocar arrays de exercícios
+    for(int i=0;i<seriesPlist.count - 1;i++)
+    {
+        [_seriesArray addObject:[NSString stringWithFormat:@"Serie %d",i+1]];
+    }
+    //pega a serie escolhida pelo usuario
+    NSMutableArray *numSerieEscolhida=[[NSMutableArray alloc] initWithContentsOfFile:
+                                       [[NSBundle mainBundle] pathForResource:@"numeroSerieEscolhida" ofType:@"plist"]];
+    
+    //Se nao existir nenhum escolhido a serie 1 é definida como padrao
+    if ([numSerieEscolhida count]==0)
+    {
+        [numSerieEscolhida addObject:@01];
+        
+        [numSerieEscolhida writeToFile:[[NSBundle mainBundle] pathForResource:@"numeroSerieEscolhida" ofType:@"plist"] atomically:YES];
+        
+        NSLog(@" Entrei no if");
+    }else
+    {
+        
+        [G4LSeries setIndexSerieEscolhida:(int)[numSerieEscolhida objectAtIndex:0]];
+        
+    }
+    
+    
+
+    
+    
 }
 - (IBAction)iniciarRotina:(id)sender {
     
@@ -184,14 +225,6 @@
 }
 
 
-- (IBAction)apagarTEste:(id)sender
-{
-    NSArray *teste=[[NSMutableArray alloc] initWithContentsOfFile:
-                    [[NSBundle mainBundle] pathForResource:@"numeroSerieEscolhida" ofType:@"plist"]];
-    
-    NSLog(@"Serie %@",teste);
-
-}
 
 
 

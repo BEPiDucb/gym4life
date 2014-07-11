@@ -12,7 +12,7 @@
 			<string>Espreguiçar</string>
 			<key>imagens</key>
 			<array>
-				<string>S1_E1_0_espreguicar.jpg</string>
+				<string>S1_espreguicar_1.png</string>
 			</array>
 		</dict>
 		<dict>
@@ -25,7 +25,7 @@
 			<string>Rotação da cabeça</string>
 			<key>imagens</key>
 			<array>
-				<string>S1_E2_0_circunducaoCabeca.jpg</string>
+				<string>S1_rotacaocabeca_2.png</string>
 			</array>
 		</dict>
 		<dict>
@@ -39,7 +39,7 @@
 			<string>Flexão lateral da cabeça</string>
 			<key>imagens</key>
 			<array>
-				<string>S1_E3_0_extencaoCabeca.jpg</string>
+				<string>S1_inclinacaocabeca_3.png</string>
 			</array>
 		</dict>
 		<dict>
@@ -52,7 +52,7 @@
 			<string>Cruzar braços</string>
 			<key>imagens</key>
 			<array>
-				<string>S1_E4_0_rotacaoOmbro.jpg</string>
+				<string>S1_cruzarbracos_4.png</string>
 			</array>
 		</dict>
 		<dict>
@@ -66,7 +66,7 @@
 			<string>Abdução ombros</string>
 			<key>imagens</key>
 			<array>
-				<string>S1_E5_0_peitoral.jpg</string>
+				<string>S1_abducaoombro_5.png</string>
 			</array>
 		</dict>
 		<dict>
@@ -80,7 +80,7 @@
 			<string>Flexão tronco</string>
 			<key>imagens</key>
 			<array>
-				<string>S1_E6_0_punho.jpg</string>
+				<string>S1_flexaotronco_6_v2.png</string>
 			</array>
 		</dict>
 		<dict>
@@ -94,7 +94,7 @@
 			<string>Rotação Tronco</string>
 			<key>imagens</key>
 			<array>
-				<string>S1_E7_0_abducaoOmbros.jpg</string>
+				<string>S1_rotacaotronco_7.png</string>
 			</array>
 		</dict>
 	</array>
@@ -102,8 +102,8 @@
 		<dict>
 			<key>orientacao</key>
 			<array>
-				<string>orientacao 1</string>
-				<string>orientacao 2</string>
+				<string>Sentado na cadeira e com a coluna ereta, erga os dois braços para o alto e inspire.</string>
+				<string>Desça lentamente os braços, abrace as suas coxas e expire.</string>
 			</array>
 			<key>nome</key>
 			<string>Espreguiçar</string>
@@ -115,8 +115,8 @@
 		<dict>
 			<key>orientacao</key>
 			<array>
-				<string>orientacao 1</string>
-				<string>orientacao 2</string>
+				<string>Sentado na cadeira e com a coluna reta, erga a mão esquerda para frente, estique o polegar e o force lentamente em direção do seu punho esquerdo.</string>
+				<string>Repita o movimento com a mão direita.</string>
 			</array>
 			<key>nome</key>
 			<string>Variação extensão punho</string>
@@ -128,8 +128,9 @@
 		<dict>
 			<key>orientacao</key>
 			<array>
-				<string>orientacao 1</string>
-				<string>orientacao 2</string>
+				<string>Sentado na cadeira e com a coluna ereta, encoste as pontas dos seus dedos da mão esquerda no ombro esquerdo.</string>
+				<string>Incline seu troco para direita lentamente, encoste as pontas dos dedos da mão direita no ombro direito.</string>
+				<string>Incline lentamente o seu tronco para o lado esquerdo.</string>
 			</array>
 			<key>nome</key>
 			<string>Flexão lateral</string>
@@ -141,8 +142,7 @@
 		<dict>
 			<key>orientacao</key>
 			<array>
-				<string>orientacao 1</string>
-				<string>orientacao 2</string>
+				<string>Sentado na cadeira e com a coluna ereta, estique o braço esquerdo para frente e o direito para trás,de maneira alternada leves os braços para frente e para trás.</string>
 			</array>
 			<key>nome</key>
 			<string>Braços alternados</string>
@@ -154,8 +154,7 @@
 		<dict>
 			<key>orientacao</key>
 			<array>
-				<string>orientacao 1</string>
-				<string>orientacao 2</string>
+				<string>Sentado na cadeira e com a coluna ereta, erga o braço esquerdo, segure o punho esquerdo atras da sua cabeça e lentamente force para direita e Repita o movimento com o outro braço</string>
 			</array>
 			<key>nome</key>
 			<string>Deslocamento lateral dos braços</string>
@@ -167,8 +166,7 @@
 		<dict>
 			<key>orientacao</key>
 			<array>
-				<string>orientacao 1</string>
-				<string>orientacao 2</string>
+				<string>Sentado na cadeira e com a coluna ereta, erga os braços na altura dos ombros, dobre os cotovelos de forma que aponte as pontas dos dedos para frente, lentamente force os cotovelos para trás e volte para centro.</string>
 			</array>
 			<key>nome</key>
 			<string>Flexão dos braços</string>

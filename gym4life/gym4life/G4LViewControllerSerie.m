@@ -52,6 +52,11 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+
+    _textViewOrientacoes.editable=NO;
+    
+    
+    _seriesVoltar.alpha=0;
     if ([G4LSeries serieClicada]==-1)
         [self iniciarExercicios];
     else

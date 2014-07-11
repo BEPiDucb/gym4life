@@ -25,16 +25,14 @@
     return self;
 }
 
--(IBAction)voltar:(id)sender
-{
-    [self dismissViewControllerAnimated:YES completion:nil];
-}
+
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
     
     pageControlBeingUsed = NO;
+    _seriesVoltar.alpha=1;
     
     //Array para teste, aloca três cores
     NSMutableArray *cores = [[NSMutableArray alloc]init];

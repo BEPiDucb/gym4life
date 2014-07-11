@@ -41,6 +41,13 @@
 		F2B21FF8196F81C400E021D5 /* S1_inclinacaocabeca_3.png in Resources */ = {isa = PBXBuildFile; fileRef = F2B21FF1196F81C400E021D5 /* S1_inclinacaocabeca_3.png */; };
 		F2B21FF9196F81C400E021D5 /* S1_rotacaocabeca_2.png in Resources */ = {isa = PBXBuildFile; fileRef = F2B21FF2196F81C400E021D5 /* S1_rotacaocabeca_2.png */; };
 		F2B21FFA196F81C400E021D5 /* S1_rotacaotronco_7.png in Resources */ = {isa = PBXBuildFile; fileRef = F2B21FF3196F81C400E021D5 /* S1_rotacaotronco_7.png */; };
+		F2B22006196FB0AE00E021D5 /* S2_bracoalternado_4.png in Resources */ = {isa = PBXBuildFile; fileRef = F2B22000196FB0AE00E021D5 /* S2_bracoalternado_4.png */; };
+		F2B22007196FB0AE00E021D5 /* S2_deslocamentolateral_5.png in Resources */ = {isa = PBXBuildFile; fileRef = F2B22001196FB0AE00E021D5 /* S2_deslocamentolateral_5.png */; };
+		F2B22008196FB0AE00E021D5 /* S2_espreguicar_1.png in Resources */ = {isa = PBXBuildFile; fileRef = F2B22002196FB0AE00E021D5 /* S2_espreguicar_1.png */; };
+		F2B22009196FB0AE00E021D5 /* S2_flexaolateral_3.png in Resources */ = {isa = PBXBuildFile; fileRef = F2B22003196FB0AE00E021D5 /* S2_flexaolateral_3.png */; };
+		F2B2200A196FB0AE00E021D5 /* S2_variacaoextensaopulso_2_V2.png in Resources */ = {isa = PBXBuildFile; fileRef = F2B22004196FB0AE00E021D5 /* S2_variacaoextensaopulso_2_V2.png */; };
+		F2B2200B196FB0AE00E021D5 /* S2_variacaoextensaopulso_2.png in Resources */ = {isa = PBXBuildFile; fileRef = F2B22005196FB0AE00E021D5 /* S2_variacaoextensaopulso_2.png */; };
+		F2B2200D196FB4AB00E021D5 /* S2_flexaobraco_6.png in Resources */ = {isa = PBXBuildFile; fileRef = F2B2200C196FB4AB00E021D5 /* S2_flexaobraco_6.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -100,6 +107,13 @@
 		F2B21FF1196F81C400E021D5 /* S1_inclinacaocabeca_3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = S1_inclinacaocabeca_3.png; sourceTree = "<group>"; };
 		F2B21FF2196F81C400E021D5 /* S1_rotacaocabeca_2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = S1_rotacaocabeca_2.png; sourceTree = "<group>"; };
 		F2B21FF3196F81C400E021D5 /* S1_rotacaotronco_7.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = S1_rotacaotronco_7.png; sourceTree = "<group>"; };
+		F2B22000196FB0AE00E021D5 /* S2_bracoalternado_4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = S2_bracoalternado_4.png; sourceTree = "<group>"; };
+		F2B22001196FB0AE00E021D5 /* S2_deslocamentolateral_5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = S2_deslocamentolateral_5.png; sourceTree = "<group>"; };
+		F2B22002196FB0AE00E021D5 /* S2_espreguicar_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = S2_espreguicar_1.png; sourceTree = "<group>"; };
+		F2B22003196FB0AE00E021D5 /* S2_flexaolateral_3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = S2_flexaolateral_3.png; sourceTree = "<group>"; };
+		F2B22004196FB0AE00E021D5 /* S2_variacaoextensaopulso_2_V2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = S2_variacaoextensaopulso_2_V2.png; sourceTree = "<group>"; };
+		F2B22005196FB0AE00E021D5 /* S2_variacaoextensaopulso_2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = S2_variacaoextensaopulso_2.png; sourceTree = "<group>"; };
+		F2B2200C196FB4AB00E021D5 /* S2_flexaobraco_6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = S2_flexaobraco_6.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -286,6 +300,13 @@
 		F2B21FEC196F786F00E021D5 /* Serie 2 */ = {
 			isa = PBXGroup;
 			children = (
+				F2B2200C196FB4AB00E021D5 /* S2_flexaobraco_6.png */,
+				F2B22000196FB0AE00E021D5 /* S2_bracoalternado_4.png */,
+				F2B22001196FB0AE00E021D5 /* S2_deslocamentolateral_5.png */,
+				F2B22002196FB0AE00E021D5 /* S2_espreguicar_1.png */,
+				F2B22003196FB0AE00E021D5 /* S2_flexaolateral_3.png */,
+				F2B22004196FB0AE00E021D5 /* S2_variacaoextensaopulso_2_V2.png */,
+				F2B22005196FB0AE00E021D5 /* S2_variacaoextensaopulso_2.png */,
 			);
 			name = "Serie 2";
 			sourceTree = "<group>";
@@ -370,18 +391,25 @@
 				F2B21FF6196F81C400E021D5 /* S1_espreguicar_1.png in Resources */,
 				F2B21FF8196F81C400E021D5 /* S1_inclinacaocabeca_3.png in Resources */,
 				F2B21FF7196F81C400E021D5 /* S1_flexaotronco_6_v2.png in Resources */,
+				F2B2200A196FB0AE00E021D5 /* S2_variacaoextensaopulso_2_V2.png in Resources */,
 				43F75F47194F7EFC00B4704A /* G4LViewControllerSerie.xib in Resources */,
+				F2B22008196FB0AE00E021D5 /* S2_espreguicar_1.png in Resources */,
 				F2B21FF9196F81C400E021D5 /* S1_rotacaocabeca_2.png in Resources */,
 				F2B21FFA196F81C400E021D5 /* S1_rotacaotronco_7.png in Resources */,
+				F2B22007196FB0AE00E021D5 /* S2_deslocamentolateral_5.png in Resources */,
 				360EF1F71937CC82007FB699 /* InfoPlist.strings in Resources */,
 				F207D111196F5913009DEE99 /* exercicio_teste.jpg in Resources */,
 				43F75F38194F7EF200B4704A /* G4LMostraSerie.xib in Resources */,
 				F2913A841965E18300D7BD71 /* numeroSerieEscolhida.plist in Resources */,
 				43F75F43194F7EFC00B4704A /* G4LViewConfig.xib in Resources */,
+				F2B2200B196FB0AE00E021D5 /* S2_variacaoextensaopulso_2.png in Resources */,
+				F2B22009196FB0AE00E021D5 /* S2_flexaolateral_3.png in Resources */,
 				0F99B841193F995800097873 /* series.plist in Resources */,
 				360EF1FF1937CC82007FB699 /* Images.xcassets in Resources */,
 				360EF21F1937CCCD007FB699 /* G4LViewPrincipal.xib in Resources */,
 				F2B21FF4196F81C400E021D5 /* S1_abducaoombro_5.png in Resources */,
+				F2B22006196FB0AE00E021D5 /* S2_bracoalternado_4.png in Resources */,
+				F2B2200D196FB4AB00E021D5 /* S2_flexaobraco_6.png in Resources */,
 				F2B21FF5196F81C400E021D5 /* S1_cruzarbracos_4.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

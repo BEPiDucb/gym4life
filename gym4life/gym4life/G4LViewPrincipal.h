@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "G4LSerieCell.h"
 
 @interface G4LViewPrincipal : UIViewController <UITableViewDataSource,UITableViewDelegate>
 

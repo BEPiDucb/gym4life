@@ -41,6 +41,8 @@
 		F2B21FF8196F81C400E021D5 /* S1_inclinacaocabeca_3.png in Resources */ = {isa = PBXBuildFile; fileRef = F2B21FF1196F81C400E021D5 /* S1_inclinacaocabeca_3.png */; };
 		F2B21FF9196F81C400E021D5 /* S1_rotacaocabeca_2.png in Resources */ = {isa = PBXBuildFile; fileRef = F2B21FF2196F81C400E021D5 /* S1_rotacaocabeca_2.png */; };
 		F2B21FFA196F81C400E021D5 /* S1_rotacaotronco_7.png in Resources */ = {isa = PBXBuildFile; fileRef = F2B21FF3196F81C400E021D5 /* S1_rotacaotronco_7.png */; };
+		F2B21FFE196F9DF100E021D5 /* G4LSerieCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F2B21FFC196F9DF100E021D5 /* G4LSerieCell.m */; };
+		F2B21FFF196F9DF100E021D5 /* G4LSerieCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F2B21FFD196F9DF100E021D5 /* G4LSerieCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -100,6 +102,9 @@
 		F2B21FF1196F81C400E021D5 /* S1_inclinacaocabeca_3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = S1_inclinacaocabeca_3.png; sourceTree = "<group>"; };
 		F2B21FF2196F81C400E021D5 /* S1_rotacaocabeca_2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = S1_rotacaocabeca_2.png; sourceTree = "<group>"; };
 		F2B21FF3196F81C400E021D5 /* S1_rotacaotronco_7.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = S1_rotacaotronco_7.png; sourceTree = "<group>"; };
+		F2B21FFB196F9DF100E021D5 /* G4LSerieCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = G4LSerieCell.h; sourceTree = "<group>"; };
+		F2B21FFC196F9DF100E021D5 /* G4LSerieCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = G4LSerieCell.m; sourceTree = "<group>"; };
+		F2B21FFD196F9DF100E021D5 /* G4LSerieCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = G4LSerieCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -256,6 +261,9 @@
 				43F75F41194F7EFC00B4704A /* G4LViewControllerSerie.xib */,
 				43F75F35194F7EF200B4704A /* G4LMostraSerie.xib */,
 				43F75F3E194F7EFC00B4704A /* G4LViewConfigHora.xib */,
+				F2B21FFB196F9DF100E021D5 /* G4LSerieCell.h */,
+				F2B21FFC196F9DF100E021D5 /* G4LSerieCell.m */,
+				F2B21FFD196F9DF100E021D5 /* G4LSerieCell.xib */,
 			);
 			name = xib;
 			sourceTree = "<group>";
@@ -380,6 +388,7 @@
 				43F75F43194F7EFC00B4704A /* G4LViewConfig.xib in Resources */,
 				0F99B841193F995800097873 /* series.plist in Resources */,
 				360EF1FF1937CC82007FB699 /* Images.xcassets in Resources */,
+				F2B21FFF196F9DF100E021D5 /* G4LSerieCell.xib in Resources */,
 				360EF21F1937CCCD007FB699 /* G4LViewPrincipal.xib in Resources */,
 				F2B21FF4196F81C400E021D5 /* S1_abducaoombro_5.png in Resources */,
 				F2B21FF5196F81C400E021D5 /* S1_cruzarbracos_4.png in Resources */,
@@ -409,6 +418,7 @@
 				360EF1FD1937CC82007FB699 /* G4LAppDelegate.m in Sources */,
 				43F75F42194F7EFC00B4704A /* G4LViewConfig.m in Sources */,
 				360EF1F91937CC82007FB699 /* main.m in Sources */,
+				F2B21FFE196F9DF100E021D5 /* G4LSerieCell.m in Sources */,
 				360EF21E1937CCCD007FB699 /* G4LViewPrincipal.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

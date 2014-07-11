@@ -19,6 +19,10 @@
 
 @implementation G4LViewPrincipal
 
+{
+    NSMutableArray *imagensCelula;
+}
+
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
@@ -36,17 +40,49 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
    //Carrega arquivos plists no iphone
+  
+    
     
     
     _notificacaoBotao.alpha=0;
     _labelNotificacao.alpha=0;
     
     self.view.backgroundColor=[UIColor colorWithRed:142.f/255.f green:209.f/255.f blue:199.f/255.f alpha:1.f];
-    _tableView.backgroundColor=[UIColor colorWithRed:142.f/255.f green:209.f/255.f blue:199.f/255.f alpha:1.f];
     
+    _tableView.backgroundColor=[UIColor colorWithRed:142.f/255.f green:209.f/255.f blue:199.f/255.f alpha:1.f];
+        
     
     
     [self carregarDadosNoiPhone];
+    
+    
+    imagensCelula=[[NSMutableArray alloc] init]; //Teste
+    
+    NSMutableArray *celula1=[[NSMutableArray alloc] init];
+    NSMutableArray *celula2=[[NSMutableArray alloc]init];
+    
+    NSMutableArray *seriesPlist=[[NSMutableArray alloc]initWithContentsOfFile:
+                                 [[NSBundle mainBundle] pathForResource:@"series" ofType:@"plist"]];
+    
+//    NSLog(@" no plist %@",[[[[seriesPlist objectAtIndex:0] objectAtIndex:3] objectForKey:@"orientacao"] objectAtIndex:0]);
+    
+    
+    //Pegando imagens da serie 1
+    for (int i=0; i<[[seriesPlist objectAtIndex:0] count]; i++)
+    {
+       [celula1 addObject: [UIImage imageNamed:[[[[seriesPlist objectAtIndex:0] objectAtIndex:i ] objectForKey:@"imagens"] objectAtIndex:0]]];
+    }
+    
+    
+    //Pegando imagens da serie 2
+    for (int i=0; i<[[seriesPlist objectAtIndex:1] count]; i++)
+    {
+        [celula1 addObject: [UIImage imageNamed:[[[[seriesPlist objectAtIndex:1] objectAtIndex:i ] objectForKey:@"imagens"] objectAtIndex:0]]];
+    }
+    
+    
+    [imagensCelula addObject:celula1];
+    [imagensCelula addObject:celula2];
     
     NSMutableString *titulo=@"";
     
@@ -77,7 +113,7 @@
 //Método requerido pelo protocolo
 -(NSInteger) tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return [_seriesArray count];
+    return 2;
 }
 
 
@@ -86,6 +122,44 @@
 {
     static NSString *simpleTableIdentifier = @"SimpleTableCell";
     
+    G4LSerieCell *custonCell=[tableView dequeueReusableCellWithIdentifier:simpleTableIdentifier];
+    
+    if (custonCell==nil)
+    {
+        NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"G4LSerieCell" owner:self options:nil];
+        custonCell = [nib objectAtIndex:0];
+        
+        
+//        custonCell=[[G4LSerieCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:simpleTableIdentifier];
+    }
+  
+    custonCell.backgroundColor=[UIColor colorWithRed:142.f/255.f green:209.f/255.f blue:199.f/255.f alpha:1.f];
+    custonCell.serieLabel.backgroundColor=[UIColor whiteColor];
+    
+    NSLog(@" na celula %d ",indexPath.item);
+    
+//    //teste
+    
+    custonCell.imageviewSerie.animationImages=[imagensCelula objectAtIndex:indexPath.item];
+   
+    CATransition *transition = [CATransition animation];
+    transition.type = kCATransitionFade;
+
+    
+    custonCell.imageviewSerie.animationDuration=10;
+    [custonCell.imageviewSerie startAnimating];
+    [custonCell.imageviewSerie.layer addAnimation:transition forKey:nil];
+    
+    
+//    //teste
+    
+    
+  //  [custonCell.imageviewSerie setImage:[UIImage imageNamed:@"S1_abducaoombro_5.png"]];
+    
+    custonCell.serieLabel.text=@"Ramon";
+    
+
+    /*
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:simpleTableIdentifier];
     
     if (cell == nil) {
@@ -101,6 +175,9 @@
     cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     
     return cell;
+     */
+    
+    return custonCell;
 }
 
 

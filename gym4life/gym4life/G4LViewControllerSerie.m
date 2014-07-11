@@ -192,6 +192,7 @@
 
         
         _exerciciosImageView.animationImages=[[animacoesExercicios objectAtIndex:indexExercicioCorrenteAnimacao]imagens];
+        
         _exerciciosImageView.animationDuration=10;
         [_exerciciosImageView startAnimating];
         [_exerciciosImageView.layer addAnimation:transition forKey:nil]; //insere transicao de imagem mais suave

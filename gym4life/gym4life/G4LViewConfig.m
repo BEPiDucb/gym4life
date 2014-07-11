@@ -246,7 +246,9 @@
     [self alertaMessagem:self.domingo andDay:1];
     
     
-    [self dismissViewControllerAnimated:YES completion:nil];
+
+    //Voltar para tela principal 
+    [self.navigationController popViewControllerAnimated:YES];
 }
 
 

@@ -94,13 +94,13 @@
     
     
     //create UIBArButton to push the second view Controller
-    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Agendar" style:UIBarButtonItemStylePlain target:self action:@selector(pushSecondController)];
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Agendar" style:UIBarButtonItemStylePlain target:self action:@selector(configuracoesHorario)];
 
     
 }
 
 
-- (void)pushSecondController
+- (void)configuracoesHorario
 {
     G4LViewConfig *viewConfig = [[G4LViewConfig alloc] initWithNibName:nil bundle:NULL];
     [self.navigationController pushViewController:viewConfig animated:YES];

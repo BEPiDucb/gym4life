@@ -40,7 +40,7 @@
     //Se nao existir nenhum escolhido a serie 1 é definida como padrao
     if ([numSerieEscolhida count]==0)
     {
-        [numSerieEscolhida addObject:@01];
+        [numSerieEscolhida addObject:@00];
         
         [numSerieEscolhida writeToFile:[[NSBundle mainBundle] pathForResource:@"numeroSerieEscolhida" ofType:@"plist"] atomically:YES];
         

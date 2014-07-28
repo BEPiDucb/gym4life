@@ -33,6 +33,11 @@
 		43F75F46194F7EFC00B4704A /* G4LViewControllerSerie.m in Sources */ = {isa = PBXBuildFile; fileRef = 43F75F40194F7EFC00B4704A /* G4LViewControllerSerie.m */; };
 		43F75F47194F7EFC00B4704A /* G4LViewControllerSerie.xib in Resources */ = {isa = PBXBuildFile; fileRef = 43F75F41194F7EFC00B4704A /* G4LViewControllerSerie.xib */; };
 		F207D111196F5913009DEE99 /* exercicio_teste.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F207D110196F5913009DEE99 /* exercicio_teste.jpg */; };
+		F27AC7F51970BFEF004FB6DE /* icone_58_58.png in Resources */ = {isa = PBXBuildFile; fileRef = F27AC7F11970BFEF004FB6DE /* icone_58_58.png */; };
+		F27AC7F61970BFEF004FB6DE /* icone_80.png in Resources */ = {isa = PBXBuildFile; fileRef = F27AC7F21970BFEF004FB6DE /* icone_80.png */; };
+		F27AC7F71970BFEF004FB6DE /* icone_120.png in Resources */ = {isa = PBXBuildFile; fileRef = F27AC7F31970BFEF004FB6DE /* icone_120.png */; };
+		F27AC7F81970BFEF004FB6DE /* icone_1024_1024.png in Resources */ = {isa = PBXBuildFile; fileRef = F27AC7F41970BFEF004FB6DE /* icone_1024_1024.png */; };
+		F27AC7FA1970C190004FB6DE /* icone_640_960.png in Resources */ = {isa = PBXBuildFile; fileRef = F27AC7F91970C190004FB6DE /* icone_640_960.png */; };
 		F2913A841965E18300D7BD71 /* numeroSerieEscolhida.plist in Resources */ = {isa = PBXBuildFile; fileRef = F2913A831965E18300D7BD71 /* numeroSerieEscolhida.plist */; };
 		F2B21FF4196F81C400E021D5 /* S1_abducaoombro_5.png in Resources */ = {isa = PBXBuildFile; fileRef = F2B21FED196F81C400E021D5 /* S1_abducaoombro_5.png */; };
 		F2B21FF5196F81C400E021D5 /* S1_cruzarbracos_4.png in Resources */ = {isa = PBXBuildFile; fileRef = F2B21FEE196F81C400E021D5 /* S1_cruzarbracos_4.png */; };
@@ -99,6 +104,11 @@
 		43F75F40194F7EFC00B4704A /* G4LViewControllerSerie.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = G4LViewControllerSerie.m; sourceTree = "<group>"; };
 		43F75F41194F7EFC00B4704A /* G4LViewControllerSerie.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = G4LViewControllerSerie.xib; sourceTree = "<group>"; };
 		F207D110196F5913009DEE99 /* exercicio_teste.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = exercicio_teste.jpg; sourceTree = "<group>"; };
+		F27AC7F11970BFEF004FB6DE /* icone_58_58.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icone_58_58.png; sourceTree = "<group>"; };
+		F27AC7F21970BFEF004FB6DE /* icone_80.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icone_80.png; sourceTree = "<group>"; };
+		F27AC7F31970BFEF004FB6DE /* icone_120.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icone_120.png; sourceTree = "<group>"; };
+		F27AC7F41970BFEF004FB6DE /* icone_1024_1024.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icone_1024_1024.png; sourceTree = "<group>"; };
+		F27AC7F91970C190004FB6DE /* icone_640_960.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icone_640_960.png; sourceTree = "<group>"; };
 		F2913A831965E18300D7BD71 /* numeroSerieEscolhida.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = numeroSerieEscolhida.plist; sourceTree = "<group>"; };
 		F2B21FED196F81C400E021D5 /* S1_abducaoombro_5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = S1_abducaoombro_5.png; sourceTree = "<group>"; };
 		F2B21FEE196F81C400E021D5 /* S1_cruzarbracos_4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = S1_cruzarbracos_4.png; sourceTree = "<group>"; };
@@ -217,6 +227,11 @@
 		360EF2261937D48C007FB699 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				F27AC7F11970BFEF004FB6DE /* icone_58_58.png */,
+				F27AC7F91970C190004FB6DE /* icone_640_960.png */,
+				F27AC7F21970BFEF004FB6DE /* icone_80.png */,
+				F27AC7F31970BFEF004FB6DE /* icone_120.png */,
+				F27AC7F41970BFEF004FB6DE /* icone_1024_1024.png */,
 				F2B21FEA196F785900E021D5 /* Imagens */,
 				F207D110196F5913009DEE99 /* exercicio_teste.jpg */,
 				0F99B840193F995800097873 /* series.plist */,
@@ -359,6 +374,9 @@
 				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = "willie santos";
 				TargetAttributes = {
+					360EF1E81937CC82007FB699 = {
+						DevelopmentTeam = Q343B6F743;
+					};
 					360EF2031937CC82007FB699 = {
 						TestTargetID = 360EF1E81937CC82007FB699;
 					};
@@ -398,17 +416,22 @@
 				F2B21FFA196F81C400E021D5 /* S1_rotacaotronco_7.png in Resources */,
 				F2B22007196FB0AE00E021D5 /* S2_deslocamentolateral_5.png in Resources */,
 				360EF1F71937CC82007FB699 /* InfoPlist.strings in Resources */,
+				F27AC7FA1970C190004FB6DE /* icone_640_960.png in Resources */,
 				F207D111196F5913009DEE99 /* exercicio_teste.jpg in Resources */,
 				43F75F38194F7EF200B4704A /* G4LMostraSerie.xib in Resources */,
 				F2913A841965E18300D7BD71 /* numeroSerieEscolhida.plist in Resources */,
 				43F75F43194F7EFC00B4704A /* G4LViewConfig.xib in Resources */,
 				F2B2200B196FB0AE00E021D5 /* S2_variacaoextensaopulso_2.png in Resources */,
+				F27AC7F81970BFEF004FB6DE /* icone_1024_1024.png in Resources */,
 				F2B22009196FB0AE00E021D5 /* S2_flexaolateral_3.png in Resources */,
 				0F99B841193F995800097873 /* series.plist in Resources */,
 				360EF1FF1937CC82007FB699 /* Images.xcassets in Resources */,
+				F27AC7F51970BFEF004FB6DE /* icone_58_58.png in Resources */,
+				F27AC7F61970BFEF004FB6DE /* icone_80.png in Resources */,
 				360EF21F1937CCCD007FB699 /* G4LViewPrincipal.xib in Resources */,
 				F2B21FF4196F81C400E021D5 /* S1_abducaoombro_5.png in Resources */,
 				F2B22006196FB0AE00E021D5 /* S2_bracoalternado_4.png in Resources */,
+				F27AC7F71970BFEF004FB6DE /* icone_120.png in Resources */,
 				F2B2200D196FB4AB00E021D5 /* S2_flexaobraco_6.png in Resources */,
 				F2B21FF5196F81C400E021D5 /* S1_cruzarbracos_4.png in Resources */,
 			);
@@ -556,10 +579,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "gym4life/gym4life-Prefix.pch";
 				INFOPLIST_FILE = "gym4life/gym4life-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -569,10 +594,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "gym4life/gym4life-Prefix.pch";
 				INFOPLIST_FILE = "gym4life/gym4life-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

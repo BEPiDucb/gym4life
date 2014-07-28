@@ -3,19 +3,19 @@
     {
       "size" : "29x29",
       "idiom" : "iphone",
-      "filename" : "29pt (58pt).png",
+      "filename" : "icone_58_58.png",
       "scale" : "2x"
     },
     {
       "size" : "40x40",
       "idiom" : "iphone",
-      "filename" : "40pt (80pt).png",
+      "filename" : "icone_80.png",
       "scale" : "2x"
     },
     {
       "size" : "60x60",
       "idiom" : "iphone",
-      "filename" : "60pt (120pt).png",
+      "filename" : "icone_120.png",
       "scale" : "2x"
     },
     {
